@@ -1,0 +1,175 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import SchemaOrg from '../components/SchemaOrg.astro';
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string | null;
+  robots?: string;
+  ogImage?: string;
+  serviceName?: string;
+  serviceDescription?: string;
+  faqs?: Array<{ question: string; answer: string }>;
+  breadcrumbs?: Array<{ name: string; url: string }>;
+  chat?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  robots = "index, follow",
+  ogImage = "https://www.opportunity-painting.com/img/carousel-3.jpg",
+  serviceName,
+  serviceDescription,
+  faqs,
+  breadcrumbs,
+  chat = false,
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+let resolvedCanonical: string | null = null;
+if (canonical !== undefined) {
+  resolvedCanonical = canonical;
+} else {
+  if (currentPath === '/' || currentPath === '/index.html' || currentPath === '') {
+    resolvedCanonical = 'https://www.opportunity-painting.com/';
+  } else {
+    resolvedCanonical = `https://www.opportunity-painting.com${currentPath}`;
+  }
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>{title}</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content={description} />
+  <meta name="robots" content={robots} />
+  {resolvedCanonical && <link rel="canonical" href={resolvedCanonical} />}
+  <meta name="author" content="Opportunity Painting Inc." />
+  <link rel="author" href="https://www.smtfyads.com" title="Smartify ADS" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  {resolvedCanonical && <meta property="og:url" content={resolvedCanonical} />}
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Opportunity Painting Inc." />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/img/favicon-32x32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+
+  <!-- Google Fonts Preconnect & Swap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Teko:wght@400;500;600;700&display=swap" 
+    rel="stylesheet" 
+  />
+
+  <!-- Structured Data JSON-LD -->
+  <SchemaOrg 
+    title={title}
+    description={description}
+    url={resolvedCanonical}
+    image={ogImage}
+    serviceName={serviceName}
+    serviceDescription={serviceDescription}
+    faqs={faqs}
+    breadcrumbs={breadcrumbs}
+  />
+
+  <!-- Google Tag Manager -->
+  <script is:inline>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-N64XLKBT');
+  </script>
+
+  <!-- Google Ads Tracking -->
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-393984382"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-393984382');
+  </script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-N64XLKBT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
+  <Header currentPath={currentPath} />
+
+  <main id="main-content">
+    <slot />
+  </main>
+
+  <Footer />
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  {chat && (
+    <script is:inline>
+      !function (e, t, r, d) {
+        try {
+          var a = t.head || t.getElementsByTagName("head")[0],
+              n = t.createElement("script");
+          n.setAttribute("src", "https://cdn.leadster.com.br/neurolead/neurolead.min.js");
+          n.setAttribute("charset", "UTF-8");
+          n.defer = !0;
+          e.neuroleadId = "5S5Ke1EYL55DdkQ3woVJP7zrt";
+          a.appendChild(n);
+        } catch (e) { }
+      }(window, document);
+    </script>
+  )}
+
+  <!-- Lightweight Back to Top Logic -->
+  <script is:inline>
+    const backToTopBtn = document.getElementById('back-to-top');
+    if (backToTopBtn) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.add('active');
+        } else {
+          backToTopBtn.classList.remove('active');
+        }
+      });
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+  </script>
+</body>
+</html>

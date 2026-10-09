@@ -1,0 +1,178 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import QuoteForm from '../../components/QuoteForm.astro';
+import FAQ from '../../components/FAQ.astro';
+
+const cabinetFaqs = [
+  {
+    question: "What is the difference between painting cabinets and cabinet refinishing?",
+    answer: "Regular house painting often relies on brush or roller application, which can leave brush strokes and chip easily. Our cabinet refinishing uses industrial spray systems with high-solids polyurethane/enamel coatings that create an ultra-durable, factory-smooth finish identical to brand-new high-end cabinets."
+  },
+  {
+    question: "How much money does cabinet refinishing save compared to replacing cabinets?",
+    answer: "Refinishing existing solid wood cabinet boxes and doors typically saves 60% to 75% compared to custom cabinet replacement, while avoiding weeks of kitchen downtime and countertop removal."
+  },
+  {
+    question: "How long does cabinet spray refinishing last?",
+    answer: "With proper care, our multi-coat catalyzed urethane finishes last 10 to 15+ years. They resist cooking grease, moisture, fingerprints, and household cleaning chemicals without chipping or peeling."
+  },
+  {
+    question: "Do you spray cabinet doors on-site in my home?",
+    answer: "No. We carefully remove all cabinet doors and drawer fronts, label each piece, and transport them to our controlled spray facility for degreasing, sanding, priming, and spray finishing. Only the exterior cabinet frame boxes are prepped and sprayed in your home inside a fully sealed plastic spray containment booth."
+  }
+];
+
+const scopeSteps = [
+  {
+    step: "01",
+    title: "Hardware Removal & Labeling",
+    desc: "Removing all cabinet doors, drawer fronts, and hardware. Every component is indexed to ensure exact realignment during reinstallation."
+  },
+  {
+    step: "02",
+    title: "Deep Chemical Degreasing",
+    desc: "Cleaning surfaces with specialized degreasers to remove decades of airborne cooking oils, grease, and residue that impede coating adhesion."
+  },
+  {
+    step: "03",
+    title: "Mechanical Sanding & Profiling",
+    desc: "Dustless orbital sanding of all woodwork to remove failing varnish and profile the wood grain for maximum mechanical bond."
+  },
+  {
+    step: "04",
+    title: "High-Adhesion Stain-Blocking Primer",
+    desc: "Applying industrial shellac or high-bonding bonding primer that locks in tannins, seals open wood pores, and establishes a rock-solid foundation."
+  },
+  {
+    step: "05",
+    title: "Inter-Coat Sanding & Imperfection Fill",
+    desc: "Hand-sanding between coats and filling wood voids or dings with high-durability timber filler for a mirror-smooth tactile surface."
+  },
+  {
+    step: "06",
+    title: "Airless Spray Application of Enamel",
+    desc: "Spraying multiple coats of premium cabinet-grade polyurethane enamel (such as Benjamin Moore Advance or Renner wood coatings) for an enduring factory finish."
+  },
+  {
+    step: "07",
+    title: "Reassembly & Hardware Upgrade",
+    desc: "Reinstalling doors and drawers with precision laser alignment, installing new handles or pulls, and upgrading hinges to soft-close if requested."
+  }
+];
+
+const breadcrumbs = [
+  { name: "Home", url: "https://www.opportunity-painting.com/" },
+  { name: "Services", url: "/interior-exterior-painting.html" },
+  { name: "Cabinet Refinishing", url: "/cabinet-refinishing.html" }
+];
+---
+
+<Layout
+  title="Kitchen Cabinet Refinishing & Painting | Opportunity Painting Inc. - Holliston, MA"
+  description="Factory-smooth cabinet spray painting and refinishing in Holliston & MetroWest MA. Save thousands over cabinet replacement. Call (508) 215-9441 for a free estimate."
+  serviceName="Kitchen Cabinet Refinishing and Painting"
+  serviceDescription="Professional spray refinishing for kitchen and bathroom cabinets with factory-grade polyurethane enamels, off-site spray booth processing, and new hardware installation."
+  faqs={cabinetFaqs}
+  breadcrumbs={breadcrumbs}
+>
+  <!-- Page Header -->
+  <section class="page-header py-5 bg-dark text-white position-relative">
+    <div class="container py-4">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <span class="badge-service">CABINET REFINISHING MASTERY</span>
+          <h1 class="text-white mb-3" style="font-size: 3.2rem;">
+            Factory-Grade Cabinet Spray Refinishing in MetroWest MA
+          </h1>
+          <p class="text-light mb-4" style="font-size: 1.1rem;">
+            Give your kitchen a high-end designer makeover at a fraction of the cost of new cabinets. Zero brush marks, rock-hard polyurethane durability, and endless custom color selections.
+          </p>
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="#quote-section" class="btn btn-primary btn-lg">Request Free In-Home Estimate</a>
+            <a href="tel:+15082159441" class="btn btn-outline-light btn-lg">(508) 215-9441</a>
+          </div>
+        </div>
+        <div class="col-lg-5 mt-4 mt-lg-0">
+          <img 
+            src="/img/service-1.jpg" 
+            alt="Factory smooth white refinished kitchen cabinets" 
+            width="500" 
+            height="340" 
+            class="rounded shadow-lg w-100" 
+            style="object-fit: cover;" 
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview Section -->
+  <section class="py-5">
+    <div class="container py-3">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <img 
+            src="/img/about-10.jpg" 
+            alt="Refinished dark kitchen island with white perimeter cabinets" 
+            width="550" 
+            height="400" 
+            class="rounded shadow w-100" 
+            style="object-fit: cover;" 
+          />
+        </div>
+        <div class="col-lg-6">
+          <span class="badge-service">THE SMARTER ALTERNATIVE</span>
+          <h2>Don't Replace Solid Wood Cabinets — Transform Them</h2>
+          <p>
+            Most older Massachusetts homes feature solid oak, maple, or cherry cabinet boxes built with outstanding structural integrity. Demolishing them just to update the color or finish is costly and environmentally wasteful.
+          </p>
+          <p>
+            At <strong>Opportunity Painting And Renovation Services Inc.</strong>, we utilize an advanced off-site spray booth process. We transport your doors to our dedicated facility, apply high-bonding primers and commercial furniture lacquers, and seal off your kitchen to spray the fixed face frames with surgical cleanliness.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Steps -->
+  <section class="py-5 bg-light">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <span class="badge-service">OUR METICULOUS PROCESS</span>
+        <h2>How We Achieve a Factory-Smooth Finish</h2>
+        <p class="text-muted mx-auto" style="max-width: 650px;">
+          The difference between DIY cabinet painting and professional refinishing is our 7-step industrial finishing regimen.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        {scopeSteps.map((item) => (
+          <div class="col-md-6 col-lg-4">
+            <div class="p-4 bg-white rounded shadow-sm border h-100 d-flex flex-column">
+              <span class="text-primary font-weight-bold mb-2" style="font-size: 1.5rem; font-family: var(--font-heading);">{item.step}</span>
+              <h4 class="mb-2">{item.title}</h4>
+              <p class="text-muted m-0" style="font-size: 0.92rem;">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Section -->
+  <section id="quote-section" class="py-5">
+    <div class="container py-3">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <QuoteForm 
+            title="Get a Free Cabinet Refinishing Quote" 
+            subtitle="Send us details or door counts for a rapid, transparent pricing estimate."
+            defaultService="Cabinet Refinishing"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={cabinetFaqs} />
+</Layout>

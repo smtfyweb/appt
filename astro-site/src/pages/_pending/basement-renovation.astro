@@ -1,0 +1,193 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import QuoteForm from '../../components/QuoteForm.astro';
+import FAQ from '../../components/FAQ.astro';
+
+const basementFaqs = [
+  {
+    question: "How do you manage moisture and mold risks in New England basements?",
+    answer: "Prior to framing, we inspect foundation walls and concrete slabs for hydrostatic pressure and moisture transmission. We install vapor barriers, rigid foam insulation against concrete walls, and moisture-resistant subfloor panels to ensure a dry, warm, and mold-free environment."
+  },
+  {
+    question: "Do finished basements in Massachusetts require an egress window or door?",
+    answer: "If your finished basement design includes a bedroom, Massachusetts building code requires a code-compliant egress window or walk-out door for emergency escape. We help assess your layout and coordinate egress requirements."
+  },
+  {
+    question: "Can you add a full or half bathroom to a finished basement?",
+    answer: "Yes. If underground plumbing rough-ins do not already exist, our licensed plumbing partners saw-cut the concrete slab to tie into the main sewer line, or install high-reliability sewage ejector pump systems."
+  },
+  {
+    question: "What flooring options work best in a finished basement?",
+    answer: "Luxury Vinyl Plank (LVP) and glazed porcelain tile are the most durable and water-resistant choices for Massachusetts basements. They provide realistic wood aesthetics while remaining 100% waterproof."
+  }
+];
+
+const scopeSteps = [
+  {
+    step: "01",
+    title: "Moisture Assessment & Demo",
+    desc: "Clearing out debris, inspecting foundation walls for efflorescence or dampness, and applying waterproofing barriers before any framing begins."
+  },
+  {
+    step: "02",
+    title: "Framing, Partitions & Soffits",
+    desc: "Erecting perimeter walls with thermal breaks, framing room partitions for home offices or gyms, and building custom soffits to conceal ductwork and pipes."
+  },
+  {
+    step: "03",
+    title: "Thermal Insulation & Soundproofing",
+    desc: "Installing rigid foam or closed-cell spray foam insulation to prevent condensation, along with Roxul/mineral wool soundproofing batts in ceiling joists."
+  },
+  {
+    step: "04",
+    title: "Electrical, Media & Recessed Lighting",
+    desc: "Installing dedicated circuits, code-required outlets every 12 feet, LED slim recessed ceiling lights, hardwired smoke/CO detectors, and AV cabling."
+  },
+  {
+    step: "05",
+    title: "Plumbing Rough-Ins (Wet Bars / Bath)",
+    desc: "Tying into waste stacks or installing sewage ejector pits for basement bathrooms, laundry rooms, or custom entertainment wet bars."
+  },
+  {
+    step: "06",
+    title: "HVAC Duct Extension & Ventilation",
+    desc: "Extending heating and cooling branch ducts to balance basement airflow and temperature year-round, adding supply and return registers."
+  },
+  {
+    step: "07",
+    title: "Moisture-Barrier Subfloors & Flooring",
+    desc: "Laying moisture-sealed subfloor membranes followed by 100% waterproof luxury vinyl plank (LVP), engineered hardwood, or tile."
+  },
+  {
+    step: "08",
+    title: "Ceilings, Baseboards & Millwork",
+    desc: "Installing seamless drywall ceilings or architectural acoustic drop ceilings with access points, plus baseboards, door casings, and crown molding."
+  },
+  {
+    step: "09",
+    title: "Drywall Taping & Fine Painting",
+    desc: "Level 4 drywall finishing, primer application, and two coats of premium washable Benjamin Moore paint on all walls, ceilings, and trim."
+  },
+  {
+    step: "10",
+    title: "Final Inspection & Move-In Readiness",
+    desc: "Detailed cleanup, fixture testing, air quality check, and final walkthrough with the client to deliver a fully functional living space."
+  }
+];
+
+const breadcrumbs = [
+  { name: "Home", url: "https://www.opportunity-painting.com/" },
+  { name: "Services", url: "/interior-exterior-painting.html" },
+  { name: "Basement Finishing", url: "/basement-renovation.html" }
+];
+---
+
+<Layout
+  title="Basement Finishing & Renovation Contractors | Opportunity Painting Inc. - Holliston, MA"
+  description="Transform your unfinished basement into living space. Family rooms, home offices, gyms, and wet bars in Holliston & MetroWest MA. Call (508) 215-9441 for a free estimate."
+  serviceName="Basement Renovation and Finishing"
+  serviceDescription="Complete basement finishing services from moisture proofing, insulation, and framing to electrical, plumbing, luxury flooring, and fine finish painting."
+  faqs={basementFaqs}
+  breadcrumbs={breadcrumbs}
+>
+  <!-- Page Header -->
+  <section class="page-header py-5 bg-dark text-white position-relative">
+    <div class="container py-4">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <span class="badge-service">BASEMENT FINISHING SPECIALISTS</span>
+          <h1 class="text-white mb-3" style="font-size: 3.2rem;">
+            Custom Basement Finishing in Holliston &amp; MetroWest MA
+          </h1>
+          <p class="text-light mb-4" style="font-size: 1.1rem;">
+            Unlock valuable square footage beneath your feet. We transform dark, unfinished basements into bright, warm, and inviting family entertainment centers, home offices, and guest suites.
+          </p>
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="#quote-section" class="btn btn-primary btn-lg">Request Free In-Home Estimate</a>
+            <a href="tel:+15082159441" class="btn btn-outline-light btn-lg">(508) 215-9441</a>
+          </div>
+        </div>
+        <div class="col-lg-5 mt-4 mt-lg-0">
+          <img 
+            src="/img/about-16.jpg" 
+            alt="Finished basement living area with recessed lighting and comfortable seating" 
+            width="500" 
+            height="340" 
+            class="rounded shadow-lg w-100" 
+            style="object-fit: cover;" 
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Overview -->
+  <section class="py-5">
+    <div class="container py-3">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <img 
+            src="/img/about-15.jpg" 
+            alt="Framed and insulated finished basement room ready for drywall" 
+            width="550" 
+            height="400" 
+            class="rounded shadow w-100" 
+            style="object-fit: cover;" 
+          />
+        </div>
+        <div class="col-lg-6">
+          <span class="badge-service">SPACE OPTIMIZATION</span>
+          <h2>The Smartest Way to Expand Your Home's Usable Living Area</h2>
+          <p>
+            An unfinished basement is raw potential. Rather than undertaking an expensive exterior home addition, finishing your existing lower level delivers immediate comfort, expanded lifestyle utility, and outstanding property appreciation.
+          </p>
+          <p>
+            At <strong>Opportunity Painting And Renovation Services Inc.</strong>, we know New England basements inside and out. Our building science approach tackles moisture management, temperature regulation, and acoustic control first, ensuring your new living space remains cozy and dry across all four seasons.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10-Step Scope of Work -->
+  <section class="py-5 bg-light">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <span class="badge-service">COMPREHENSIVE SCOPE OF WORK</span>
+        <h2>Our 10-Step Basement Finishing Process</h2>
+        <p class="text-muted mx-auto" style="max-width: 650px;">
+          From foundation prep to final trim, every detail is built to Massachusetts building code standards.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        {scopeSteps.map((item) => (
+          <div class="col-md-6 col-lg-4">
+            <div class="p-4 bg-white rounded shadow-sm border h-100 d-flex flex-column">
+              <span class="text-primary font-weight-bold mb-2" style="font-size: 1.5rem; font-family: var(--font-heading);">{item.step}</span>
+              <h4 class="mb-2">{item.title}</h4>
+              <p class="text-muted m-0" style="font-size: 0.92rem;">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Section -->
+  <section id="quote-section" class="py-5">
+    <div class="container py-3">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <QuoteForm 
+            title="Get a Free Basement Finishing Estimate" 
+            subtitle="Let's tour your basement and design a custom living space that fits your lifestyle."
+            defaultService="Basement Renovation"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={basementFaqs} />
+</Layout>

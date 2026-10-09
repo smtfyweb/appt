@@ -1,0 +1,157 @@
+---
+interface Props {
+  activePage?: string;
+}
+
+const { activePage } = Astro.props;
+---
+
+
+
+<!-- Início da Seção de Contatos e Redes Sociais -->
+<div class="wow fadeIn bg-dark container-fluid p-0" data-wow-delay="0.1s">
+    <div class="row d-lg-flex d-none gx-0">
+        <!-- Início da Coluna de Contatos -->
+        <div class="col-lg-7 px-5 text-start">
+            <div class="me-3 align-items-center d-inline-flex h-100 py-3">
+                <a href="tel:+15082159441" class="text-body px-2" title="Call directly">
+                    <svg class="icon text-primary me-2" aria-hidden="true"><use href="/img/icons.svg#fa-phone-alt"/></svg>508 215 9441
+                </a>
+                <a href="sms:+15082159441?&body=Hi%20Ney,%20I'd%20like%20to%20request%20a%20free%20quote" class="text-body px-2" title="Send a direct SMS text">
+                    Text US
+                </a>
+                <a href="mailto:office@opportunity-painting.com" class="text-body px-2">
+                    <svg class="icon text-primary me-2" aria-hidden="true"><use href="/img/icons.svg#fa-envelope-open"/></svg>office@opportunity-painting.com
+                </a>
+            </div>
+        </div>
+        <!-- Fim da Coluna de Contatos -->
+
+        <!-- Início da Coluna de Links e Redes Sociais -->
+        <div class="col-lg-5 px-5 text-end">
+            <div class="me-2 align-items-center d-inline-flex h-100 py-3">
+                <a href="/terms-of-service.html" class="text-body px-2">Terms</a>
+                <a href="/privacy-policy.html" class="text-body px-2">Privacy</a>
+            </div>
+            <div class="align-items-center d-inline-flex h-100">
+                <a href="http://www.instagram.com/opportunity_painting"
+                    class="btn btn-outline-body btn-square me-1"
+                    aria-label="Instagram">
+                    <svg class="icon" aria-hidden="true"><use href="/img/icons.svg#fa-instagram"/></svg>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100050506784663"
+                    class="btn btn-outline-body btn-square me-1"
+                    aria-label="Facebook">
+                    <svg class="icon" aria-hidden="true"><use href="/img/icons.svg#fa-facebook-f"/></svg>
+                </a>
+                <a href="https://www.google.com/search?q=opportunity+painting+reviews&rlz=1CDGOYI_enUS777US777&oq=opportunity+painting+reviews&aqs=chrome..69i57j0i546l5.954j0j4&hl=en-US&sourceid=chrome-mobile&ie=UTF-8#lkt=LocalPoiReviews&lpg=cid:CgIgAQ%3D%3D&trex=m_t:lcl_akp,rc_f"
+                    class="btn btn-outline-body btn-square me-1"
+                    aria-label="Google Reviews">
+                    <svg class="icon" aria-hidden="true"><use href="/img/icons.svg#fa-google"/></svg>
+                </a>
+                <a href="http://yelp.com/biz/opportunity-painting-holliston-3?hrid=FUbnm0Mtc4LOxRuI0VStiA&utm_campaign=bizapp_ios_review_share_popup&utm_medium=copy_link&utm_source=(direct)"
+                    class="btn btn-outline-body btn-square me-1"
+                    aria-label="Yelp">
+                    <svg class="icon" aria-hidden="true"><use href="/img/icons.svg#fa-yelp"/></svg>
+                </a>
+                <a href="https://wa.me/message/K3QVFUZOUZVXO1" class="btn btn-outline-body btn-square me-0"
+                    aria-label="WhatsApp">
+                    <svg class="icon" aria-hidden="true"><use href="/img/icons.svg#fa-whatsapp"/></svg>
+                </a>
+                <a href="https://www.youtube.com/channel/UC4Asa7w8FHFXJ0NzoZ4Xpyg"
+                    class="btn btn-outline-body btn-square me-0"
+                    aria-label="YouTube">
+                    <svg class="icon" aria-hidden="true"><use href="/img/icons.svg#fa-youtube"/></svg>
+                </a>
+            </div>
+        </div>
+        <!-- Fim da Coluna de Links e Redes Sociais -->
+    </div>
+</div>
+<!-- Fim da Seção de Contatos e Redes Sociais -->
+
+<!-- Início da Barra de Navegação -->
+<nav class="wow fadeIn bg-dark navbar navbar-expand-lg navbar-light px-lg-5 py-lg-0 sticky-top"
+    data-wow-delay="0.1s">
+    <!-- Início do Link da Marca -->
+    <a href="/" class="ms-4 ms-lg-0 navbar-brand">
+        <div class="h1 text-primary m-0">
+            <img alt="Opportunity Painting & Renovation" width="210" height="64" class="me-3" src="/img/icons/icon-1.png">
+        </div>
+    </a>
+    <!-- Fim do Link da Marca -->
+
+    <!-- Início do Botão de Toggle para Mobile -->
+    <button class="me-4 navbar-toggler" type="button" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Fim do Botão de Toggle para Mobile -->
+
+    <!-- Início da Área de Links da Navegação -->
+    <div class="collapse justify-content-center navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav p-4 p-lg-0">
+            <!-- Início do Link Home -->
+            <a href="/" class={`nav-item nav-link ${activePage === 'home' ? 'active' : ''}`}>Home</a>
+            <!-- Fim do Link Home -->
+
+            <!-- Início do Link About -->
+            <a href="/about.html" class={`nav-item nav-link ${activePage === 'about' ? 'active' : ''}`}>About</a>
+            <!-- Fim do Link About -->
+
+            <!-- Início do Dropdown de Services -->
+            <div class="nav-item dropdown">
+                <a href="/#services" class={`nav-link dropdown-toggle ${activePage === 'services' || activePage?.startsWith('service-') || activePage === 'kitchen-renovation' || activePage === 'bathroom-renovation' || activePage === 'basement-renovation' ? 'active' : ''}`} data-bs-toggle="dropdown">Services</a>
+                <div class="m-0 border-0 dropdown-menu">
+                    <a href="/kitchen-renovation.html" class={`dropdown-item ${activePage === 'kitchen-renovation' ? 'active' : ''}`}>Kitchen Renovation</a>
+                    <a href="/bathroom-renovation.html" class={`dropdown-item ${activePage === 'bathroom-renovation' ? 'active' : ''}`}>Bathroom Renovation</a>
+                    <a href="/basement-renovation.html" class={`dropdown-item ${activePage === 'basement-renovation' ? 'active' : ''}`}>Basement Renovation</a>
+                    <a href="/service-kitchen-cabinet-refinishing.html" class={`dropdown-item ${activePage === 'service-kitchen-cabinet-refinishing' ? 'active' : ''}`}>Kitchen Cabinet Refinishing</a>
+                    <a href="/service-interior-painting.html" class={`dropdown-item ${activePage === 'service-interior-painting' ? 'active' : ''}`}>Interior Painting</a>
+                    <a href="/service-exterior-painting.html" class={`dropdown-item ${activePage === 'service-exterior-painting' ? 'active' : ''}`}>Exterior Painting</a>
+                    <a href="/service-commercial-painting.html" class={`dropdown-item ${activePage === 'service-commercial-painting' ? 'active' : ''}`}>Commercial Painting</a>
+                    <a href="/service-light-carpentry.html" class={`dropdown-item ${activePage === 'service-light-carpentry' ? 'active' : ''}`}>Light Carpentry</a>
+                </div>
+            </div>
+            <!-- Fim do Dropdown de Services -->
+
+            <!-- Início do Dropdown de Resources -->
+            <div class="nav-item dropdown">
+                <a href="#" class={`nav-link dropdown-toggle ${activePage === 'areas-we-serve' || activePage === 'testimonial' || activePage === 'request-free-quote' || activePage === 'terms-of-service' || activePage === 'privacy-policy' ? 'active' : ''}`} data-bs-toggle="dropdown">RESOURCES</a>
+                <div class="m-0 border-0 dropdown-menu">
+                    <a href="/areas-we-serve.html" class={`dropdown-item ${activePage === 'areas-we-serve' ? 'active' : ''}`}>Areas We Serve</a>
+                    <a href="/testimonial.html" class={`dropdown-item ${activePage === 'testimonial' ? 'active' : ''}`}>Testimonial</a>
+                    <a href="/request-free-quote.html" class={`dropdown-item ${activePage === 'request-free-quote' ? 'active' : ''}`}>Get A Free Quote</a>
+                    <a href="/terms-of-service.html" class={`dropdown-item ${activePage === 'terms-of-service' ? 'active' : ''}`}>Terms of Service</a>
+                    <a href="/privacy-policy.html" class={`dropdown-item ${activePage === 'privacy-policy' ? 'active' : ''}`}>Privacy Policy</a>
+                </div>
+            </div>
+            <!-- Fim do Dropdown de Resources -->
+
+            <!-- Início do Link Contact -->
+            <a href="/contact.html" class={`nav-item nav-link ${activePage === 'contact' ? 'active' : ''}`}>Contact</a>
+            <!-- Fim do Link Contact -->
+
+            <!-- Botões Rápidos no Menu Mobile -->
+            <div class="d-lg-none mt-3 pt-3 border-top border-secondary d-flex flex-column gap-2">
+                <a href="/request-free-quote.html" class="btn btn-primary w-100 py-2">Get A Free Quote</a>
+                <a href="sms:+15082159441?&body=Hi%20Ney,%20I'd%20like%20to%20request%20a%20free%20quote" class="btn btn-outline-light w-100 py-2 d-flex align-items-center justify-content-center text-center">
+                    Text US: (508) 215-9441
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Fim da Área de Links da Navegação -->
+
+    <!-- Início dos Botões de Ação da Navbar -->
+    <div class="d-none d-lg-flex align-items-center gap-2">
+        <a href="sms:+15082159441?&body=Hi%20Ney,%20I'd%20like%20to%20request%20a%20free%20quote%20for%20a%20project" 
+           class="btn btn-outline-light py-2 px-3 d-inline-flex align-items-center justify-content-center text-center" 
+           style="border-color: rgba(255, 255, 255, 0.3); font-size: 0.9rem;"
+           title="Send a text message directly to Ney">
+            Text US
+        </a>
+        <a href="/request-free-quote.html" class="btn btn-primary py-2 px-3" style="font-size: 0.95rem;">Get A Free Quote</a>
+    </div>
+    <!-- Fim dos Botões de Ação da Navbar -->
+</nav>
+<!-- Fim da Barra de Navegação -->

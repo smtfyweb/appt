@@ -1,0 +1,31 @@
+# Node & Astro
+node_modules/
+dist/
+.astro/
+
+# Logs & temp
+npm-debug.log*
+yarn-debug.log*
+.DS_Store
+Thumbs.db
+.env
+.env.*
+
+# Audit outputs & large backups
+*.tar.gz
+lh-*.json
+relatorio-B.txt
+shots/
+shots2/
+shots3/
+txt/
+audit-final.txt
+alturas-*.txt
+baseline-alturas.txt
+codigo-diag.txt
+debug-scan.txt
+diag.txt
+icones-uso.txt
+lh-diag.txt
+verif.txt
+kitchen_head.txt

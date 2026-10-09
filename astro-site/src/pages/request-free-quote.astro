@@ -1,0 +1,127 @@
+---
+import LayoutLive from '../layouts/LayoutLive.astro';
+import { getHousePainterSchema } from '../utils/schema';
+
+const housePainterSchema = getHousePainterSchema();
+---
+
+<LayoutLive
+  title="Free Painting &amp; Renovation Estimate, Holliston MA | Opportunity Painting"
+  description="Request a free estimate for interior &amp; exterior painting, cabinet refinishing, or complete kitchen, bathroom, and basement renovations in Holliston, MA and MetroWest."
+  canonical="https://www.opportunity-painting.com/request-free-quote.html"
+  keywords="Interior painting, Exterior painting, Kitchen renovation, Bathroom renovation, Basement renovation, Free Quote Holliston MA"
+  ogTitle="Free Painting &amp; Renovation Estimate, Holliston MA | Opportunity Painting"
+  ogDescription="Request a free estimate for interior &amp; exterior painting, cabinet refinishing, or complete kitchen, bathroom, and basement renovations in Holliston, MA and MetroWest."
+  ogUrl="https://www.opportunity-painting.com/request-free-quote.html"
+  ogImage="https://www.opportunity-painting.com/img/carousel-3.jpg"
+  chat={false}
+  activePage="request-free-quote"
+>
+  <Fragment slot="jsonld">
+    <!-- Início JSON-LD -->
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(housePainterSchema, null, 2)} />
+    <!-- Fim JSON-LD -->
+  </Fragment>
+
+    <!-- Início Conteúdo Principal -->
+    <div class="py-5 container-xxl">
+        <div class="container">
+            <div class="row g-5">
+
+                <!-- Início Coluna de Texto -->
+                <div class="wow col-lg-6 fadeInUp" data-wow-delay="0.1s">
+                    <div class="h4 section-title">Get A Free Quote</div>
+                    <h1 class="mb-4 display-5">Get a Free Painting &amp; Renovation Estimate in Holliston, MA</h1>
+                    <p class="mb-4">Discover how our painting and turnkey remodeling solutions make your home improvement projects smooth, elegant, and long-lasting.</p>
+                    <p class="mb-4">With over 15 years of industry experience, Opportunity Painting &amp; Renovation transforms spaces with precision, licensed craftsmanship (CSL &amp; HIC), and transparent pricing. Request a personalized estimate today.</p>
+
+                    <div class="row g-4">
+                        <!-- Início Contato - Telefone -->
+                        <div class="col-12">
+                            <div class="d-flex">
+                                <div class="align-items-center d-flex justify-content-center bg-light flex-shrink-0"
+                                    style="width:65px;height:65px">
+                                    <svg class="icon text-primary fa-2x" aria-hidden="true"><use href="/img/icons.svg#fa-phone-alt"/></svg>
+                                </div>
+                                <div class="ms-4">
+                                    <p class="mb-2">Call Us Now</p>
+                                    <h3 class="mb-0"><a href="tel:+15082159441" class="text-decoration-none text-dark">508 215 9441</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim Contato - Telefone -->
+
+
+                        <!-- Início Contato - E-mail -->
+                        <div class="col-12">
+                            <div class="d-flex">
+                                <div class="align-items-center d-flex justify-content-center bg-light flex-shrink-0"
+                                    style="width:65px;height:65px">
+                                    <svg class="icon text-primary fa-2x" aria-hidden="true"><use href="/img/icons.svg#fa-envelope-open"/></svg>
+                                </div>
+                                <div class="ms-4">
+                                    <p class="mb-2">Mail Us Now</p>
+                                    <h3 class="mb-0"><a href="mailto:office@opportunity-painting.com" class="text-decoration-none text-dark">office@opportunity-painting.com</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim Contato - E-mail -->
+                    </div>
+                </div>
+                <!-- Fim Coluna de Texto -->
+
+                <!-- Início Formulário de Contato -->
+                <div class="wow col-lg-6 fadeInUp" data-wow-delay="0.5s">
+                    <form action="https://formsubmit.co/office@opportunity-painting.com" method="POST">
+                        <input name="_captcha" type="hidden" value="false">
+                        <input name="_next" type="hidden"
+                            value="https://opportunity-painting.com/thank-you.html">
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6">
+                                <input name="name" class="form-control" placeholder="Your Name" aria-label="Your Name" type="text" autocomplete="name" required
+                                    style="height:55px">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input name="email" class="form-control" placeholder="Your Email" aria-label="Your Email" type="email" autocomplete="email" required
+                                    style="height:55px">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input name="mobile" class="form-control" placeholder="Your Mobile" aria-label="Your Mobile" type="tel" autocomplete="tel" required
+                                    style="height:55px">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <select class="form-select" name="service" aria-label="Choose Service" required style="height:55px">
+                                    <option value="" selected disabled>Choose Service</option>
+                                    <option value="Interior painting">Interior painting</option>
+                                    <option value="Exterior painting">Exterior painting</option>
+                                    <option value="Commercial painting">Commercial painting</option>
+                                    <option value="Kitchen cabinets refinishing">Kitchen cabinets refinishing</option>
+                                    <option value="Light carpentry">Light carpentry</option>
+                                    <option value="Kitchen renovation">Kitchen renovation</option>
+                                    <option value="Bathroom renovation">Bathroom renovation</option>
+                                    <option value="Basement renovation">Basement renovation</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="date" name="date" class="form-control" placeholder="Choose Date" aria-label="Choose Date" autocomplete="off" required style="height:55px">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="time" name="time" class="form-control" placeholder="Choose Time" aria-label="Choose Time" autocomplete="off" required style="height:55px">
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control" name="message"
+                                    placeholder="Please, provide a brief project description and your address for on-site estimates" aria-label="Please, provide a brief project description and your address for on-site estimates"
+                                    required rows="5"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary py-3 w-100" type="submit">Book Get A Free Quote</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Fim Formulário de Contato -->
+            </div>
+        </div>
+    </div>
+    <!-- Fim Conteúdo Principal -->
+</LayoutLive>

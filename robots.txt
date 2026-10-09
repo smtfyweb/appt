@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://opportunity-painting.com/sitemap.xml

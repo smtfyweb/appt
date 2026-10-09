@@ -1,0 +1,116 @@
+---
+import Layout from '../layouts/Layout.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+import FAQ from '../components/FAQ.astro';
+
+const interiorFaqs = [
+  {
+    question: "Do you move and protect heavy furniture before painting?",
+    answer: "Yes, our team carefully moves furniture to the center of each room, drapes it with clean plastic sheeting, and protects all hardwood or carpeted flooring with heavy drop cloths."
+  },
+  {
+    question: "Are your interior paints low or zero VOC?",
+    answer: "Yes, we exclusively apply zero-VOC and ultra-low-VOC paints from Benjamin Moore and Sherwin-Williams, ensuring minimal odor and healthy indoor air quality for your family and pets."
+  },
+  {
+    question: "How do you achieve sharp, crisp paint lines on baseboards and ceilings?",
+    answer: "We use professional-grade FrogTape or 3M delicate-surface painter's tape, paired with expert hand-cutting techniques and caulking along baseboards and crown molding for surgical precision."
+  }
+];
+
+const breadcrumbs = [
+  { name: "Home", url: "https://www.opportunity-painting.com/" },
+  { name: "Services", url: "/interior-exterior-painting.html" },
+  { name: "Interior Painting", url: "/service-interior-painting.html" }
+];
+---
+
+<Layout
+  title="Expert Interior Painting Services | Opportunity Painting Inc. - Holliston, MA"
+  description="Transform your home's interior with Opportunity Painting Inc. Precision drywall prep, smooth wall finishes, doors, and fine trim painting across MetroWest MA."
+  serviceName="Interior Painting Services"
+  serviceDescription="High-end interior painting for Massachusetts residences, including drywall patching, trim enameling, ceiling painting, and color consultations."
+  faqs={interiorFaqs}
+  breadcrumbs={breadcrumbs}
+>
+  <!-- Page Header -->
+  <section class="page-header py-5 bg-dark text-white position-relative">
+    <div class="container py-4">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <span class="badge-service">INTERIOR PAINTING SPECIALISTS</span>
+          <h1 class="text-white mb-3" style="font-size: 3.2rem;">
+            Precision Interior Painting in Holliston &amp; MetroWest MA
+          </h1>
+          <p class="text-light mb-4" style="font-size: 1.1rem;">
+            From single-room makeovers to full interior repaints. We combine dust-controlled drywall preparation, surgical trim enameling, and rich architectural color palettes.
+          </p>
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="#quote-section" class="btn btn-primary btn-lg">Request Free In-Home Estimate</a>
+            <a href="tel:+15082159441" class="btn btn-outline-light btn-lg">(508) 215-9441</a>
+          </div>
+        </div>
+        <div class="col-lg-5 mt-4 mt-lg-0">
+          <img 
+            src="/img/about-7.jpg" 
+            alt="Interior painter cutting in trim with precision" 
+            width="500" 
+            height="340" 
+            class="rounded shadow-lg w-100" 
+            style="object-fit: cover;" 
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Narrative -->
+  <section class="py-5">
+    <div class="container py-3">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <img 
+            src="/img/about-8.jpg" 
+            alt="Pristine interior living room painted in designer neutral colors" 
+            width="550" 
+            height="400" 
+            class="rounded shadow w-100" 
+            style="object-fit: cover;" 
+          />
+        </div>
+        <div class="col-lg-6">
+          <span class="badge-service">THE ART OF INTERIOR PAINTING</span>
+          <h2>Transforming Living Spaces With Style &amp; Dedication</h2>
+          <p>
+            When it comes to interior painting, perfection is in the preparation. At <strong>Opportunity Painting &amp; Renovation Services Inc.</strong>, we know that walls and trim reveal every flaw under natural light.
+          </p>
+          <p>
+            We take the time to scrape, patch, sand, and prime before applying topcoats. Whether highlighting architectural features with satin white trim enamels or infusing bedrooms with tranquil designer neutrals, our craftsmen deliver flawless, uniform coverage that stands the test of time.
+          </p>
+          <ul class="service-features mt-3" style="list-style: none; padding: 0;">
+            <li class="mb-2"><strong>✓ Complete Furniture &amp; Floor Masking:</strong> Zero paint splatters on your belongings.</li>
+            <li class="mb-2"><strong>✓ Comprehensive Plaster &amp; Drywall Repair:</strong> Erasing cracks, dents, and nail holes.</li>
+            <li class="mb-2"><strong>✓ Benjamin Moore &amp; Sherwin-Williams:</strong> Durable, washable, scuff-resistant formulas.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Section -->
+  <section id="quote-section" class="py-5 bg-light">
+    <div class="container py-3">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <QuoteForm 
+            title="Get a Free Interior Painting Estimate" 
+            subtitle="Tell us about the rooms you'd like to paint for a prompt written quote."
+            defaultService="Interior Painting"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={interiorFaqs} />
+</Layout>

@@ -1,0 +1,73 @@
+---
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  items: FAQItem[];
+}
+
+const {
+  title = "Frequently Asked Questions",
+  subtitle = "Clear answers about our renovation process, permits, pricing, and warranties.",
+  items = []
+} = Astro.props;
+---
+
+<section class="faq-section py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge-service">TRANSPARENCY FIRST</span>
+      <h2 class="mb-3">{title}</h2>
+      <p class="text-muted mx-auto" style="max-width: 650px;">{subtitle}</p>
+    </div>
+
+    <div class="faq-accordion mx-auto" style="max-width: 850px;">
+      {items.map((item, idx) => (
+        <details class="faq-item" open={idx === 0}>
+          <summary class="faq-header">
+            <span>{item.question}</span>
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </summary>
+          <div class="faq-content">
+            <p class="m-0">{item.answer}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-accordion details {
+    margin-bottom: 1rem;
+    border-radius: var(--border-radius);
+    background: #fff;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease;
+  }
+  .faq-accordion details[open] {
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-light);
+  }
+  .faq-accordion summary {
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+  }
+  .faq-accordion summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq-accordion details[open] .chevron {
+    transform: rotate(180deg);
+  }
+  .chevron {
+    transition: transform 0.2s ease;
+  }
+</style>

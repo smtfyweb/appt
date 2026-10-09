@@ -1,0 +1,101 @@
+---
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  defaultService?: string;
+}
+
+const {
+  title = "Request Your Free Estimate",
+  subtitle = "Tell us about your project. We respond promptly with detailed, transparent pricing.",
+  defaultService = "Interior Painting"
+} = Astro.props;
+
+const services = [
+  "Interior Painting",
+  "Exterior Painting",
+  "Commercial Painting",
+  "Kitchen Cabinets Refinishing",
+  "Light Carpentry",
+  "Kitchen Renovation",
+  "Bathroom Renovation",
+  "Basement Renovation"
+];
+---
+
+<div class="quote-form-card p-4 p-md-5">
+  <div class="text-center mb-4">
+    <span class="badge-service">FAST RESPONSE</span>
+    <h3 class="m-0" style="font-size: 2rem;">{title}</h3>
+    <p class="text-muted mt-2" style="font-size: 0.95rem;">{subtitle}</p>
+  </div>
+
+  <form 
+    action="https://formsubmit.co/office@opportunity-painting.com" 
+    method="POST" 
+    class="quote-form"
+    id="lead-quote-form"
+  >
+    <!-- FormSubmit Anti-Spam & Configuration -->
+    <input type="text" name="_honey" style="display:none;" />
+    <input type="hidden" name="_captcha" value="false" />
+    <input type="hidden" name="_subject" value="New Estimate Request - Opportunity Painting" />
+    <input type="hidden" name="_next" value="https://www.opportunity-painting.com/thank-you.html" />
+
+    <div class="row g-3">
+      <div class="col-md-6 form-group">
+        <label for="form-name" class="form-label">Full Name *</label>
+        <input type="text" id="form-name" name="name" class="form-control" placeholder="John Doe" required />
+      </div>
+
+      <div class="col-md-6 form-group">
+        <label for="form-phone" class="form-label">Phone Number *</label>
+        <input type="tel" id="form-phone" name="phone" class="form-control" placeholder="(508) 000-0000" required />
+      </div>
+
+      <div class="col-md-6 form-group">
+        <label for="form-email" class="form-label">Email Address *</label>
+        <input type="email" id="form-email" name="email" class="form-control" placeholder="john@example.com" required />
+      </div>
+
+      <div class="col-md-6 form-group">
+        <label for="form-service" class="form-label">Service Needed *</label>
+        <select id="form-service" name="service" class="form-select" required>
+          {services.map((srv) => (
+            <option value={srv} selected={srv === defaultService}>{srv}</option>
+          ))}
+        </select>
+      </div>
+
+      <div class="col-12 form-group">
+        <label for="form-message" class="form-label">Project Details &amp; Address / Town *</label>
+        <textarea 
+          id="form-message" 
+          name="message" 
+          class="form-control" 
+          rows="4" 
+          placeholder="Please describe your rooms, estimated square footage, timeline, or specific requirements..." 
+          required
+        ></textarea>
+      </div>
+
+      <div class="col-12 text-center mt-3">
+        <button type="submit" class="btn btn-primary px-5 py-3 w-100" style="font-size: 1.1rem; font-weight: 700;">
+          Send Estimate Request
+        </button>
+        <p class="text-muted mt-2 mb-0" style="font-size: 0.8rem;">
+          🔒 Your privacy is protected. We will never share your information.
+        </p>
+      </div>
+    </div>
+  </form>
+</div>
+
+<style>
+  .quote-form-card {
+    background: #FFFFFF;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-lg);
+  }
+</style>

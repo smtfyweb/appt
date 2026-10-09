@@ -1,0 +1,198 @@
+---
+import { siteConfig } from '../siteConfig';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  url?: string;
+  image?: string;
+  pageType?: 'WebSite' | 'AboutPage' | 'ContactPage' | 'Service' | 'ItemPage';
+  serviceName?: string;
+  serviceDescription?: string;
+  faqs?: Array<{ question: string; answer: string }>;
+  breadcrumbs?: Array<{ name: string; url: string }>;
+}
+
+const {
+  title = "Opportunity Painting And Renovation Services Inc.",
+  description = "Premier painting, cabinet refinishing, kitchen, bathroom, and basement renovation contractors in Holliston, MA.",
+  url = "https://www.opportunity-painting.com/",
+  image = "https://www.opportunity-painting.com/img/carousel-1.jpg",
+  serviceName,
+  serviceDescription,
+  faqs,
+  breadcrumbs
+} = Astro.props;
+
+const canonicalUrl = url.startsWith('http') ? url : `https://www.opportunity-painting.com${url}`;
+
+const orgCredentials = [
+  ...(siteConfig.credentials.hic ? [{
+    "@type": "EducationalOccupationalCredential",
+    "credentialCategory": "registration",
+    "name": "Massachusetts Home Improvement Contractor (HIC)",
+    "recognizedBy": {
+      "@type": "State",
+      "name": "Commonwealth of Massachusetts"
+    },
+    "identifier": `MA HIC #${siteConfig.credentials.hic}`
+  }] : []),
+  ...(siteConfig.credentials.epaLogo ? [{
+    "@type": "EducationalOccupationalCredential",
+    "credentialCategory": "certification",
+    "name": "EPA Lead-Safe Certified Firm",
+    "recognizedBy": {
+      "@type": "GovernmentOrganization",
+      "name": "Environmental Protection Agency (EPA)"
+    }
+  }] : [])
+];
+
+const founderCredentials = [
+  ...(siteConfig.credentials.csl ? [{
+    "@type": "EducationalOccupationalCredential",
+    "credentialCategory": "license",
+    "name": "Massachusetts Construction Supervisor License (CSL)",
+    "recognizedBy": {
+      "@type": "State",
+      "name": "Commonwealth of Massachusetts"
+    }
+  }] : [])
+];
+
+const sloganParts = ["Family-owned", "15+ Years Experience", "Fully insured", "Free estimates"];
+if (siteConfig.credentials.hic) sloganParts.splice(2, 0, `MA HIC #${siteConfig.credentials.hic}`);
+const dynamicSlogan = sloganParts.join(" · ");
+
+// Global Business Entity Data with Full Trust Credentials for SEO & AI (AEO/GEO)
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "https://www.opportunity-painting.com/#organization",
+  "name": "Opportunity Painting And Renovation Services Inc.",
+  "alternateName": "Opportunity Painting Inc.",
+  "url": "https://www.opportunity-painting.com/",
+  "logo": "https://www.opportunity-painting.com/img/icons/icon-1.png",
+  "image": image,
+  "description": "High-end residential and commercial painting, kitchen remodeling, bathroom renovation, basement finishing, and cabinet refinishing contractors serving Holliston and the MetroWest Boston area.",
+  "telephone": "+1-508-215-9441",
+  "email": "office@opportunity-painting.com",
+  "priceRange": "$$",
+  "slogan": dynamicSlogan,
+  "founder": {
+    "@type": "Person",
+    "name": "Juliney 'Ney' Santana",
+    "jobTitle": "Founder & General Contractor",
+    ...(founderCredentials.length > 0 ? { "hasCredential": founderCredentials } : {})
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "7 Franklin St",
+    "addressLocality": "Holliston",
+    "addressRegion": "MA",
+    "postalCode": "01746",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 42.200664,
+    "longitude": -71.420965
+  },
+  ...(orgCredentials.length > 0 ? { "hasCredential": orgCredentials } : {}),
+  "knowsAbout": [
+    "Residential Interior Painting",
+    "Exterior House Painting",
+    "Kitchen Remodeling",
+    "Bathroom Renovation",
+    "Finished Basements",
+    "Cabinet Spray Refinishing",
+    "Finish Carpentry",
+    "Commercial Facility Painting",
+    "Schluter Waterproofing Systems",
+    "Massachusetts Building Code Compliance"
+  ],
+  "areaServed": siteConfig.serviceAreas.map((city) => ({
+    "@type": "City",
+    "name": city,
+    "addressRegion": "MA"
+  })),
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "07:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday"],
+      "opens": "08:00",
+      "closes": "16:00"
+    }
+  ],
+  "sameAs": [
+    "http://www.instagram.com/opportunity_painting",
+    "https://www.facebook.com/profile.php?id=100050506784663",
+    "http://yelp.com/biz/opportunity-painting-holliston-3?hrid=FUbnm0Mtc4LOxRuI0VStiA&utm_campaign=bizapp_ios_review_share_popup&utm_medium=copy_link&utm_source=(direct)",
+    "https://wa.me/message/K3QVFUZOUZVXO1",
+    "https://www.youtube.com/channel/UC4Asa7w8FHFXJ0NzoZ4Xpyg",
+    "https://www.youtube.com/@opportunity-painting"
+  ]
+};
+
+// Optional Service Schema
+const serviceSchema = serviceName ? {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": serviceName,
+  "provider": {
+    "@type": "HomeAndConstructionBusiness",
+    "@id": "https://www.opportunity-painting.com/#organization",
+    "name": "Opportunity Painting And Renovation Services Inc."
+  },
+  "areaServed": {
+    "@type": "State",
+    "name": "Massachusetts"
+  },
+  "description": serviceDescription || description
+} : null;
+
+// Optional FAQPage Schema (crucial for AEO/GEO)
+const faqSchema = (faqs && faqs.length > 0) ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+} : null;
+
+// Optional Breadcrumbs Schema
+const breadcrumbsSchema = (breadcrumbs && breadcrumbs.length > 0) ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbs.map((crumb, index) => {
+    let itemUrl = crumb.url;
+    if (crumb.name === 'Home' || crumb.url === '/' || crumb.url === '/index.html') {
+      itemUrl = 'https://www.opportunity-painting.com/';
+    } else if (!crumb.url.startsWith('http')) {
+      itemUrl = `https://www.opportunity-painting.com${crumb.url.startsWith('/') ? crumb.url : `/${crumb.url}`}`;
+    }
+    return {
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": crumb.name,
+      "item": itemUrl
+    };
+  })
+} : null;
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+{serviceSchema && <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />}
+{faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+{breadcrumbsSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbsSchema)} />}

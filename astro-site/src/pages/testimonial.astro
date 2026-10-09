@@ -1,0 +1,116 @@
+---
+import LayoutLive from '../layouts/LayoutLive.astro';
+import { getHousePainterSchema, getBreadcrumbSchema } from '../utils/schema';
+
+const housePainterSchema = getHousePainterSchema();
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: "Home", url: "https://www.opportunity-painting.com/" },
+  { name: "RESOURCES", url: "https://www.opportunity-painting.com/testimonial.html" },
+  { name: "Testimonial", url: "https://www.opportunity-painting.com/testimonial.html" }
+]);
+---
+
+<LayoutLive
+  title="Customer Reviews | Opportunity Painting, Holliston, MA"
+  description="Read what customers say about Opportunity Painting in Holliston, MA, and find our reviews on Google and Yelp."
+  canonical="https://www.opportunity-painting.com/testimonial.html"
+  keywords="Interior painting, Exterior painting, Commercial painting, Light carpentry, Kitchen cabinets refinishing, Testimonial"
+  ogTitle="Customer Reviews | Opportunity Painting, Holliston, MA"
+  ogDescription="Read what customers say about Opportunity Painting in Holliston, MA, and find our reviews on Google and Yelp."
+  ogUrl="https://www.opportunity-painting.com/testimonial.html"
+  ogImage="https://www.opportunity-painting.com/img/carousel-3.jpg"
+  chat={false}
+  carousel={true}
+  activePage="testimonial"
+>
+  <Fragment slot="jsonld">
+    <!-- Início JSON-LD Schema -->
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(housePainterSchema, null, 2)} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbSchema, null, 2)} />
+    <!-- Fim JSON-LD Schema -->
+  </Fragment>
+
+    <!-- Início Cabeçalho da Página -->
+    <div class="wow fadeIn container-fluid mb-5 page-header py-5" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="text-white animated display-1 slideInDown">Customer Reviews</h1>
+            <nav aria-label="breadcrumb" class="animated slideInDown">
+                <ol class="mb-0 breadcrumb text-uppercase">
+                    <li class="breadcrumb-item"><a href="/" class="text-white">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#" class="text-white">RESOURCES</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Testimonial</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Fim Cabeçalho da Página -->
+
+    <!-- Início Testemunhos -->
+    <div class="py-5 container-xxl">
+        <div class="container">
+            <div class="text-center fadeInUp mb-5 mx-auto wow" data-wow-delay="0.1s" style="max-width: 600px;">
+                <div class="h4 section-title">Testimonial</div>
+                <h2 class="mb-4 display-5">Authentic Testimonials: Check them out on Google now!</h2>
+                <p class="text-muted">Over 15 years of trusted craftsmanship, customer dedication, and five-star reviews across MetroWest Massachusetts.</p>
+            </div>
+            <div class="wow fadeInUp owl-carousel testimonial-carousel" data-wow-delay="0.1s">
+                <div class="text-center testimonial-item"
+                    data-dot="<img class='img-fluid' src='/img/testimonial-1.jpg' alt='Katie McIntosh'>">
+                    <p class="fs-5">Opportunity Painting was exceptional in their customer care, communication and
+                        quality
+                        of workmanship. They were efficient and meticulous in their work, and kept the work area very
+                        clean throughout the two-day process. We are very pleased
+                        with the results (drywall repair and interior painting of walls and 20ft ceiling). We highly
+                        recommend OP and will certainly hire them again for our next painting project.
+                    </p>
+                    <h3>Katie McIntosh</h3>
+                    <span class="text-primary">Client</span>
+                </div>
+                <div class="text-center testimonial-item"
+                    data-dot="<img class='img-fluid' src='/img/testimonial-2.jpg' alt='Diane Healey'>">
+                    <p class="fs-5">Ney and his crew did an outstanding job on our kitchen cabinets. They were
+                        professional, respectful of our property, responsive and polite. I would definitely hire
+                        Opportunity Painting again.
+                    </p>
+                    <h3>Diane Healey</h3>
+                    <span class="text-primary">Client</span>
+                </div>
+                <div class="text-center testimonial-item"
+                    data-dot="<img class='img-fluid' src='/img/testimonial-3.jpg' alt='Jeffrey Coady'>">
+                    <p class="fs-5">These are the guys you want. We had three rooms done as well as a stairway and hall
+                        area. The work included stripping wallpaper, sheet rock patching, ceiling repair, plastering,
+                        skim coating, priming and two coats of paint. It turned out
+                        to be an eight-day project. The work was done to perfection, we couldn't have been happier. The
+                        people were easy to work with, diligent and hard working. We highly recommend Opportunity
+                        Painting.
+                    </p>
+                    <h3>Jeffrey Coady</h3>
+                    <span class="text-primary">Client</span>
+                </div>
+            </div>
+            <!-- Início Botões de Avaliações Externas -->
+            <div class="row g-3 justify-content-center mt-5 pt-3 text-center">
+                <div class="col-12 col-md-auto">
+                    <a href="https://www.google.com/search?q=opportunity+painting+reviews&rlz=1CDGOYI_enUS777US777&oq=opportunity+painting+reviews&aqs=chrome..69i57j0i546l5.954j0j4&hl=en-US&sourceid=chrome-mobile&ie=UTF-8#lkt=LocalPoiReviews&lpg=cid:CgIgAQ%3D%3D&trex=m_t:lcl_akp,rc_f"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-primary py-3 px-4">
+                        Read our reviews on Google
+                    </a>
+                </div>
+                <div class="col-12 col-md-auto">
+                    <a href="http://yelp.com/biz/opportunity-painting-holliston-3?hrid=FUbnm0Mtc4LOxRuI0VStiA&utm_campaign=bizapp_ios_review_share_popup&utm_medium=copy_link&utm_source=(direct)"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-primary py-3 px-4">
+                        Read our reviews on Yelp
+                    </a>
+                </div>
+                <div class="col-12 col-md-auto">
+                    <a href="https://www.homeadvisor.com/rated.OpportunityPaintingand.91196958.html"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-primary py-3 px-4">
+                        Read our reviews on HomeAdvisor
+                    </a>
+                </div>
+            </div>
+            <!-- Fim Botões de Avaliações Externas -->
+        </div>
+    </div>
+    <!-- Fim Testemunhos -->
+</LayoutLive>

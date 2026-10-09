@@ -1,0 +1,458 @@
+---
+import LayoutLive from '../layouts/LayoutLive.astro';
+import { getHousePainterSchema, getBreadcrumbSchema } from '../utils/schema';
+import { siteConfig } from '../siteConfig';
+
+const housePainterSchema = getHousePainterSchema();
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: "Home", url: "https://www.opportunity-painting.com/" },
+  { name: "Services", url: "https://www.opportunity-painting.com/#services" },
+  { name: "Exterior Painting", url: "https://www.opportunity-painting.com/service-exterior-painting.html" }
+]);
+---
+
+<LayoutLive
+  title="Exterior House Painting, Holliston MA | Opportunity Painting"
+  description="Exterior house painting in Holliston, MA and nearby towns like Framingham, Hopkinton and Medway: power washing, prep, rot repair and lasting finishes."
+  canonical="https://www.opportunity-painting.com/service-exterior-painting.html"
+  keywords="Exterior painting, House painting, Exterior house painting, Painting services"
+  ogTitle="Exterior House Painting, Holliston MA | Opportunity Painting"
+  ogDescription="Exterior house painting in Holliston, MA and nearby towns like Framingham, Hopkinton and Medway: power washing, prep, rot repair and lasting finishes."
+  ogUrl="https://www.opportunity-painting.com/service-exterior-painting.html"
+  ogImage="https://www.opportunity-painting.com/img/carousel-2.jpg"
+  chat={false}
+  activePage="service-exterior-painting"
+>
+  <Fragment slot="jsonld">
+    <!-- Estrutura de dados JSON-LD para SEO -->
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(housePainterSchema, null, 2)} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbSchema, null, 2)} />
+  </Fragment>
+
+    <!-- Início Página de Serviço -->
+    <div class="wow fadeIn container-fluid mb-5 page-header py-5" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="text-white animated display-1 slideInDown">Exterior House Painting in Holliston, MA</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="mb-0 breadcrumb text-uppercase">
+                    <li class="breadcrumb-item"><a href="/" class="text-white">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/#services" class="text-white">Services</a></li>
+                    <li class="text-primary active breadcrumb-item" aria-current="page">Exterior Painting</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Início Conteúdo Principal -->
+    <div class="py-5 container-xxl">
+        <div class="container">
+            <div class="row g-5">
+                <div class="wow col-lg-6 fadeInUp" data-wow-delay="0.1s">
+                    <div class="h4 section-title">Why Choose Opportunity Painting!!</div>
+                    <h2 class="mb-4 display-5">Discover Why Trusting Us is the Best Choice! Learn More About Our
+                        Expertise!</h2>
+                    <p class="mb-4">Enhance your home's allure with the most effective exterior house painting by
+                        Opportunity Painting. Backed by over 15 years of hands-on experience, we simplify the process, providing a hassle-free, headache-free makeover.
+                        Our skilled exterior painting professionals guarantee top-notch results, ensuring a final
+                        product you'll take pride in, making your neighbors envious.
+                    </p>
+
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Innovative Painting Techniques Icon" class="flex-shrink-0" src="/img/icons/icon-2.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Innovative Painting Techniques</h3>
+                                    <p class="mb-0">Revolutionize your home's exterior with our cutting-edge painting
+                                        techniques, meticulously applied for a flawless and enduring finish.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Advanced Solutions Icon" class="flex-shrink-0" src="/img/icons/icon-3.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Advanced Solutions</h3>
+                                    <p class="mb-0">Unlock visionary solutions that enhance your project. Our team
+                                        guarantees excellence in every detail.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Project Management Excellence Icon" class="flex-shrink-0" src="/img/icons/icon-4.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Project Management Excellence</h3>
+                                    <p class="mb-0">Embark on efficient project management. We oversee every detail,
+                                        allowing you to concentrate on your vision.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wow col-lg-6 fadeInUp" data-wow-delay="0.5s">
+                    <div class="feature-img">
+                        <img alt="Exterior Painting Sample 1" class="img-fluid" src="/img/about-9.jpg" loading="lazy" decoding="async">
+                        <img alt="Exterior Painting Sample 2" class="img-fluid" src="/img/about-10.jpg" loading="lazy" decoding="async">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim Conteúdo Principal -->
+
+    <!-- Início Container -->
+    <div class="container">
+        <!-- Início Row -->
+        <div class="row">
+            <!-- Início Coluna Principal -->
+            <div class="mx-auto col-md-10 mt-5">
+                <h2 class="mb-4 text-center">The Art of Exterior Painting</h2>
+                <div class="mb-4"></div>
+
+                <!-- Início Seção Introdução -->
+                <h2>Introduction</h2>
+                <p class="text-justify">
+                    Enhancing the exterior aesthetics of your home through painting is a strategic approach to elevate
+                    its curb appeal.
+                    At <a href="/"><strong>© Opportunity Painting And
+                            Services Inc.</strong></a>,
+                    we streamline the process, ensuring a hassle-free experience that yields remarkable results. Our
+                    team of seasoned professionals
+                    in exterior painting guarantees top-notch outcomes, instilling a sense of pride in your property and
+                    garnering admiration from your neighbors.
+                </p>
+
+                <p class="text-justify">
+                    Rotted trim or damaged siding should be repaired before it is painted, which is where our <a href="/service-light-carpentry.html">light carpentry</a> service comes in. For the inside of your home, see <a href="/service-interior-painting.html">interior painting</a>, or ask about <a href="/service-commercial-painting.html">commercial painting</a> for condo and multi-family properties.
+                </p>
+
+                <p class="text-justify">
+                    Based in Holliston at 7 Franklin St, we also serve Framingham, Hopkinton, Milford, Medway, Ashland, Sherborn, Millis, Dover and the surrounding MetroWest area. See all <a href="/areas-we-serve.html">areas we serve</a>, and follow our latest projects on <a href="https://www.instagram.com/opportunity_painting" target="_blank" rel="noopener noreferrer">Instagram</a>.
+                </p>
+                <div class="mb-4"></div>
+
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
+                    <h2 class="m-0">Exterior Painting Capabilities &amp; Specialized Solutions</h2>
+                </div>
+                
+                <p class="text-justify">
+                    Every New England home faces unique climate demands. Whether preserving historic clapboards or fortifying modern fiber cement siding against seasonal weather extremes, Opportunity Painting delivers tailored exterior solutions:
+                </p>
+
+                <div class="row g-4 my-3">
+                    <!-- Card 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Full Protection</span>
+                                <span class="possibility-num">01</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Clapboard &amp; Siding Repainting</h3>
+                            <p class="possibility-desc">
+                                Complete exterior coatings for cedar clapboards, shingles, and fiber-cement siding engineered to resist UV degradation, peeling, and moisture infiltration across all seasons.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Cedar Clapboard</span>
+                                <span class="possibility-tag">Wood Shingles</span>
+                                <span class="possibility-tag">Weather Barrier</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">100% Acrylic Latex</span>
+                                <span class="possibility-pill-box">Full Protection</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Architectural Trim</span>
+                                <span class="possibility-num">02</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Trim, Fascia &amp; Portico Detailing</h3>
+                            <p class="possibility-desc">
+                                Fine finish enameling on corner boards, eaves, soffits, window surrounds, and front porticos with crisp, high-contrast color delineation and smooth leveling.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Fascia &amp; Eaves</span>
+                                <span class="possibility-tag">Window Casings</span>
+                                <span class="possibility-tag">Satin &amp; Gloss</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Precision Masking</span>
+                                <span class="possibility-pill-box">Crisp Lines</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Carpentry Prep</span>
+                                <span class="possibility-num">03</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Wood Rot Repair &amp; Replacement</h3>
+                            <p class="possibility-desc">
+                                In-house carpenter services to excise rotted boards and replace compromised fascia, sills, and trim with rot-proof AZEK PVC or factory-primed cedar before painting.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">AZEK / PVC Trim</span>
+                                <span class="possibility-tag">Fascia &amp; Soffit</span>
+                                <span class="possibility-tag">Light Carpentry</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">MA CSL Licensed</span>
+                                <span class="possibility-pill-box">Rot Elimination</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Surface Clean</span>
+                                <span class="possibility-num">04</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Power Washing &amp; Prep</h3>
+                            <p class="possibility-desc">
+                                High-pressure cleaning with biodegradable detergents to eradicate mildew, algae, and chalking, followed by heavy scraping, feather sanding, and spot priming.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Mildew Removal</span>
+                                <span class="possibility-tag">Feather Sanding</span>
+                                <span class="possibility-tag">Bonding Primer</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Substrate Prep</span>
+                                <span class="possibility-pill-box">Maximum Adhesion</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Stain &amp; Seal</span>
+                                <span class="possibility-num">05</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Deck &amp; Porch Staining</h3>
+                            <p class="possibility-desc">
+                                Revitalize weathered pressure-treated, mahogany, and cedar decking with semi-transparent or solid protective stains that seal against snow, rain, and foot traffic.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Deck Restoration</span>
+                                <span class="possibility-tag">UV Protective Stain</span>
+                                <span class="possibility-tag">Slip Resistance</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Wood Preservation</span>
+                                <span class="possibility-pill-box">Deep Penetration</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Commercial &amp; HOA</span>
+                                <span class="possibility-num">06</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="9" y1="22" x2="9" y2="2"/><line x1="8" y1="6" x2="10" y2="6"/><line x1="14" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="10" y2="10"/><line x1="14" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="10" y2="14"/><line x1="14" y1="14" x2="16" y2="14"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Multi-Family &amp; Commercial</h3>
+                            <p class="possibility-desc">
+                                Professional exterior painting for condominiums, office buildings, retail facades, and residential complexes with coordinated staging and minimal tenant disruption.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Condo Complexes</span>
+                                <span class="possibility-tag">Commercial Facades</span>
+                                <span class="possibility-tag">Project Scheduling</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Fully Insured</span>
+                                <span class="possibility-pill-box">Safety Compliant</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Início Seção Metodologia Editorial -->
+                <div class="content-section my-5">
+                    <span class="section-title">METICULOUS METHODOLOGY</span>
+                    <h2 class="display-6 mt-1 mb-3">Our Methodology for Exterior Painting</h2>
+
+                    <div class="editorial-process">
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">01.</span> Transparent Estimation</h3>
+                            <p class="text-justify">
+                                When engaging <a href="/">Opportunity Painting</a> for your <strong><a href="/service-exterior-painting.html">Exterior House Painting</a></strong> needs, you'll collaborate directly with the owner, who will furnish a candid estimate encompassing the entire project with no concealed charges.
+                            </p>
+                            <ul>
+                                <li>The owner conducts an on-site assessment to gather project specifics</li>
+                                <li>A complimentary, no-obligation quote is provided</li>
+                                <li>Exterior painting is promptly scheduled</li>
+                                <li>A project timeline is communicated to you</li>
+                                <li>You select paint hues</li>
+                            </ul>
+                            <p class="text-justify">
+                                Given the uniqueness of each painting project, an accurate estimate can only be determined after an assessment of your home's condition and the scope of necessary work. This personalized approach ensures precise and comprehensive estimates for our clients.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">02.</span> Comprehensive Preparation</h3>
+                            <p class="text-justify">
+                                Recognizing the pivotal role of preparation in achieving impeccable paint finishes, the <a href="/">Opportunity Painting</a> team adheres to meticulous steps to prime all surfaces before commencing painting:
+                            </p>
+                            <ul>
+                                <li>Thorough surface washing to eliminate mildew or mold</li>
+                                <li>Elimination of loose paint through sanding</li>
+                                <li>Preparation of glossy areas through scuffing and sanding</li>
+                                <li>Gaps are filled with caulk to prevent water infiltration</li>
+                            </ul>
+                            <p class="text-justify">
+                                Every aspect of the preparatory phase for your exterior painting project is conducted meticulously, with utmost attention to detail and care for your property. We maintain constant communication throughout the project to ensure your comfort and satisfaction.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">03.</span> Proficient Painting and Methodical Cleanup</h3>
+                            <p class="text-justify">
+                                Following thorough surface preparation, the exterior painting process commences. Our adept team at <a href="/">Opportunity Painting</a> primes all painted surfaces to ensure uniformity and adheres to specific steps:
+                            </p>
+                            <ul>
+                                <li>Application of primer for consistent finish</li>
+                                <li>Use of premium-quality paints for durability</li>
+                                <li>Regular cleanup of tools and materials to maintain cleanliness</li>
+                                <li>Post-painting inspection with you to ensure complete satisfaction</li>
+                            </ul>
+                            <p class="text-justify">
+                                Our exterior painting services are tailored to minimize disruptions to your daily routine. Unable to be present during painting? Not an issue. We accommodate your schedule to ensure minimal interference.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Box: Serviços Relacionados (Crosslinks) -->
+                <div class="my-4">
+                    <h3>Explore Our Full Range of Home Enhancement Services</h3>
+                    <p class="text-justify">
+                        In addition to exterior painting, we also provide various other home enhancement services. Explore our
+                        <strong><a href="/service-interior-painting.html">interior painting</a></strong>,
+                        <strong><a href="/service-commercial-painting.html">commercial painting</a></strong>,
+                        <strong><a href="/service-light-carpentry.html">light carpentry</a></strong>,
+                        <strong><a href="/service-kitchen-cabinet-refinishing.html">kitchen cabinet refinishing</a></strong>,
+                        and complete <strong><a href="/kitchen-renovation.html">kitchen</a></strong>,
+                        <strong><a href="/bathroom-renovation.html">bathroom</a></strong>, and
+                        <strong><a href="/basement-renovation.html">basement renovations</a></strong>.
+                    </p>
+                </div>
+
+                <!-- Seção FAQ Accordion -->
+                <div class="faq-section mb-5">
+                    <div class="text-center mb-4">
+                        <span class="section-title">Answers &amp; Clarity</span>
+                        <h2 class="display-6 mt-1 mb-2">Frequently Asked Questions</h2>
+                    </div>
+
+                    <div class="faq-accordion">
+                        <details>
+                            <summary>How often should an exterior home in New England be repainted?</summary>
+                            <p class="faq-answer">
+                                Due to harsh New England winters and humid summers, wood siding typically requires professional repainting every 6 to 8 years, while stained shingles or decks benefit from refreshing every 3 to 5 years.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do you pressure-wash the exterior before painting?</summary>
+                            <p class="faq-answer">
+                                Yes, thorough power washing with eco-friendly cleaning detergents is our mandatory first step. It removes dirt, mildew, algae, and chalking paint, ensuring the surface is clean and ready for primer adhesion.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>What if you find rotten trim or wood siding during prep?</summary>
+                            <p class="faq-answer">
+                                Our team includes skilled light carpenters. We can remove rotted fascia, soffits, corner boards, or clapboards and replace them with rot-proof PVC (AZEK) or primed cedar before applying paint.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do you repair damaged wood before painting the outside of a house?</summary>
+                            <p class="faq-answer">
+                                Yes. Rotted trim and boards should be replaced before painting, because paint will not hold on damaged wood. We handle those repairs ourselves as part of our <a href="/service-light-carpentry.html">light carpentry</a> service, so the job stays with one team.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do you offer exterior painting in Framingham and nearby towns?</summary>
+                            <p class="faq-answer">
+                                Yes. We are based in Holliston and also serve Framingham, Hopkinton, Milford, Medway, Ashland, Sherborn, Millis, Dover, Medfield, Natick and Franklin. If you are not sure we cover your address, call us at (508) 215-9441.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do you offer free estimates and a warranty?</summary>
+                            <p class="faq-answer">
+                                Yes. We visit the property, talk through the work and give you a detailed quote at no cost. We also offer a written workmanship warranty, and the terms are detailed in your contract.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- Bloco de Citação / CTA -->
+                <div class="text-center my-4">
+                    <div class="h5 font-italic mb-3">Your home's exterior reflects its unique personality and style.</div>
+                    <div class="my-3 d-flex flex-wrap justify-content-center gap-2">
+                        <a href="/request-free-quote.html" class="btn btn-primary btn-lg px-4" style="height: 48px; line-height: 32px;">Get a Free Quote</a>
+                        <a href="sms:+15082159441?&body=Hi%20Ney,%20I'd%20like%20a%20free%20quote%20for%20an%20exterior%20painting%20project" class="btn btn-dark btn-lg px-4 d-inline-flex align-items-center justify-content-center text-center" style="height: 48px; line-height: 32px;">
+                            Text US
+                        </a>
+                    </div>
+                    <div class="text-muted small">
+                        By the <a href="/">© Opportunity Painting And Renovation Services Inc.</a> Team
+                    </div>
+                </div>
+
+            </div>
+            <!-- Fim Coluna Principal -->
+        </div>
+        <!-- Fim Row -->
+    </div>
+    <!-- Fim Container -->
+</LayoutLive>

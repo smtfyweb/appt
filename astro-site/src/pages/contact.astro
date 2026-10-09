@@ -1,0 +1,179 @@
+---
+import LayoutLive from '../layouts/LayoutLive.astro';
+import { getHousePainterSchema, getBreadcrumbSchema } from '../utils/schema';
+
+const housePainterSchema = getHousePainterSchema();
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: "Home", url: "https://www.opportunity-painting.com/" },
+  { name: "RESOURCES", url: "https://www.opportunity-painting.com/contact.html" },
+  { name: "Contact Us", url: "https://www.opportunity-painting.com/contact.html" }
+]);
+---
+
+<LayoutLive
+  title="Contact Opportunity Painting &amp; Renovation | Holliston, MA"
+  description="Contact Opportunity Painting &amp; Renovation at 7 Franklin St, Holliston, MA. Call (508) 215-9441 for free estimates on painting and kitchen, bathroom, and basement remodeling."
+  canonical="https://www.opportunity-painting.com/contact.html"
+  keywords="Interior painting, Exterior painting, Kitchen renovation, Bathroom renovation, Basement renovation, Holliston MA Contractor"
+  ogTitle="Contact Opportunity Painting &amp; Renovation | Holliston, MA"
+  ogDescription="Contact Opportunity Painting &amp; Renovation at 7 Franklin St, Holliston, MA. Call (508) 215-9441 for free estimates on painting and kitchen, bathroom, and basement remodeling."
+  ogUrl="https://www.opportunity-painting.com/contact.html"
+  ogImage="https://www.opportunity-painting.com/img/carousel-3.jpg"
+  chat={false}
+  activePage="contact"
+>
+  <Fragment slot="jsonld">
+    <!-- Início JSON-LD -->
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(housePainterSchema, null, 2)} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbSchema, null, 2)} />
+    <!-- Fim JSON-LD -->
+  </Fragment>
+
+    <!-- Início Seção de Cabeçalho da Página -->
+    <div class="wow fadeIn container-fluid mb-5 page-header py-5" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <!-- Início Título da Página -->
+            <h1 class="text-white animated display-1 slideInDown">Contact Opportunity Painting &amp; Renovation</h1>
+            <!-- Fim Título da Página -->
+
+            <!-- Início Navegação Breadcrumb -->
+            <nav aria-label="breadcrumb" class="animated slideInDown">
+                <ol class="mb-0 breadcrumb text-uppercase">
+                    <li class="breadcrumb-item">
+                        <a href="/" class="text-white">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#" class="text-white">RESOURCES</a>
+                    </li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">
+                        Contact Us
+                    </li>
+                </ol>
+            </nav>
+            <!-- Fim Navegação Breadcrumb -->
+        </div>
+    </div>
+    <!-- Fim Seção de Cabeçalho da Página -->
+
+    <!-- Início Seção de Contato -->
+    <div class="py-5 container-xxl">
+        <div class="container">
+            <!-- Início Título da Seção -->
+            <div class="wow fadeInUp mb-5 mx-auto text-center" data-wow-delay="0.1s" style="max-width:600px">
+                <div class="h4 section-title">Contact Us</div>
+                <h2 class="mb-4 display-5">If You Have Any Query, Please Feel Free Contact Us</h2>
+                <p class="text-muted">Backed by over 15 years of experience in painting and home renovations across Massachusetts, our team is ready to assist you.</p>
+            </div>
+            <!-- Fim Título da Seção -->
+
+            <!-- Início Linha de Contato -->
+            <div class="row g-5">
+                <!-- Início Informações de Contato -->
+                <div class="wow fadeInUp col-lg-6" data-wow-delay="0.1s">
+                    <div class="d-flex flex-column h-100 justify-content-between">
+                        <!-- Início Endereço -->
+                        <div class="align-items-center d-flex w-100 bg-light p-4 mb-4" style="border-radius: var(--radius-card-sm);">
+                            <div class="align-items-center d-flex justify-content-center flex-shrink-0"
+                                style="width:55px;height:55px;background:var(--primary);border-radius:var(--radius-sm)">
+                                <svg class="icon text-white fa-2x" style="width:24px;height:24px" aria-hidden="true"><use href="/img/icons.svg#fa-map-marker-alt"/></svg>
+                            </div>
+                            <div class="ms-4">
+                                <p class="mb-2">Address</p>
+                                <h3 class="mb-0">7 Franklin St, Holliston, MA 01746, United States</h3>
+                            </div>
+                        </div>
+                        <!-- Fim Endereço -->
+
+                        <!-- Início Telefone -->
+                        <div class="align-items-center d-flex w-100 bg-light p-4 mb-4" style="border-radius: var(--radius-card-sm);">
+                            <div class="align-items-center d-flex justify-content-center flex-shrink-0"
+                                style="width:55px;height:55px;background:var(--primary);border-radius:var(--radius-sm)">
+                                <svg class="icon text-white fa-2x" style="width:24px;height:24px" aria-hidden="true"><use href="/img/icons.svg#fa-phone-alt"/></svg>
+                            </div>
+                            <div class="ms-4">
+                                <p class="mb-2">Call Us Now</p>
+                                <h3 class="mb-0"><a href="tel:+15082159441" class="text-decoration-none text-dark">508 215 9441</a></h3>
+                            </div>
+                        </div>
+                        <!-- Fim Telefone -->
+
+                        <!-- Início E-mail -->
+                        <div class="align-items-center d-flex w-100 bg-light p-4" style="border-radius: var(--radius-card-sm);">
+                            <div class="align-items-center d-flex justify-content-center flex-shrink-0"
+                                style="width:55px;height:55px;background:var(--primary);border-radius:var(--radius-sm)">
+                                <svg class="icon text-white fa-2x" style="width:24px;height:24px" aria-hidden="true"><use href="/img/icons.svg#fa-envelope-open"/></svg>
+                            </div>
+                            <div class="ms-4">
+                                <p class="mb-2">Mail Us Now</p>
+                                <h3 class="mb-0"><a href="mailto:office@opportunity-painting.com" class="text-decoration-none text-dark">office@opportunity-painting.com</a></h3>
+                            </div>
+                        </div>
+                        <!-- Fim E-mail -->
+                    </div>
+                </div>
+                <!-- Fim Informações de Contato -->
+
+                <!-- Início Formulário de Contato -->
+                <div class="wow fadeInUp col-lg-6" data-wow-delay="0.5s">
+                    <form action="https://formsubmit.co/office@opportunity-painting.com" method="POST">
+                        <input name="_captcha" type="hidden" value="false">
+                        <input name="_next" type="hidden" value="https://opportunity-painting.com/thank-you.html">
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6">
+                                <input name="name" class="form-control" placeholder="Your Name" aria-label="Your Name" type="text" autocomplete="name" required
+                                    style="height:55px">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input name="email" class="form-control" placeholder="Your Email" aria-label="Your Email" type="email" autocomplete="email" required
+                                    style="height:55px">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input name="mobile" class="form-control" placeholder="Your Mobile" aria-label="Your Mobile" type="tel" autocomplete="tel" required
+                                    style="height:55px">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <select class="form-select" name="service" aria-label="Choose Service" required style="height:55px">
+                                    <option value="" selected disabled>Choose Service</option>
+                                    <option value="Interior painting">Interior painting</option>
+                                    <option value="Exterior painting">Exterior painting</option>
+                                    <option value="Commercial painting">Commercial painting</option>
+                                    <option value="Kitchen cabinets refinishing">Kitchen cabinets refinishing</option>
+                                    <option value="Light carpentry">Light carpentry</option>
+                                    <option value="Kitchen renovation">Kitchen renovation</option>
+                                    <option value="Bathroom renovation">Bathroom renovation</option>
+                                    <option value="Basement renovation">Basement renovation</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="date" name="date" class="form-control" placeholder="Choose Date" aria-label="Choose Date" autocomplete="off" required style="height:55px">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="time" name="time" class="form-control" placeholder="Choose Time" aria-label="Choose Time" autocomplete="off" required style="height:55px">
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control" name="message"
+                                    placeholder="Please, provide a brief project description and your address for on-site estimates" aria-label="Please, provide a brief project description and your address for on-site estimates"
+                                    required rows="5"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary py-3 w-100" type="submit">Book A Free Quote</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Fim Formulário de Contato -->
+
+            </div>
+            <!-- Fim Linha de Contato -->
+        </div>
+    </div>
+    <!-- Fim Seção de Contato -->
+
+    <!-- Início Map -->
+    <div class="wow fadeIn container-xxl pt-5 px-0" data-wow-delay="0.1s" style="border-radius: 4px; overflow: hidden;">
+        <iframe allowfullscreen aria-hidden="false" class="mb-n2 w-100"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.897198307526!2d-71.4517486!3d42.2028879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e40dc05e6244ab%3A0xa6d80d9f2a5e5c9c!2s6H2H%2B6J%20Holliston%2C%20Massachusetts%2C%20EUA!5e0!3m2!1sen!2sbr!4v1700000000000"
+            style="height:450px;border:0;border-radius:4px;" title="Map showing 7 Franklin St, Holliston, MA" loading="lazy" referrerpolicy="no-referrer-when-downgrade" tabindex="0"></iframe>
+    </div>
+    <!-- Fim Map -->
+</LayoutLive>

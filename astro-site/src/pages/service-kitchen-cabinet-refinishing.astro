@@ -1,0 +1,498 @@
+---
+import LayoutLive from '../layouts/LayoutLive.astro';
+import { getHousePainterSchema, getBreadcrumbSchema } from '../utils/schema';
+import { siteConfig } from '../siteConfig';
+
+const housePainterSchema = getHousePainterSchema();
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: "Home", url: "https://www.opportunity-painting.com/" },
+  { name: "Services", url: "https://www.opportunity-painting.com/#services" },
+  { name: "Kitchen Cabinets Refinishing", url: "https://www.opportunity-painting.com/service-kitchen-cabinet-refinishing.html" }
+]);
+---
+
+<LayoutLive
+  title="Cabinet Refinishing in Holliston, MA | Opportunity Painting"
+  description="Kitchen cabinet painting and refinishing in Holliston, MA and nearby Framingham, Hopkinton and Milford. A smooth, durable finish. Request a free estimate."
+  canonical="https://www.opportunity-painting.com/service-kitchen-cabinet-refinishing.html"
+  keywords="Kitchen cabinets refinishing, Cabinet refinishing, Cabinet painting, Kitchen renovation"
+  ogTitle="Cabinet Refinishing in Holliston, MA | Opportunity Painting"
+  ogDescription="Kitchen cabinet painting and refinishing in Holliston, MA and nearby Framingham, Hopkinton and Milford. A smooth, durable finish. Request a free estimate."
+  ogUrl="https://www.opportunity-painting.com/service-kitchen-cabinet-refinishing.html"
+  ogImage="https://www.opportunity-painting.com/img/carousel-3.jpg"
+  chat={false}
+  activePage="service-kitchen-cabinet-refinishing"
+>
+  <Fragment slot="jsonld">
+    <!-- JSON-LD Script -->
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(housePainterSchema, null, 2)} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbSchema, null, 2)} />
+  </Fragment>
+
+    <!-- Início Page Header -->
+    <div class="wow fadeIn container-fluid mb-5 page-header py-5" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="text-white animated display-1 slideInDown">Kitchen Cabinet Refinishing in Holliston, MA</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="mb-0 breadcrumb text-uppercase">
+                    <li class="breadcrumb-item">
+                        <a href="/" class="text-white">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="/#services" class="text-white">Services</a>
+                    </li>
+                    <li class="text-primary active breadcrumb-item" aria-current="page">Kitchen Cabinets Refinishing
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Fim Page Header -->
+
+    <!-- Início Content Section -->
+    <div class="py-5 container-xxl">
+        <div class="container">
+            <div class="row g-5">
+                <div class="wow col-lg-6 fadeInUp" data-wow-delay="0.1s">
+                    <div class="h4 section-title">CABINET REFINEMENT EXCELLENCE</div>
+                    <h2 class="mb-4 display-5">Elevate Your Space with Expert Cabinet Refinishing</h2>
+                    <p class="mb-4">
+                        Backed by over 15 years of fine finishing experience, transform your kitchen, bathroom, and custom cabinetry precisely with Opportunity
+                        Painting. Our enduring craftsmanship, premium paints, and meticulous restoration deliver modern
+                        appeal, cost-effective transformations, and home enhancement. Explore served cities for
+                        transformative cabinet renewals.
+                    </p>
+
+                    <div class="row g-4">
+                        <!-- Início Feature 1 -->
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Precision in Cabinet Refinishing Icon" class="flex-shrink-0" src="/img/icons/icon-2.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Precision in Cabinet Refinishing</h3>
+                                    <p class="mb-0">Experience precise cabinet refinishing at Opportunity Painting,
+                                        achieving a modern and refined appeal.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim Feature 1 -->
+
+                        <!-- Início Feature 2 -->
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Swift Transformations Icon" class="flex-shrink-0" src="/img/icons/icon-3.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Swift Transformations</h3>
+                                    <p class="mb-0">Swift and cost-effective transformations that minimize disruptions
+                                        in your kitchen space.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim Feature 2 -->
+
+                        <!-- Início Feature 3 -->
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Enduring Craftsmanship Icon" class="flex-shrink-0" src="/img/icons/icon-4.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Enduring Craftsmanship</h3>
+                                    <p class="mb-0">Benefit from enduring craftsmanship, premium paints, and meticulous
+                                        restoration for lasting home enhancement.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim Feature 3 -->
+                    </div>
+                </div>
+
+                <!-- Início Image Section -->
+                <div class="wow col-lg-6 fadeInUp" data-wow-delay="0.5s">
+                    <div class="feature-img">
+                        <img alt="Kitchen Cabinet Refinishing Sample 1" class="img-fluid" src="/img/about-15.jpg" loading="lazy" decoding="async">
+                        <img alt="Kitchen Cabinet Refinishing Sample 2" class="img-fluid" src="/img/about-16.jpg" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <!-- Fim Image Section -->
+            </div>
+        </div>
+    </div>
+    <!-- Fim Content Section -->
+
+    <!-- Início Container -->
+    <div class="container">
+        <!-- Início Row -->
+        <div class="row">
+            <!-- Início Coluna Principal -->
+            <div class="mx-auto col-md-10 mt-5">
+                <h2 class="mb-4 text-center">Enhance Your Kitchen with Professional Cabinet Painting</h2>
+                <div class="mb-4"></div>
+
+                <!-- Início Seção Introdução -->
+                <h2>Introduction</h2>
+                <p class="text-justify">
+                    Elevate the aesthetic appeal and sophistication of your kitchen with our expert
+                    <strong>kitchen cabinet painting</strong> services. At <a
+                        href="/">
+                        <strong>© Opportunity Painting And Renovation Services Inc.</strong></a>, we specialize in transforming
+                    outdated cabinets
+                    into stunning focal points that breathe new life into your kitchen space. Our skilled craftsmen
+                    utilize advanced
+                    techniques and premium materials to deliver flawless finishes that surpass your expectations.
+                </p>
+
+                <p class="text-justify">
+                    Considering a bigger change? See our <a href="/kitchen-renovation.html">kitchen renovation</a> service. Matching walls and trim can be refreshed with <a href="/service-interior-painting.html">interior painting</a>, and <a href="/service-light-carpentry.html">light carpentry</a> covers new moldings and repairs.
+                </p>
+
+                <p class="text-justify">
+                    Based in Holliston at 7 Franklin St, we also serve Framingham, Hopkinton, Milford, Medway, Ashland, Sherborn, Millis, Dover and the surrounding MetroWest area. See all <a href="/areas-we-serve.html">areas we serve</a>, and follow our latest projects on <a href="https://www.instagram.com/opportunity_painting" target="_blank" rel="noopener noreferrer">Instagram</a>.
+                </p>
+                <div class="mb-4"></div>
+                <!-- Fim Seção Introdução -->
+
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
+                    <h2 class="m-0">Cabinet Refinishing Capabilities &amp; Precision Solutions</h2>
+                </div>
+
+                <p class="text-justify">
+                    Transforming existing cabinetry is one of the highest-return investments in New England home renovation. Backed by over 15 years of fine finishing mastery, Opportunity Painting applies precision spray finishes that rival factory new cabinetry:
+                </p>
+
+                <div class="row g-4 my-3">
+                    <!-- Card 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Fine Finishing</span>
+                                <span class="possibility-num">01</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Factory-Grade Spray Finishes</h3>
+                            <p class="possibility-desc">
+                                High-volume low-pressure (HVLP) spray application delivering an ultra-smooth, mirror-like factory enamel finish without brush strokes or roller stipple.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">HVLP Spraying</span>
+                                <span class="possibility-tag">Zero Brush Marks</span>
+                                <span class="possibility-tag">Furniture Grade</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Catalyzed Urethane</span>
+                                <span class="possibility-pill-box">Mirror Finish</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Controlled Lab</span>
+                                <span class="possibility-num">02</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Off-Site Door &amp; Drawer Processing</h3>
+                            <p class="possibility-desc">
+                                Cabinet doors and drawer fronts are removed, labeled, and refinished in our dedicated dust-free spray booth facility under climate-controlled conditions.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Dust-Free Booth</span>
+                                <span class="possibility-tag">Precision Labeling</span>
+                                <span class="possibility-tag">Climate Controlled</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Dedicated Facility</span>
+                                <span class="possibility-pill-box">Surgical Prep</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Surface Prep</span>
+                                <span class="possibility-num">03</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Tannin &amp; Stain-Blocking Primers</h3>
+                            <p class="possibility-desc">
+                                Industrial bonding primers and shellac sealers lock in open wood grain and tannins, preventing bleed-through and ensuring an unbreakable bond with topcoats.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Shellac Primer</span>
+                                <span class="possibility-tag">Tannin Lock</span>
+                                <span class="possibility-tag">High Bonding</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Max Adhesion</span>
+                                <span class="possibility-pill-box">No Peeling</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Cabinetry Craft</span>
+                                <span class="possibility-num">04</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Hardware &amp; Soft-Close Upgrades</h3>
+                            <p class="possibility-desc">
+                                Complete modern hardware installation, filling obsolete screw holes, precision laser realignment, and upgrading standard hinges to whisper-quiet soft-close mechanisms.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Soft-Close Hinges</span>
+                                <span class="possibility-tag">Modern Pulls</span>
+                                <span class="possibility-tag">Laser Realignment</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Light Carpentry</span>
+                                <span class="possibility-pill-box">Custom Fit</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Color Styling</span>
+                                <span class="possibility-num">05</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 1 10 10c0 2.5-2 4.5-4.5 4.5h-1.5c-1 0-2 .8-2 1.8 0 .5.2 1 .5 1.4.3.4.5.9.5 1.3 0 1.1-.9 2-2 2-5.5 0-10-4.5-10-10S6.5 2 12 2z"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Custom Color Matching &amp; Lacquers</h3>
+                            <p class="possibility-desc">
+                                Endless color selections formulated with top-tier finishes like Benjamin Moore Advance and Sherwin-Williams Gallery Series, matched to your countertops and backsplash.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Benjamin Moore</span>
+                                <span class="possibility-tag">Sherwin-Williams</span>
+                                <span class="possibility-tag">Custom Palettes</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">100% Color Match</span>
+                                <span class="possibility-pill-box">Satin &amp; Semi-Gloss</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Smart Value</span>
+                                <span class="possibility-num">06</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">65% Savings vs. Full Replacement</h3>
+                            <p class="possibility-desc">
+                                Preserve solid wood maple, cherry, or oak boxes while saving 60% to 75% compared to full demolition, avoiding weeks of kitchen downtime and countertop disruption.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Cost-Effective</span>
+                                <span class="possibility-tag">10-15+ Year Life</span>
+                                <span class="possibility-tag">Fast Turnaround</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">MA HIC Reg.</span>
+                                <span class="possibility-pill-box">Smart Investment</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Início Seção Editorial: Kitchen Cabinet Services -->
+                <div class="content-section my-5">
+                    <span class="section-title">METICULOUS CABINET FINISHING</span>
+                    <h2 class="display-6 mt-1 mb-3">Kitchen Cabinet Services</h2>
+
+                    <h3>Specific Services</h3>
+                    <p class="text-justify">
+                        Our team at <a href="/"><strong>© Opportunity Painting And Renovation Services Inc.</strong></a> offers a range of specialized services tailored to meet your kitchen cabinet needs:
+                    </p>
+                    <ul>
+                        <li><strong><a href="/service-kitchen-cabinet-refinishing.html">Cabinet Transformation:</a></strong> Our expert painters can completely transform the look of your cabinets, updating them with fresh paint and modern hardware.</li>
+                        <li><strong><a href="/service-kitchen-cabinet-refinishing.html">Restoration and Painting:</a></strong> We restore the beauty of your cabinets with meticulous attention to detail, providing custom painting services to suit your preferences.</li>
+                        <li><strong><a href="/service-kitchen-cabinet-refinishing.html">High-Quality Finishes:</a></strong> Utilizing top-quality paints and stains, we ensure durable and long-lasting finishes that enhance the overall appearance of your kitchen.</li>
+                    </ul>
+
+                    <h3>Benefits of Our Services</h3>
+                    <p class="text-justify">
+                        When you choose <a href="/"><strong>© Opportunity Painting And Renovation Services Inc.</strong></a> for your kitchen cabinet painting needs, you benefit from:
+                    </p>
+                    <ul>
+                        <li>Professional consultation and personalized service</li>
+                        <li>Economical alternatives to cabinet replacement</li>
+                        <li>Durable finishes that stand the test of time</li>
+                        <li>Skilled craftsmanship and attention to detail</li>
+                    </ul>
+
+                    <div class="mt-5 mb-4">
+                        <span class="section-title">FACTORY-SMOOTH REGIMEN</span>
+                        <h2 class="display-6 mt-1 mb-3">Our 7-Step Factory-Smooth Refinishing Process</h2>
+                        <p class="text-justify mb-4">
+                            The difference between DIY cabinet painting and professional refinishing is our 7-step industrial finishing regimen:
+                        </p>
+
+                        <div class="editorial-process">
+                            <div class="editorial-step">
+                                <h3 class="editorial-step-title"><span class="step-num-accent">01.</span> Hardware Removal &amp; Labeling</h3>
+                                <p class="text-justify">
+                                    Removing all cabinet doors, drawer fronts, and hardware. Every component is indexed to ensure exact realignment during reinstallation.
+                                </p>
+                            </div>
+
+                            <div class="editorial-step">
+                                <h3 class="editorial-step-title"><span class="step-num-accent">02.</span> Deep Chemical Degreasing</h3>
+                                <p class="text-justify">
+                                    Cleaning surfaces with specialized degreasers to remove decades of airborne cooking oils, grease, and residue that impede coating adhesion.
+                                </p>
+                            </div>
+
+                            <div class="editorial-step">
+                                <h3 class="editorial-step-title"><span class="step-num-accent">03.</span> Mechanical Sanding &amp; Profiling</h3>
+                                <p class="text-justify">
+                                    Dustless orbital sanding of all woodwork to remove failing varnish and profile the wood grain for maximum mechanical bond.
+                                </p>
+                            </div>
+
+                            <div class="editorial-step">
+                                <h3 class="editorial-step-title"><span class="step-num-accent">04.</span> High-Adhesion Stain-Blocking Primer</h3>
+                                <p class="text-justify">
+                                    Applying industrial shellac or high-bonding bonding primer that locks in tannins, seals open wood pores, and establishes a rock-solid foundation.
+                                </p>
+                            </div>
+
+                            <div class="editorial-step">
+                                <h3 class="editorial-step-title"><span class="step-num-accent">05.</span> Inter-Coat Sanding &amp; Imperfection Fill</h3>
+                                <p class="text-justify">
+                                    Hand-sanding between coats and filling wood voids or dings with high-durability timber filler for a mirror-smooth tactile surface.
+                                </p>
+                            </div>
+
+                            <div class="editorial-step">
+                                <h3 class="editorial-step-title"><span class="step-num-accent">06.</span> Airless Spray Application of Enamel</h3>
+                                <p class="text-justify">
+                                    Spraying multiple coats of premium cabinet-grade polyurethane enamel (such as Benjamin Moore Advance or Renner wood coatings) for an enduring factory finish.
+                                </p>
+                            </div>
+
+                            <div class="editorial-step">
+                                <h3 class="editorial-step-title"><span class="step-num-accent">07.</span> Reassembly &amp; Hardware Upgrade</h3>
+                                <p class="text-justify">
+                                    Reinstalling doors and drawers with precision laser alignment, installing new handles or pulls, and upgrading hinges to soft-close if requested.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Box: Serviços Relacionados (Crosslinks) -->
+                <div class="my-4">
+                    <h3>Explore Our Full Range of Home Enhancement Services</h3>
+                    <p class="text-justify">
+                        Discover how we can further enhance your property with our complete range of services. For major culinary transformations, explore our turnkey <strong><a href="/kitchen-renovation.html">kitchen renovation</a></strong> services (open-concept wall removal, custom islands, and new countertops). We also specialize in luxury <strong><a href="/bathroom-renovation.html">bathroom renovation</a></strong>, finished <strong><a href="/basement-renovation.html">basement renovation</a></strong>, premier <strong><a href="/service-interior-painting.html">interior painting</a></strong>, durable <strong><a href="/service-exterior-painting.html">exterior painting</a></strong>, <strong><a href="/service-commercial-painting.html">commercial painting</a></strong>, and skilled <strong><a href="/service-light-carpentry.html">light carpentry</a></strong>.
+                    </p>
+                </div>
+
+                <!-- Seção FAQ Accordion -->
+                <div class="faq-section mb-5">
+                    <div class="text-center mb-4">
+                        <span class="section-title">Answers &amp; Clarity</span>
+                        <h2 class="display-6 mt-1 mb-2">Frequently Asked Questions</h2>
+                    </div>
+
+                    <div class="faq-accordion">
+                        <details>
+                            <summary>What is the difference between painting cabinets and cabinet refinishing?</summary>
+                            <p class="faq-answer">
+                                Regular house painting often relies on brush or roller application, which can leave brush strokes and chip easily. Our cabinet refinishing uses industrial spray systems with high-solids polyurethane/enamel coatings that create an ultra-durable, factory-smooth finish identical to brand-new high-end cabinets.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>How much money does cabinet refinishing save compared to replacing cabinets?</summary>
+                            <p class="faq-answer">
+                                Refinishing existing solid wood cabinet boxes and doors typically saves 60% to 75% compared to custom cabinet replacement, while avoiding weeks of kitchen downtime and countertop removal.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>How long does cabinet spray refinishing last?</summary>
+                            <p class="faq-answer">
+                                With proper care, our multi-coat catalyzed urethane finishes last 10 to 15+ years. They resist cooking grease, moisture, fingerprints, and household cleaning chemicals without chipping or peeling.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do you spray cabinet doors on-site in my home?</summary>
+                            <p class="faq-answer">
+                                No. We carefully remove all cabinet doors and drawer fronts, label each piece, and transport them to our controlled spray facility for degreasing, sanding, priming, and spray finishing. Only the exterior cabinet frame boxes are prepped and sprayed in your home inside a fully sealed plastic spray containment booth.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Can my cabinets be refinished, or do they need to be replaced?</summary>
+                            <p class="faq-answer">
+                                If the cabinet boxes are solid, refinishing can give them a new look without the cost and disruption of replacement. We will look at their condition and tell you honestly which option makes sense.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do you offer cabinet refinishing in Framingham and nearby towns?</summary>
+                            <p class="faq-answer">
+                                Yes. We are based in Holliston and also serve Framingham, Hopkinton, Milford, Medway, Ashland, Sherborn, Millis, Dover, Medfield, Natick and Franklin. If you are not sure we cover your address, call us at (508) 215-9441.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do you offer free estimates and a warranty?</summary>
+                            <p class="faq-answer">
+                                Yes. We visit the property, talk through the work and give you a detailed quote at no cost. We also offer a written workmanship warranty, and the terms are detailed in your contract.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- Bloco de Citação / CTA -->
+                <div class="text-center my-4">
+                    <div class="h5 font-italic mb-3">A flawless, factory-smooth finish that revitalizes your kitchen cabinetry.</div>
+                    <div class="my-3 d-flex flex-wrap justify-content-center gap-2">
+                        <a href="/request-free-quote.html" class="btn btn-primary btn-lg px-4" style="height: 48px; line-height: 32px;">Get a Free Quote</a>
+                        <a href="sms:+15082159441?&body=Hi%20Ney,%20I'd%20like%20a%20free%20quote%20for%20kitchen%20cabinet%20refinishing" class="btn btn-dark btn-lg px-4 d-inline-flex align-items-center justify-content-center text-center" style="height: 48px; line-height: 32px;">
+                            Text US
+                        </a>
+                    </div>
+                    <div class="text-muted small">
+                        By the <a href="/">© Opportunity Painting And Renovation Services Inc.</a> Team
+                    </div>
+                </div>
+                <!-- Fim Bloco de Citação -->
+            </div>
+            <!-- Fim Coluna Principal -->
+        </div>
+        <!-- Fim Row -->
+    </div>
+    <!-- Fim Container -->
+</LayoutLive>

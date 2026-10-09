@@ -1,0 +1,189 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import QuoteForm from '../../components/QuoteForm.astro';
+import FAQ from '../../components/FAQ.astro';
+
+const kitchenFaqs = [
+  {
+    question: "How long does a complete kitchen renovation take?",
+    answer: "A standard full kitchen remodel typically takes between 3 to 5 weeks from initial demolition to the final punch list walkthrough, depending on cabinet delivery schedules and custom countertop fabrication."
+  },
+  {
+    question: "Can Opportunity Painting help with kitchen layout changes?",
+    answer: "Yes. Our team handles non-structural and structural framing adjustments, wall removals to create open-concept living, island relocations, and custom pantry framing in full compliance with local Massachusetts building codes."
+  },
+  {
+    question: "Do you install both custom and prefabricated cabinetry?",
+    answer: "Yes, we expertly install both fully custom hardwood cabinetry and semi-custom prefabricated cabinet lines. We ensure laser-level alignment, soft-close hardware tuning, crown molding, and custom light rail detailing."
+  },
+  {
+    question: "Do you manage plumbing and electrical upgrades?",
+    answer: "Yes, all plumbing relocations (sinks, dishwashers, ice makers) and electrical installations (dedicated 20A appliance circuits, GFCI outlets, under-cabinet LED task lighting, recessed lighting) are coordinated by licensed Massachusetts tradespeople."
+  }
+];
+
+const scopeSteps = [
+  {
+    step: "01",
+    title: "Demolition & Site Preparation",
+    desc: "Careful removal of old cabinets, countertops, flooring, and appliances. We erect dust containment barriers and floor protection to safeguard adjacent rooms, followed by responsible debris disposal."
+  },
+  {
+    step: "02",
+    title: "Framing & Structural Adjustments",
+    desc: "Modifying or building new wall framing, installing solid blocking for heavy wall-mounted cabinets and islands, and preparing rough openings for windows or pantries."
+  },
+  {
+    step: "03",
+    title: "Electrical & Task Lighting",
+    desc: "Upgrading wiring to current MA electrical code. Adding dedicated circuits for high-draw appliances, installing GFCI outlets, recessed ceiling lights, and integrated under-cabinet lighting."
+  },
+  {
+    step: "04",
+    title: "Plumbing Relocation & Rough-Ins",
+    desc: "Relocating or modernizing water supply and drain lines for kitchen sinks, dishwashers, pot-fillers, and refrigerator ice makers. All connections are thoroughly leak-tested."
+  },
+  {
+    step: "05",
+    title: "Precision Cabinetry Installation",
+    desc: "Setting base, wall, and island cabinets with laser precision. Adding specialty storage organizers, pull-out spice racks, soft-close hardware, and finishing with custom crown molding."
+  },
+  {
+    step: "06",
+    title: "Countertops & Backsplash",
+    desc: "Digital laser templating, fabrication, and installation of premium granite, quartz, marble, or butcher block tops. Expert installation of tile, stone, or glass mosaic backsplashes with epoxy grout."
+  },
+  {
+    step: "07",
+    title: "Flooring Installation",
+    desc: "Subfloor leveling and moisture testing followed by the installation of luxury vinyl plank (LVP), hardwood, or porcelain floor tile with seamless transitions to adjoining rooms."
+  },
+  {
+    step: "08",
+    title: "Drywall, Painting & Detailing",
+    desc: "Drywall patching, skim coating, and application of premium moisture-resistant primer and two coats of Benjamin Moore or Sherwin-Williams paint on walls, ceilings, and architectural trim."
+  },
+  {
+    step: "09",
+    title: "Final Walkthrough & Turnover",
+    desc: "Deep cleaning of the kitchen, appliance commissioning, final hardware adjustments, and a comprehensive client walkthrough to ensure 100% satisfaction."
+  }
+];
+
+const breadcrumbs = [
+  { name: "Home", url: "https://www.opportunity-painting.com/" },
+  { name: "Services", url: "/interior-exterior-painting.html" },
+  { name: "Kitchen Renovation", url: "/kitchen-renovation.html" }
+];
+---
+
+<Layout
+  title="Kitchen Renovation Contractors | Opportunity Painting Inc. - Holliston, MA"
+  description="Professional kitchen remodeling in Holliston, MA & MetroWest Boston. Custom cabinets, quartz countertops, tile backsplashes, and layout adjustments. Call (508) 215-9441 for a free estimate."
+  serviceName="Kitchen Renovation and Remodeling"
+  serviceDescription="Full-service kitchen renovation including demolition, framing, plumbing, electrical, custom cabinetry, quartz countertops, tile backsplash, and fine finish carpentry."
+  faqs={kitchenFaqs}
+  breadcrumbs={breadcrumbs}
+>
+  <!-- Hero Section -->
+  <section class="page-header py-5 bg-dark text-white position-relative">
+    <div class="container py-4">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <span class="badge-service">KITCHEN REMODELING SPECIALISTS</span>
+          <h1 class="text-white mb-3" style="font-size: 3.2rem;">
+            Chef-Ready Kitchen Renovations in Holliston &amp; MetroWest MA
+          </h1>
+          <p class="text-light mb-4" style="font-size: 1.1rem;">
+            Transform your kitchen into a functional, beautiful culinary space tailored to your lifestyle. We manage every phase with obsessive attention to craftsmanship, cleanliness, and code compliance.
+          </p>
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="#quote-section" class="btn btn-primary btn-lg">Request Free In-Home Estimate</a>
+            <a href="tel:+15082159441" class="btn btn-outline-light btn-lg">(508) 215-9441</a>
+          </div>
+        </div>
+        <div class="col-lg-5 mt-4 mt-lg-0">
+          <img 
+            src="/img/about-10.jpg" 
+            alt="Beautifully renovated kitchen with modern white cabinets and island" 
+            width="500" 
+            height="340" 
+            class="rounded shadow-lg w-100" 
+            style="object-fit: cover;" 
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview Section -->
+  <section class="py-5">
+    <div class="container py-3">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <img 
+            src="/img/about-14.jpg" 
+            alt="Craftsman installing kitchen cabinetry in Massachusetts home" 
+            width="550" 
+            height="400" 
+            class="rounded shadow w-100" 
+            style="object-fit: cover;" 
+          />
+        </div>
+        <div class="col-lg-6">
+          <span class="badge-service">PROJECT OVERVIEW</span>
+          <h2>A Smarter Layout. Generous Storage. Designer Finishes.</h2>
+          <p>
+            Your kitchen is the true focal point of your home. It's where mornings begin, family dinners unfold, and friends gather. At <strong>Opportunity Painting And Renovation Services Inc.</strong>, we balance aesthetic elegance with ergonomic functionality.
+          </p>
+          <p>
+            Whether you want to open up your kitchen to an adjacent dining room, incorporate a generous center island with pendant lighting, or replace worn countertops with timeless quartz, our seasoned carpenters and trades deliver turnkey excellence with minimal disruption to your daily routine.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9-Step Scope of Work -->
+  <section class="py-5 bg-light">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <span class="badge-service">COMPREHENSIVE SCOPE OF WORK</span>
+        <h2>Our Step-by-Step Kitchen Renovation Process</h2>
+        <p class="text-muted mx-auto" style="max-width: 650px;">
+          We manage every stage with transparent scheduling, verified quality control, and strict building code standards.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        {scopeSteps.map((item) => (
+          <div class="col-md-6 col-lg-4">
+            <div class="p-4 bg-white rounded shadow-sm border h-100 d-flex flex-column">
+              <span class="text-primary font-weight-bold mb-2" style="font-size: 1.5rem; font-family: var(--font-heading);">{item.step}</span>
+              <h4 class="mb-2">{item.title}</h4>
+              <p class="text-muted m-0" style="font-size: 0.92rem;">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form Section -->
+  <section id="quote-section" class="py-5">
+    <div class="container py-3">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <QuoteForm 
+            title="Get a Free Kitchen Renovation Estimate" 
+            subtitle="Tell us about your kitchen project in Holliston or MetroWest MA for a free itemized proposal."
+            defaultService="Kitchen Renovation"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs for AEO/GEO -->
+  <FAQ items={kitchenFaqs} />
+</Layout>

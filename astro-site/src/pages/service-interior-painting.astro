@@ -1,0 +1,473 @@
+---
+import LayoutLive from '../layouts/LayoutLive.astro';
+import { getHousePainterSchema, getBreadcrumbSchema } from '../utils/schema';
+import { siteConfig } from '../siteConfig';
+
+const housePainterSchema = getHousePainterSchema();
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: "Home", url: "https://www.opportunity-painting.com/" },
+  { name: "Services", url: "https://www.opportunity-painting.com/#services" },
+  { name: "Interior Painting", url: "https://www.opportunity-painting.com/service-interior-painting.html" }
+]);
+---
+
+<LayoutLive
+  title="Interior Painting in Holliston, MA | Opportunity Painting"
+  description="Interior painting in Holliston, MA and nearby towns including Framingham, Hopkinton and Milford: walls, ceilings, trim and doors. Request a free estimate."
+  canonical="https://www.opportunity-painting.com/service-interior-painting.html"
+  keywords="Interior painting, House painting, Interior house painting, Painting services"
+  ogTitle="Interior Painting in Holliston, MA | Opportunity Painting"
+  ogDescription="Interior painting in Holliston, MA and nearby towns including Framingham, Hopkinton and Milford: walls, ceilings, trim and doors. Request a free estimate."
+  ogUrl="https://www.opportunity-painting.com/service-interior-painting.html"
+  ogImage="https://www.opportunity-painting.com/img/carousel-1.jpg"
+  chat={false}
+  activePage="service-interior-painting"
+>
+  <Fragment slot="jsonld">
+    <!-- Início do JSON-LD -->
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(housePainterSchema, null, 2)} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbSchema, null, 2)} />
+    <!-- Fim do JSON-LD -->
+  </Fragment>
+
+    <!-- Início Page Header -->
+    <div class="wow fadeIn container-fluid mb-5 page-header py-5" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="text-white animated display-1 slideInDown">Interior Painting in Holliston, MA</h1>
+
+            <!-- Início Breadcrumb -->
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="mb-0 breadcrumb text-uppercase">
+                    <li class="breadcrumb-item"><a href="/" class="text-white">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/#services" class="text-white">services</a></li>
+                    <li class="text-primary active breadcrumb-item" aria-current="page">Interior Painting</li>
+                </ol>
+            </nav>
+            <!-- Fim Breadcrumb -->
+        </div>
+    </div>
+    <!-- Fim Page Header -->
+
+    <!-- Início Main Content -->
+    <div class="py-5 container-xxl">
+        <div class="container">
+            <div class="row g-5">
+
+                <!-- Início Texto Principal -->
+                <div class="wow col-lg-6 fadeInUp" data-wow-delay="0.1s">
+                    <div class="h4 section-title">Expert Interior Painting</div>
+                    <h2 class="mb-4 display-5">Transforming Spaces with Precision!</h2>
+                    <p class="mb-4">Explore Opportunity Painting's expertise in Interior Painting services. Backed by over 15 years of experience, we transform
+                        spaces with precision and style, ensuring unparalleled quality. Discover why we are the trusted
+                        choice to bring interiors to life.
+                    </p>
+
+                    <!-- Início Benefícios -->
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Style and Dedication Icon" class="flex-shrink-0" src="/img/icons/icon-2.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Style and Dedication</h3>
+                                    <p class="mb-0">With an unwavering commitment to style and dedication, our interior
+                                        painting services stand out. Each brushstroke is an expression of excellence,
+                                        creating environments that reflect your personality.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Customized Transformation Icon" class="flex-shrink-0" src="/img/icons/icon-3.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Customized Transformation</h3>
+                                    <p class="mb-0">We offer a customized transformation for each interior painting
+                                        project. From planning to execution, we guarantee results that exceed
+                                        expectations, bringing comfort and beauty to every space.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Colors That Tell Stories Icon" class="flex-shrink-0" src="/img/icons/icon-4.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Colors That Tell Stories</h3>
+                                    <p class="mb-0">Our color palettes tell unique stories. Each shade is chosen with
+                                        precision to create an immersive atmosphere. Trust Opportunity Painting to bring
+                                        your interior painting ideas to life.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Benefícios -->
+                </div>
+                <!-- Fim Texto Principal -->
+
+                <!-- Início Imagens -->
+                <div class="wow col-lg-6 fadeInUp" data-wow-delay="0.5s">
+                    <div class="feature-img">
+                        <img alt="Interior Painting Sample 1" class="img-fluid" src="/img/about-7.jpg" loading="lazy" decoding="async">
+                        <img alt="Interior Painting Sample 2" class="img-fluid" src="/img/about-8.jpg" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <!-- Fim Imagens -->
+            </div>
+        </div>
+    </div>
+    <!-- Fim Main Content -->
+
+    <!-- Início Container Principal -->
+    <div class="container">
+        <!-- Início Linha -->
+        <div class="row">
+            <div class="mx-auto col-md-10 mt-5">
+                <h2 class="mb-4 text-center">The Art of Interior Painting: Transforming Spaces with Precision</h2>
+
+                <!-- Espaço para Margem -->
+                <div class="mb-4"></div>
+
+                <h2>Introduction</h2>
+                <p class="text-justify">
+                    When it comes to <strong><a
+                            href="/service-interior-painting.html">interior
+                            painting</a></strong>, attention to detail and precision are paramount.
+                    At <a href="/"><strong>© Opportunity Painting And
+                            Services Inc.</strong></a>, we understand the significance of the interior of your property
+                    and the impact it has on creating a welcoming and visually appealing environment.
+                    In this article, we'll delve into the intricacies of interior painting and how it can transform your
+                    space.
+                </p>
+
+                <p class="text-justify">
+                    Looking beyond walls and ceilings? We also offer <a href="/service-exterior-painting.html">exterior painting</a>, <a href="/service-commercial-painting.html">commercial painting</a>, <a href="/service-kitchen-cabinet-refinishing.html">kitchen cabinet refinishing</a> and <a href="/service-light-carpentry.html">light carpentry</a> for trim and repairs, as well as <a href="/kitchen-renovation.html">kitchen</a>, <a href="/bathroom-renovation.html">bathroom</a> and <a href="/basement-renovation.html">basement</a> renovations.
+                </p>
+
+                <p class="text-justify">
+                    Based in Holliston at 7 Franklin St, we also serve Framingham, Hopkinton, Milford, Medway, Ashland, Sherborn, Millis, Dover and the surrounding MetroWest area. See all <a href="/areas-we-serve.html">areas we serve</a>, and follow our latest projects on <a href="https://www.instagram.com/opportunity_painting" target="_blank" rel="noopener noreferrer">Instagram</a>.
+                </p>
+
+                <!-- Espaço para Margem -->
+                <div class="mb-4"></div>
+
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
+                    <h2 class="m-0">Interior Painting Capabilities &amp; Specialized Solutions</h2>
+                </div>
+                
+                <p class="text-justify">
+                    From single-room aesthetic transformations to comprehensive whole-home interior repaints, Opportunity Painting &amp; Renovation delivers surgical precision, clean worksites, and premium architectural coatings:
+                </p>
+
+                <div class="row g-4 my-3">
+                    <!-- Card 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Living Spaces</span>
+                                <span class="possibility-num">01</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Living &amp; Dining Room Makeovers</h3>
+                            <p class="possibility-desc">
+                                Create inviting, elegant gathering spaces with rich designer color palettes, crisp ceiling lines, and scuff-resistant Benjamin Moore or Sherwin-Williams finishes.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Feature Walls</span>
+                                <span class="possibility-tag">Designer Palettes</span>
+                                <span class="possibility-tag">Matte &amp; Eggshell</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Zero-VOC Formulas</span>
+                                <span class="possibility-pill-box">Uniform Coverage</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Private Suites</span>
+                                <span class="possibility-num">02</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Bedrooms &amp; Master Retreats</h3>
+                            <p class="possibility-desc">
+                                Infuse sleeping quarters with tranquil, restful tones. We use zero-VOC, odor-free paints so your family can sleep comfortably the same evening work concludes.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Tranquil Neutrals</span>
+                                <span class="possibility-tag">Odor-Free</span>
+                                <span class="possibility-tag">Smooth Sheens</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Eco-Friendly</span>
+                                <span class="possibility-pill-box">Same-Day Comfort</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Fine Woodwork</span>
+                                <span class="possibility-num">03</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Trim, Baseboards &amp; Doors</h3>
+                            <p class="possibility-desc">
+                                Flawless semi-gloss and satin enameling on interior door slabs, baseboards, window casings, crown molding, and wainscoting with surgical tape lines.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Baseboard Caulk</span>
+                                <span class="possibility-tag">Crown Molding</span>
+                                <span class="possibility-tag">Satin Enamels</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Precision Edge</span>
+                                <span class="possibility-pill-box">Durable Finish</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">High Ceilings</span>
+                                <span class="possibility-num">04</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Foyers &amp; Multi-Story Stairwells</h3>
+                            <p class="possibility-desc">
+                                Specialized interior staging and modular scaffolding to safely reach double-height entry foyers, vaulted ceilings, and complex open stairwells with zero mess.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Cathedral Ceilings</span>
+                                <span class="possibility-tag">Stairwell Staging</span>
+                                <span class="possibility-tag">Safe Scaffolding</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Fully Insured</span>
+                                <span class="possibility-pill-box">Zero-Fall Hazard</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Substrate Repair</span>
+                                <span class="possibility-num">05</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Plaster &amp; Drywall Restoration</h3>
+                            <p class="possibility-desc">
+                                Expert skim-coating, settling crack tape repairs, nail pop eradication, and water stain sealing before painting to ensure perfectly flat, seamless walls.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Level 4/5 Finish</span>
+                                <span class="possibility-tag">Crack Taping</span>
+                                <span class="possibility-tag">Stain Blocking</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Master Prep</span>
+                                <span class="possibility-pill-box">Seamless Walls</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Moisture Zones</span>
+                                <span class="possibility-num">06</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Kitchen &amp; Bath Anti-Mildew Finishes</h3>
+                            <p class="possibility-desc">
+                                Application of specialized moisture-resistant coatings (such as Benjamin Moore Aura Bath &amp; Spa) engineered to repel steam, condensation, and mildew growth.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Mildew Resistant</span>
+                                <span class="possibility-tag">Steam Repellent</span>
+                                <span class="possibility-tag">Washable Sheen</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Moisture Defense</span>
+                                <span class="possibility-pill-box">Long-Term Hygiene</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Início Seção Metodologia Editorial -->
+                <div class="content-section my-5">
+                    <span class="section-title">METICULOUS METHODOLOGY</span>
+                    <h2 class="display-6 mt-1 mb-3">Our Step-by-Step Interior Painting Methodology</h2>
+
+                    <div class="editorial-process">
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">01.</span> Color Selection</h3>
+                            <p class="text-justify">
+                                Choosing the right color sets the tone for the entire room. We guide our clients through the color
+                                selection process, ensuring they find the perfect shade that complements their style and enhances
+                                the ambiance of the space.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">02.</span> Protecting the Area</h3>
+                            <p class="text-justify">
+                                Before any paint touches the walls, we take meticulous care in protecting your furniture and floors.
+                                Using high-quality protective materials, we shield your belongings from any potential splatters or
+                                spills, ensuring a clean and seamless painting process.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">03.</span> Surface Preparation</h3>
+                            <p class="text-justify">
+                                A flawless paint job starts with proper surface preparation. Our skilled painters meticulously fill
+                                holes, seal cracks, and sand uneven surfaces to create a smooth canvas for painting. This attention
+                                to detail ensures a professional and long-lasting finish.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">04.</span> Application of Paint</h3>
+                            <p class="text-justify">
+                                Using premium quality paints and the latest techniques, we apply coats of paint evenly to achieve a
+                                flawless finish. Whether it's a flat, matte, or glossy finish, we work closely with our clients to
+                                meet their preferences and exceed their expectations.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">05.</span> Clean-Up</h3>
+                            <p class="text-justify">
+                                Once the painting is complete, we leave your space spotless. Our team takes care of removing all
+                                painting materials, cleaning surfaces, and ensuring your furniture is returned to its original
+                                position. We believe in leaving your home better than we found it.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">06.</span> Final Inspection</h3>
+                            <p class="text-justify">
+                                Before we consider the job complete, we conduct a thorough inspection of the painted surfaces. We
+                                walk through the space with our clients, addressing any concerns and ensuring their satisfaction
+                                with the results. Our goal is to deliver exceptional quality that stands the test of time.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Box: Serviços Relacionados (Crosslinks) -->
+                <div class="my-4">
+                    <h3>Explore Our Full Range of Home Enhancement Services</h3>
+                    <p class="text-justify">
+                        In addition to interior painting, we also offer a comprehensive portfolio of services to meet all your residential needs. Our
+                        <strong><a href="/service-exterior-painting.html">exterior painting</a></strong> service is designed to enhance curb appeal, while
+                        our <strong><a href="/service-commercial-painting.html">commercial painting</a></strong> service caters to businesses.
+                        For culinary spaces, explore our <strong><a href="/service-kitchen-cabinet-refinishing.html">kitchen cabinet refinishing</a></strong> or complete <strong><a href="/kitchen-renovation.html">kitchen renovation</a></strong>.
+                        We also deliver luxury <strong><a href="/bathroom-renovation.html">bathroom renovation</a></strong>, turnkey <strong><a href="/basement-renovation.html">basement renovation</a></strong>, and skilled <strong><a href="/service-light-carpentry.html">light carpentry</a></strong>.
+                    </p>
+                </div>
+
+                <!-- Seção FAQ Accordion -->
+                <div class="faq-section mb-5">
+                    <div class="text-center mb-4">
+                        <span class="section-title">Answers &amp; Clarity</span>
+                        <h2 class="display-6 mt-1 mb-2">Frequently Asked Questions</h2>
+                    </div>
+
+                    <div class="faq-accordion">
+                        <details>
+                            <summary>Do you move and protect heavy furniture before painting?</summary>
+                            <p class="faq-answer">
+                                Yes, our team carefully moves furniture to the center of each room, drapes it with clean plastic sheeting, and protects all hardwood or carpeted flooring with heavy drop cloths.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Are your interior paints low or zero VOC?</summary>
+                            <p class="faq-answer">
+                                Yes, we exclusively apply zero-VOC and ultra-low-VOC paints from Benjamin Moore and Sherwin-Williams, ensuring minimal odor and healthy indoor air quality for your family and pets.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>How do you achieve sharp, crisp paint lines on baseboards and ceilings?</summary>
+                            <p class="faq-answer">
+                                We use professional-grade FrogTape or 3M delicate-surface painter's tape, paired with expert hand-cutting techniques and caulking along baseboards and crown molding for surgical precision.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>How do you prepare walls before painting?</summary>
+                            <p class="faq-answer">
+                                Good paint starts with good preparation. We protect floors and furniture, repair holes and cracks, sand and prime where needed, and then apply the finish coats, cleaning up as we go.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do you offer interior painting in Framingham and nearby towns?</summary>
+                            <p class="faq-answer">
+                                Yes. We are based in Holliston and also serve Framingham, Hopkinton, Milford, Medway, Ashland, Sherborn, Millis, Dover, Medfield, Natick and Franklin. If you are not sure we cover your address, call us at (508) 215-9441.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do you offer free estimates and a warranty?</summary>
+                            <p class="faq-answer">
+                                Yes. We visit the property, talk through the work and give you a detailed quote at no cost. We also offer a written workmanship warranty, and the terms are detailed in your contract.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- Bloco de Citação / CTA -->
+                <div class="text-center my-4">
+                    <div class="h5 font-italic mb-3">Colors are the smiles of nature.</div>
+                    <div class="my-3 d-flex flex-wrap justify-content-center gap-2">
+                        <a href="/request-free-quote.html" class="btn btn-primary btn-lg px-4" style="height: 48px; line-height: 32px;">Get a Free Quote</a>
+                        <a href="sms:+15082159441?&body=Hi%20Ney,%20I'd%20like%20a%20free%20quote%20for%20an%20interior%20painting%20project" class="btn btn-dark btn-lg px-4 d-inline-flex align-items-center justify-content-center text-center" style="height: 48px; line-height: 32px;">
+                            Text US
+                        </a>
+                    </div>
+                    <div class="text-muted small">
+                        By the <a href="/">© Opportunity Painting And Renovation Services Inc.</a> Team
+                    </div>
+                </div>
+                <!-- Fim Bloco de Citação -->
+
+            </div>
+        </div>
+        <!-- Fim Linha -->
+    </div>
+    <!-- Fim Container Principal -->
+</LayoutLive>

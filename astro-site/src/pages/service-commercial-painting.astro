@@ -1,0 +1,419 @@
+---
+import LayoutLive from '../layouts/LayoutLive.astro';
+import { getHousePainterSchema, getBreadcrumbSchema } from '../utils/schema';
+import { siteConfig } from '../siteConfig';
+
+const housePainterSchema = getHousePainterSchema();
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: "Home", url: "https://www.opportunity-painting.com/" },
+  { name: "Services", url: "https://www.opportunity-painting.com/#services" },
+  { name: "Commercial Painting", url: "https://www.opportunity-painting.com/service-commercial-painting.html" }
+]);
+---
+
+<LayoutLive
+  title="Commercial Painters in Holliston, MA | Opportunity Painting"
+  description="Commercial painting in Holliston, Framingham and MetroWest, MA for businesses, condo associations and rental properties. Clean, scheduled work. Free estimates."
+  canonical="https://www.opportunity-painting.com/service-commercial-painting.html"
+  keywords="Commercial painting, Office painting, Condo painting, Warehouse painting, Metal structure painting"
+  ogTitle="Commercial Painters in Holliston, MA | Opportunity Painting"
+  ogDescription="Commercial painting in Holliston, Framingham and MetroWest, MA for businesses, condo associations and rental properties. Clean, scheduled work. Free estimates."
+  ogUrl="https://www.opportunity-painting.com/service-commercial-painting.html"
+  ogImage="https://www.opportunity-painting.com/img/carousel-3.jpg"
+  chat={false}
+  activePage="service-commercial-painting"
+>
+  <Fragment slot="jsonld">
+    <!-- Início Schema Markup -->
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(housePainterSchema, null, 2)} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbSchema, null, 2)} />
+    <!-- Fim Schema Markup -->
+  </Fragment>
+
+    <!-- Início Page Header -->
+    <div class="wow fadeIn container-fluid mb-5 page-header py-5" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="text-white animated display-1 slideInDown">Commercial Painting in Holliston, MA</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="mb-0 breadcrumb text-uppercase">
+                    <li class="breadcrumb-item"><a href="/" class="text-white">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/#services" class="text-white">Services</a></li>
+                    <li class="text-primary active breadcrumb-item" aria-current="page">Commercial Painting</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Fim Page Header -->
+
+    <!-- Início Content Section -->
+    <div class="py-5 container-xxl">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Início Left Column -->
+                <div class="wow col-lg-6 fadeInUp" data-wow-delay="0.1s">
+                    <div class="h4 section-title">Expert Commercial Painting Services</div>
+                    <h2 class="mb-4 display-5">Transform Your Commercial Property with Opportunity Painting &amp;
+                        Services</h2>
+                    <p class="mb-4">
+                        Enhance the aesthetics of your commercial property with Opportunity Painting &amp; Services.
+                        With
+                        over 15 years of experience, we specialize in interior and exterior painting for offices,
+                        condos, warehouses, and metal structures. We ensure personalized attention, overseeing every
+                        step from color selection to the final inspection. With a flexible schedule to minimize
+                        disruptions, we address damages and apply multiple coats, ensuring exceptional results.
+                    </p>
+
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Pro Painting Services Icon" class="flex-shrink-0" src="/img/icons/icon-2.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Pro Painting Services</h3>
+                                    <p class="mb-0">Delve into our expertise in commercial painting, boasting over 15
+                                        years of experience for exceptional results, transforming properties with
+                                        professionalism and precision.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Color Consultation Icon" class="flex-shrink-0" src="/img/icons/icon-3.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Color Consultation</h3>
+                                    <p class="mb-0">Elevate your space with expert color advice, ensuring a vibrant and
+                                        professional ambiance that aligns with your commercial vision.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Efficient Scheduling Icon" class="flex-shrink-0" src="/img/icons/icon-4.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Efficient Scheduling</h3>
+                                    <p class="mb-0">Optimize your timeline with our flexible scheduling, minimizing
+                                        disruptions while delivering top-notch commercial painting services on time.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fim Left Column -->
+
+                <!-- Início Right Column -->
+                <div class="wow col-lg-6 fadeInUp" data-wow-delay="0.5s">
+                    <div class="feature-img">
+                        <img alt="Commercial Painting Sample 1" class="img-fluid" src="/img/about-11.jpg" loading="lazy" decoding="async">
+                        <img alt="Commercial Painting Sample 2" class="img-fluid" src="/img/about-12.jpg" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <!-- Fim Right Column -->
+            </div>
+        </div>
+    </div>
+    <!-- Fim Content Section -->
+
+    <!-- Início Container -->
+    <div class="container">
+        <!-- Início Row -->
+        <div class="row">
+            <!-- Início Coluna Principal -->
+            <div class="mx-auto col-md-10 mt-5">
+                <!-- Título Principal -->
+                <h2 class="mb-4 text-center"><strong>Commercial Painting Services:</strong> Elevating Your Business
+                    Aesthetics</h2>
+                <!-- Espaço vazio -->
+                <div class="mb-4"></div>
+
+                <!-- Seção Introdução -->
+                <h2>Introduction</h2>
+                <p class="text-justify">
+                    When it comes to <strong><a href="/service-commercial-painting.html">commercial
+                            painting</a></strong>,
+                    professionalism and precision are paramount. At <a
+                        href="/"><strong>© Opportunity Painting And
+                            Services Inc.</strong></a>,
+                    we recognize the importance of maintaining a visually appealing business environment. In this
+                    segment, we'll explore the extensive range of commercial painting services tailored to elevate your
+                    business aesthetics.
+                </p>
+
+                <p class="text-justify">
+                    We paint homes inside and out as well: see <a href="/service-interior-painting.html">interior painting</a> and <a href="/service-exterior-painting.html">exterior painting</a>. For repairs before painting, our <a href="/service-light-carpentry.html">light carpentry</a> service covers trim and woodwork.
+                </p>
+
+                <p class="text-justify">
+                    Based in Holliston at 7 Franklin St, we also serve Framingham, Hopkinton, Milford, Medway, Ashland, Sherborn, Millis, Dover and the surrounding MetroWest area. See all <a href="/areas-we-serve.html">areas we serve</a>, and follow our latest projects on <a href="https://www.instagram.com/opportunity_painting" target="_blank" rel="noopener noreferrer">Instagram</a>.
+                </p>
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
+                    <h2 class="m-0">Commercial Painting Capabilities &amp; Specialized Sectors</h2>
+                </div>
+                
+                <p class="text-justify">
+                    In the commercial realm, coating durability, brand aesthetics, and strict project timelines are paramount. Opportunity Painting delivers turnkey commercial painting solutions tailored to business facilities across MetroWest Massachusetts:
+                </p>
+
+                <div class="row g-4 my-3">
+                    <!-- Card 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Multi-Family</span>
+                                <span class="possibility-num">01</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Condos &amp; HOA Communities</h3>
+                            <p class="possibility-desc">
+                                Exterior siding, trim, common stairwells, and clubhouse repainting for condominium associations with phased scheduling to respect resident peace.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">HOA Common Areas</span>
+                                <span class="possibility-tag">Hallway Corridors</span>
+                                <span class="possibility-tag">Resident Scheduling</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Fully Insured &amp; COI</span>
+                                <span class="possibility-pill-box">Minimal Disruption</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Corporate</span>
+                                <span class="possibility-num">02</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Corporate Offices &amp; Suites</h3>
+                            <p class="possibility-desc">
+                                Clean, brand-aligned workspaces, conference rooms, and reception foyers painted with zero-VOC, ultra-low odor paints to keep employees productive.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Conference Rooms</span>
+                                <span class="possibility-tag">Zero-VOC Paints</span>
+                                <span class="possibility-tag">Brand Colors</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Night Shifts Available</span>
+                                <span class="possibility-pill-box">Zero Downtime</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Retail</span>
+                                <span class="possibility-num">03</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Retail Stores &amp; Showrooms</h3>
+                            <p class="possibility-desc">
+                                Eye-catching retail facades, storefronts, and display floor walls designed to welcome shoppers with high-durability, scuff-resistant paint coatings.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Storefront Facades</span>
+                                <span class="possibility-tag">Display Areas</span>
+                                <span class="possibility-tag">Scuff Defense</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Rapid Turnaround</span>
+                                <span class="possibility-pill-box">Retail Ready</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Healthcare</span>
+                                <span class="possibility-num">04</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Medical &amp; Healthcare Clinics</h3>
+                            <p class="possibility-desc">
+                                Strict hygienic protocols using anti-microbial, washable commercial coatings engineered for patient examination rooms, dental clinics, and wellness centers.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Anti-Microbial</span>
+                                <span class="possibility-tag">Sterile Washable</span>
+                                <span class="possibility-tag">Odorless</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Clinical Grade</span>
+                                <span class="possibility-pill-box">Hygienic Finish</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Industrial</span>
+                                <span class="possibility-num">05</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M5 20V8l5 4V8l5 4V4h4v16"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Warehouses &amp; Light Industrial</h3>
+                            <p class="possibility-desc">
+                                High-durability coatings for distribution centers, manufacturing floors, safety walkways, metal structural framing, and dryfall ceiling coatings.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Dryfall Ceilings</span>
+                                <span class="possibility-tag">Safety Striping</span>
+                                <span class="possibility-tag">Epoxy Coatings</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Industrial Duty</span>
+                                <span class="possibility-pill-box">Heavy Traffic</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Hospitality</span>
+                                <span class="possibility-num">06</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Hospitality &amp; Restaurants</h3>
+                            <p class="possibility-desc">
+                                Atmosphere-enhancing interior and exterior coatings for restaurants, bistros, hotels, and event venues executed during off-hours with spotless handoffs.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Dining Rooms</span>
+                                <span class="possibility-tag">Bar Enameling</span>
+                                <span class="possibility-tag">Off-Hour Staging</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Turnkey Clean</span>
+                                <span class="possibility-pill-box">Ready for Guests</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Início Seção Tipos de Pintura Comercial Editorial -->
+                <div class="content-section my-5">
+                    <span class="section-title">COMMERCIAL STANDARDS &amp; EXECUTION</span>
+                    <h2 class="display-6 mt-1 mb-3">Understanding the Process</h2>
+
+                    <div class="editorial-process">
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">01.</span> Types of Commercial Painting</h3>
+                            <p class="text-justify">
+                                The requirements of commercial painting projects demand a disciplined approach from inception to
+                                completion. Our team of commercial painting experts is dedicated to delivering superior quality and
+                                professional results across various business sectors and building types, including:
+                            </p>
+                            <ul>
+                                <li><strong><a href="/service-interior-painting.html">Condominiums and Apartments</a></strong></li>
+                                <li><strong><a href="/service-exterior-painting.html">Industrial Facilities</a></strong></li>
+                                <li><strong><a href="/service-commercial-painting.html">Retail Spaces</a></strong></li>
+                                <li><strong><a href="/service-light-carpentry.html">Healthcare Facilities</a></strong></li>
+                                <li><strong><a href="/service-kitchen-cabinet-refinishing.html">Hospitality Establishments</a></strong></li>
+                                <li><strong><a href="/service-light-carpentry.html">Educational Institutions</a></strong></li>
+                                <li><strong><a href="/service-light-carpentry.html">Entertainment and Recreation Venues</a></strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Box: Serviços Relacionados (Crosslinks) -->
+                <div class="my-4">
+                    <h3>Explore Our Full Range of Home &amp; Commercial Services</h3>
+                    <p class="text-justify">
+                        In addition to commercial painting, we offer a comprehensive range of residential services. Our <strong><a href="/service-interior-painting.html">interior painting</a></strong> transforms indoor ambiance, while our <strong><a href="/service-exterior-painting.html">exterior painting</a></strong> protects and enhances curb appeal. For complete home upgrades, explore our licensed <strong><a href="/kitchen-renovation.html">kitchen renovation</a></strong>, <strong><a href="/bathroom-renovation.html">bathroom renovation</a></strong>, and <strong><a href="/basement-renovation.html">basement renovation</a></strong> solutions, along with <strong><a href="/service-light-carpentry.html">light carpentry</a></strong> and <strong><a href="/service-kitchen-cabinet-refinishing.html">kitchen cabinet refinishing</a></strong>.
+                    </p>
+                </div>
+
+                <!-- Seção FAQ Accordion -->
+                <div class="faq-section mb-5">
+                    <div class="text-center mb-4">
+                        <span class="section-title">Answers &amp; Clarity</span>
+                        <h2 class="display-6 mt-1 mb-2">Frequently Asked Questions</h2>
+                    </div>
+
+                    <div class="faq-accordion">
+                        <details>
+                            <summary>Can Opportunity Painting work overnight or on weekends to avoid business downtime?</summary>
+                            <p class="faq-answer">
+                                Yes, we offer flexible night and weekend scheduling for commercial offices, retail shops, medical clinics, and corporate facilities so your employees and clients experience zero operational disruption.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do you provide Certificate of Insurance (COI) for property managers?</summary>
+                            <p class="faq-answer">
+                                Yes, we regularly issue customized Certificates of Insurance (COI) naming property managers, HOAs, or building owners as additional insureds prior to commencing any commercial job.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do you paint condominiums and rental properties?</summary>
+                            <p class="faq-answer">
+                                Yes. We work with condo associations and rental property owners, and we plan the schedule with you to keep disruption to residents and tenants as low as possible.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do you offer commercial painting in Framingham and nearby towns?</summary>
+                            <p class="faq-answer">
+                                Yes. We are based in Holliston and also serve Framingham, Hopkinton, Milford, Medway, Ashland, Sherborn, Millis, Dover, Medfield, Natick and Franklin. If you are not sure we cover your address, call us at (508) 215-9441.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do you offer free estimates and a warranty?</summary>
+                            <p class="faq-answer">
+                                Yes. We visit the property, talk through the work and give you a detailed quote at no cost. We also offer a written workmanship warranty, and the terms are detailed in your contract.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- Bloco de Citação / CTA -->
+                <div class="text-center my-4">
+                    <div class="h5 font-italic mb-3">Elevate Your Business Aesthetics with Professional Painting Services.</div>
+                    <div class="my-3 d-flex flex-wrap justify-content-center gap-2">
+                        <a href="/request-free-quote.html" class="btn btn-primary btn-lg px-4" style="height: 48px; line-height: 32px;">Get a Free Quote</a>
+                        <a href="sms:+15082159441?&body=Hi%20Ney,%20I'd%20like%20a%20free%20quote%20for%20a%20commercial%20painting%20project" class="btn btn-dark btn-lg px-4 d-inline-flex align-items-center justify-content-center text-center" style="height: 48px; line-height: 32px;">
+                            Text US
+                        </a>
+                    </div>
+                    <div class="text-muted small">
+                        By the <a href="/">© Opportunity Painting And Renovation Services Inc.</a> Team
+                    </div>
+                </div>
+            </div>
+            <!-- Fim Coluna Principal -->
+        </div>
+        <!-- Fim Row -->
+    </div>
+    <!-- Fim Container -->
+</LayoutLive>

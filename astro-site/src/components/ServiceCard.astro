@@ -1,0 +1,82 @@
+---
+export interface Props {
+  title: string;
+  image: string;
+  description: string;
+  link: string;
+  badge?: string;
+  features?: string[];
+}
+
+const {
+  title,
+  image,
+  description,
+  link,
+  badge,
+  features = []
+} = Astro.props;
+---
+
+<div class="card-service">
+  <div class="card-service-img-wrapper">
+    <img 
+      src={image} 
+      alt={`${title} by Opportunity Painting Inc.`} 
+      width="400" 
+      height="260" 
+      loading="lazy" 
+      decoding="async"
+    />
+    {badge && <span class="card-badge">{badge}</span>}
+  </div>
+  <div class="card-service-body">
+    <h3>{title}</h3>
+    <p>{description}</p>
+    {features.length > 0 && (
+      <ul class="service-features my-3">
+        {features.map((feat) => (
+          <li>
+            <svg class="check-icon me-2" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="3">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>{feat}</span>
+          </li>
+        ))}
+      </ul>
+    )}
+    <div class="mt-auto pt-3">
+      <a href={link} class="btn btn-outline-primary w-100">
+        Learn More &amp; Scope
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .card-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--dark);
+    color: var(--white);
+    padding: 0.3rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    border-left: 3px solid var(--primary);
+  }
+  .service-features {
+    list-style: none;
+    padding: 0;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+  }
+  .service-features li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.4rem;
+  }
+</style>

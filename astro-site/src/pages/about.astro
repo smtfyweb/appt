@@ -1,0 +1,249 @@
+---
+import LayoutLive from '../layouts/LayoutLive.astro';
+import { getHousePainterSchema, getBreadcrumbSchema } from '../utils/schema';
+
+const housePainterSchema = getHousePainterSchema();
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: "Home", url: "https://www.opportunity-painting.com/" },
+  { name: "RESOURCES", url: "https://www.opportunity-painting.com/about.html" },
+  { name: "About", url: "https://www.opportunity-painting.com/about.html" }
+]);
+---
+
+<LayoutLive
+  title="About Opportunity Painting | Painters in Holliston, MA"
+  description="Family-owned painters in Holliston, MA, led by owner Juliney Santana. Interior and exterior painting, carpentry and kitchen cabinet refinishing."
+  canonical="https://www.opportunity-painting.com/about.html"
+  keywords="Interior painting, Exterior painting, Commercial painting, Light carpentry, Kitchen cabinets refinishing"
+  ogTitle="About Opportunity Painting | Painters in Holliston, MA"
+  ogDescription="Family-owned painters in Holliston, MA, led by owner Juliney Santana. Interior and exterior painting, carpentry and kitchen cabinet refinishing."
+  ogUrl="https://www.opportunity-painting.com/about.html"
+  ogImage="https://www.opportunity-painting.com/img/carousel-3.jpg"
+  chat={false}
+  activePage="about"
+>
+  <Fragment slot="jsonld">
+    <!-- JSON-LD Script -->
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(housePainterSchema, null, 2)} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbSchema, null, 2)} />
+  </Fragment>
+
+    <!-- Início About Us Header -->
+    <div class="wow fadeIn container-fluid mb-5 page-header py-5" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="text-white animated display-1 slideInDown">About Opportunity Painting</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="mb-0 breadcrumb text-uppercase">
+                    <li class="breadcrumb-item"><a href="/" class="text-white">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#" class="text-white">RESOURCES</a></li>
+                    <li class="text-primary active breadcrumb-item" aria-current="page">About</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Fim About Us Header -->
+
+    <!-- Início About Us Content -->
+    <div class="py-5 container-xxl">
+        <div class="container">
+            <div class="row g-5">
+                <div class="wow fadeIn col-lg-6" data-wow-delay="0.1s">
+                    <div class="about-img">
+                        <img alt="Opportunity Painting Interior Project" src="/img/about-3.jpg" class="img-fluid" loading="lazy" decoding="async">
+                        <img alt="Opportunity Painting Exterior Project" src="/img/about-4.jpg" class="img-fluid" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <div class="wow fadeIn col-lg-6" data-wow-delay="0.5s">
+                    <div class="h4 section-title">About Us</div>
+                    <h2 class="mb-4 display-5">Experts in Transforming Spaces</h2>
+                    <p>Welcome to Opportunity Painting, industry leaders in painting and carpentry with over 15 years of
+                        solid experience. As a family-owned business, we've earned a reputation for unwavering
+                        excellence and dedication to our clients.</p>
+                    <p>Our expertise spans premier interior and exterior painting, full kitchen renovations, luxury bathroom remodeling, finished basements, custom kitchen cabinet refinishing, architectural light carpentry, and commercial projects. Choosing Opportunity Painting &amp; Renovation Services means opting for agile, reliable, and impeccable craftsmanship backed by licensed oversight on every project.</p>
+                    <p class="mb-4">Our transparent, no-hidden-cost estimates underscore our commitment to customer
+                        satisfaction. Transform your space with us; schedule a consultation to discover how we uniquely
+                        and exceptionally meet your needs.</p>
+                    <div class="d-flex align-items-center mb-5 years-exp">
+                        <div class="d-flex align-items-center justify-content-center border border-4 border-primary flex-shrink-0 rounded-3"
+                            style="width:120px;height:120px">
+                            <div class="display-1 h1 mb-n2" data-toggle="counter-up">15</div>
+                        </div>
+                        <div class="ps-4">
+                            <div class="h3 mb-0">Years</div>
+                            <div class="h3 mb-0">Working</div>
+                            <div class="h3 mb-0">Experience</div>
+                        </div>
+                    </div>
+                    <a href="/contact.html" class="btn btn-primary px-5 py-3">Read More<span class="visually-hidden"> about Opportunity Painting</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim About Us Content -->
+
+    <!-- Início Seção de Fatos -->
+    <div class="py-5 container-xxl">
+        <div class="container pt-5">
+            <div class="row g-4">
+
+                <!-- Início Fato: Mission -->
+                <div class="wow fadeInUp col-lg-4 col-md-6" data-wow-delay="0.1s">
+                    <div class="h-100 bg-light fact-item p-5 pt-0 text-center">
+                        <div class="fact-icon"><img alt="Mission Icon" src="/img/icons/icon-2.png" loading="lazy" decoding="async"></div>
+                        <h3 class="mb-3">Mission</h3>
+                        <p class="mb-0">Artistry and excellence in home transformation. We're dedicated to crafting
+                            inspiring spaces, delivering enduring beauty and structural integrity you deserve.</p>
+                    </div>
+                </div>
+                <!-- Fim Fato: Mission -->
+
+                <!-- Início Fato: Vision -->
+                <div class="wow fadeInUp col-lg-4 col-md-6" data-wow-delay="0.3s">
+                    <div class="h-100 bg-light fact-item p-5 pt-0 text-center">
+                        <div class="fact-icon"><img alt="Vision Icon" src="/img/icons/icon-3.png" loading="lazy" decoding="async"></div>
+                        <h3 class="mb-3">Vision</h3>
+                        <p class="mb-0">Redefining residential painting and turnkey home remodeling. The trusted choice for elevating aesthetic
+                            standards and functional living for our clients across Massachusetts.</p>
+                    </div>
+                </div>
+                <!-- Fim Fato: Vision -->
+
+                <!-- Início Fato: Values -->
+                <div class="wow fadeInUp col-lg-4 col-md-6" data-wow-delay="0.5s">
+                    <div class="h-100 bg-light fact-item p-5 pt-0 text-center">
+                        <div class="fact-icon"><img alt="Values Icon" src="/img/icons/icon-4.png" loading="lazy" decoding="async"></div>
+                        <h3 class="mb-3">Values</h3>
+                        <p class="mb-0">Simply excellence. Our commitment to quality, trust, and beauty shines in every
+                            stroke, surpassing expectations in every project.</p>
+                    </div>
+                </div>
+                <!-- Fim Fato: Values -->
+
+            </div>
+        </div>
+    </div>
+    <!-- Fim Seção de Fatos -->
+
+    <!-- Início Seção Licenças e Seguros -->
+    <div class="py-5 container-xxl">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="wow fadeInUp col-lg-6" data-wow-delay="0.1s">
+                    <div class="h4 section-title">Licenses &amp; Insurance</div>
+                    <h2 class="mb-4 display-5">Full Protection &amp; State Compliance in Massachusetts</h2>
+                    <p class="mb-4">
+                        In the State of Massachusetts, residential contractors are required to hold proper licenses and comprehensive insurance to perform any work on residential properties, protecting both your property and the workers on site.
+                    </p>
+                    <p class="mb-4">
+                        Opportunity Painting &amp; Renovation Services Inc. meets and exceeds all state requirements. Our founder and owner, <strong>Juliney Santana</strong>, personally holds the necessary state licenses: <strong>Construction Supervisor License (CSL)</strong> and <strong>Home Improvement Contractor (HIC)</strong> registration.
+                    </p>
+                    <div class="border-start border-5 border-primary ps-4 mb-4">
+                        <h3 class="h5 mb-2">Standard of Care</h3>
+                        <p class="mb-0 text-muted">
+                            Opportunity Painting &amp; Renovation Services Inc. warrants that all services will be performed by qualified personnel who possess the necessary competency in accordance with applicable industry standards, manufacturer specifications, and Massachusetts state codes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="wow fadeInUp col-lg-6" data-wow-delay="0.5s">
+                    <div class="bg-light p-4 p-sm-5 rounded">
+                        <h3 class="mb-4">Coverage &amp; Certifications</h3>
+
+                        <div class="d-flex align-items-start mb-4">
+                            <svg class="icon text-primary me-3 flex-shrink-0 mt-1" style="width:22px;height:22px;" aria-hidden="true"><use href="/img/icons.svg#bi-check-circle"/></svg>
+                            <div>
+                                <h4 class="h6 mb-1">$2,000,000 General Liability</h4>
+                                <p class="mb-0 text-muted small">Carries full liability insurance coverage of up to $2,000,000, along with property damage insurance to safeguard your home.</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start mb-4">
+                            <svg class="icon text-primary me-3 flex-shrink-0 mt-1" style="width:22px;height:22px;" aria-hidden="true"><use href="/img/icons.svg#bi-check-circle"/></svg>
+                            <div>
+                                <h4 class="h6 mb-1">$1,000,000 Workers' Compensation</h4>
+                                <p class="mb-0 text-muted small">Comprehensive workman's compensation coverage protecting every craftsman and technician on your property.</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start mb-4">
+                            <svg class="icon text-primary me-3 flex-shrink-0 mt-1" style="width:22px;height:22px;" aria-hidden="true"><use href="/img/icons.svg#bi-check-circle"/></svg>
+                            <div>
+                                <h4 class="h6 mb-1">CSL License &amp; HIC Registration</h4>
+                                <p class="mb-0 text-muted small">Owner Juliney Santana holds an active Massachusetts Construction Supervisor License (CSL) and Home Improvement Contractor (HIC) registration.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-3 bg-white border border-primary rounded">
+                            <p class="mb-0 small text-dark">
+                                <strong>Certificate of Insurance (COI):</strong> A certified Certificate of Insurance can be provided directly to the homeowner/client prior to the commencement of work and before any payments are made.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim Seção Licenças e Seguros -->
+
+    <!-- Início Seção: Why Choose Us -->
+    <div class="py-5 container-xxl">
+        <div class="container">
+            <div class="row g-5">
+
+                <!-- Início Coluna: Texto -->
+                <div class="wow fadeInUp col-lg-6" data-wow-delay="0.1s">
+                    <div class="h4 section-title">Why Choose Us!</div>
+                    <h2 class="mb-4 display-5">Why You Should Trust Us? Learn More About Us!</h2>
+                    <p class="mb-4">Trust in our reliable expertise and innovative solutions that set Opportunity
+                        Painting apart. Efficient project management and technical mastery define our approach. Rely on
+                        our proven track record and unparalleled quality. Learn more about the excellence we deliver.
+                    </p>
+
+                    <!-- Início Lista de Benefícios -->
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Technical Efficiency Icon" src="/img/icons/icon-2.png" class="flex-shrink-0" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Technical Efficiency</h3>
+                                    <p class="mb-0">We transform spaces with precision, ensuring reliable solutions.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Commitment to Quality Icon" src="/img/icons/icon-3.png" class="flex-shrink-0" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Commitment to Quality</h3>
+                                    <p class="mb-0">Reliability and quality define our solid track record.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Excellence in Project Management Icon" src="/img/icons/icon-4.png" class="flex-shrink-0" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Excellence in Project Management</h3>
+                                    <p class="mb-0">We manage projects efficiently, ensuring exceptional results.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Lista de Benefícios -->
+                </div>
+                <!-- Fim Coluna: Texto -->
+
+                <!-- Início Coluna: Imagem -->
+                <div class="wow fadeInUp col-lg-6" data-wow-delay="0.5s">
+                    <div class="feature-img">
+                        <img alt="Opportunity Painting Workmanship" src="/img/about-5.jpg" class="img-fluid" loading="lazy" decoding="async">
+                        <img alt="Opportunity Painting High Quality Finishes" src="/img/about-6.jpg" class="img-fluid" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <!-- Fim Coluna: Imagem -->
+
+            </div>
+        </div>
+    </div>
+    <!-- Fim Seção: Why Choose Us -->
+</LayoutLive>

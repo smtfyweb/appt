@@ -1,0 +1,638 @@
+---
+import LayoutLive from '../layouts/LayoutLive.astro';
+import { getHousePainterSchema } from '../utils/schema';
+
+const housePainterSchema = getHousePainterSchema();
+---
+
+<LayoutLive
+  title="House Painters in Holliston, MA | Opportunity Painting"
+  description="Painting, cabinet refinishing, carpentry and home renovation in Holliston, MA, serving Framingham, Hopkinton, Milford, Medway and nearby towns. Free estimates."
+  canonical="https://www.opportunity-painting.com/"
+  keywords="Interior painting, Exterior painting, Commercial painting, Kitchen cabinets refinishing, Light carpentry, Kitchen renovation, Bathroom renovation, Basement renovation"
+  ogTitle="House Painters in Holliston, MA | Opportunity Painting"
+  ogDescription="Painting, cabinet refinishing, carpentry and home renovation in Holliston, MA, serving Framingham, Hopkinton, Milford, Medway and nearby towns. Free estimates."
+  ogUrl="https://www.opportunity-painting.com/"
+  ogImage="https://www.opportunity-painting.com/img/carousel-3.jpg"
+  chat={true}
+  carousel={true}
+  activePage="home"
+>
+  <Fragment slot="jsonld">
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(housePainterSchema, null, 2)} />
+  </Fragment>
+
+    <!-- Início do Carrossel de Cabeçalho -->
+    <div class="wow fadeIn container-fluid p-0 pb-5" data-wow-delay="0.1s">
+        <div class="owl-carousel header-carousel position-relative">
+
+            <!-- Início do Item do Carrossel 1 -->
+            <div class="owl-carousel-item position-relative" data-dot="<img src='/img/carousel-3.jpg' alt='House Painters in Holliston, MA'>">
+                <img alt="House Painters in Holliston, MA" class="img-fluid" src="/img/carousel-3.jpg" fetchpriority="high">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h1 class="animated display-1 slideInDown text-white">House Painters in Holliston, MA</h1>
+                                <p class="mb-4 fs-5 fw-medium pb-3 text-white">
+                                    Transform your spaces with elegance. Our interior painting experts craft unique
+                                    environments that tell your story.
+                                </p>
+                                <a href="/service-interior-painting.html"
+                                    class="btn btn-primary py-3 animated px-5 slideInLeft">Read More<span class="visually-hidden"> about interior painting services</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim do Item do Carrossel 1 -->
+
+            <!-- Início do Item do Carrossel 2 -->
+            <div class="owl-carousel-item position-relative" data-dot="<img src='/img/carousel-1.jpg' alt='Timeless Exterior Painting'>">
+                <img alt="Timeless Exterior Painting" class="img-fluid" src="/img/carousel-1.jpg" loading="lazy" decoding="async">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <div class="h1 animated display-1 slideInDown text-white">Timeless Exteriors</div>
+                                <p class="mb-4 fs-5 fw-medium pb-3 text-white">
+                                    Enhance your exteriors with timeless allure. Our meticulous exterior painting
+                                    process
+                                    ensures lasting satisfaction, crafting spaces for years of comfortable living.
+                                </p>
+                                <a href="/service-exterior-painting.html"
+                                    class="btn btn-primary py-3 animated px-5 slideInLeft">Read More<span class="visually-hidden"> about exterior painting services</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim do Item do Carrossel 2 -->
+
+            <!-- Início do Item do Carrossel 3 -->
+            <div class="owl-carousel-item position-relative" data-dot="<img src='/img/carousel-2.jpg' alt='Kitchen Cabinets Refinishing'>">
+                <img alt="Kitchen Cabinets Refinishing" class="img-fluid" src="/img/carousel-2.jpg" loading="lazy" decoding="async">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <div class="h1 animated display-1 slideInDown text-white">Kitchen Cabinets Refinishing</div>
+                                <p class="mb-4 fs-5 fw-medium pb-3 text-white">
+                                    Renew your kitchen with elegance. Our cabinet restoration services create a
+                                    sophisticated look for a classy and functional gourmet space.
+                                </p>
+                                <a href="/service-kitchen-cabinet-refinishing.html"
+                                    class="btn btn-primary py-3 animated px-5 slideInLeft">Read More<span class="visually-hidden"> about kitchen cabinets refinishing</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim do Item do Carrossel 3 -->
+
+            <!-- Início do Item do Carrossel 4 -->
+            <div class="owl-carousel-item position-relative" data-dot="<img src='/img/about-16.jpg' alt='Complete Home Renovations'>">
+                <img alt="Complete Home Renovations" class="img-fluid" src="/img/about-16.jpg" loading="lazy" decoding="async">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <div class="h1 animated display-1 slideInDown text-white">Complete Home Renovations</div>
+                                <p class="mb-4 fs-5 fw-medium pb-3 text-white">
+                                    Turnkey kitchen, bathroom, and basement remodeling backed by 15+ years of licensed general contracting excellence (CSL &amp; HIC).
+                                </p>
+                                <a href="/kitchen-renovation.html"
+                                    class="btn btn-primary py-3 animated px-5 slideInLeft">Explore Renovations<span class="visually-hidden"> about home renovation services</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim do Item do Carrossel 4 -->
+
+        </div>
+    </div>
+    <!-- Fim do Carrossel de Cabeçalho -->
+
+    <!-- Início Container Principal -->
+    <div class="py-5 container-xxl" id="services">
+        <div class="container">
+            <!-- Início Seção Título -->
+            <div class="wow fadeInUp mb-5 mx-auto text-center" data-wow-delay="0.1s" style="max-width:750px;">
+                <div class="h4 section-title">Our Services</div>
+                <h2 class="mb-4 display-5">Specialized Painting &amp; Complete Home Renovation Services Tailored to You</h2>
+            </div>
+            <!-- Fim Seção Título -->
+
+            <!-- Início Linha de Serviços (8 Serviços Completos) -->
+            <div class="row g-4">
+                <!-- Serviço 1: Interior Painting -->
+                <div class="wow fadeInUp col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.1s">
+                    <div class="d-flex h-100 position-relative service-item text-center">
+                        <img alt="Interior Painting" class="bg-img" src="/img/service-1.jpg" loading="lazy" decoding="async">
+                        <div class="p-4 py-5 service-text d-flex flex-column justify-content-between h-100 w-100">
+                            <div>
+                                <img alt="Interior Painting Icon" class="mb-4" src="/img/icons/icon-5.png" loading="lazy" decoding="async">
+                                <h3 class="mb-3 h4">Interior Painting</h3>
+                                <p class="mb-4">Colors that tell stories, renewing your spaces with precision and style.</p>
+                            </div>
+                            <div>
+                                <a href="/service-interior-painting.html" class="btn"><svg class="icon text-primary me-2" aria-hidden="true"><use href="/img/icons.svg#fa-plus"/></svg><span class="btn-text">Read More</span><span class="visually-hidden"> about interior painting</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Serviço 2: Exterior Painting -->
+                <div class="wow fadeInUp col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.2s">
+                    <div class="d-flex h-100 position-relative service-item text-center">
+                        <img alt="Exterior Painting" class="bg-img" src="/img/service-2.jpg" loading="lazy" decoding="async">
+                        <div class="p-4 py-5 service-text d-flex flex-column justify-content-between h-100 w-100">
+                            <div>
+                                <img alt="Exterior Painting Icon" class="mb-4" src="/img/icons/icon-6.png" loading="lazy" decoding="async">
+                                <h3 class="mb-3 h4">Exterior Painting</h3>
+                                <p class="mb-4">Vibrant exteriors and durable coatings that protect and rejuvenate your home.</p>
+                            </div>
+                            <div>
+                                <a href="/service-exterior-painting.html" class="btn"><svg class="icon text-primary me-2" aria-hidden="true"><use href="/img/icons.svg#fa-plus"/></svg><span class="btn-text">Read More</span><span class="visually-hidden"> about exterior painting</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Serviço 3: Commercial Painting -->
+                <div class="wow fadeInUp col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.3s">
+                    <div class="d-flex h-100 position-relative service-item text-center">
+                        <img alt="Commercial Painting" class="bg-img" src="/img/service-3.jpg" loading="lazy" decoding="async">
+                        <div class="p-4 py-5 service-text d-flex flex-column justify-content-between h-100 w-100">
+                            <div>
+                                <img alt="Commercial Painting Icon" class="mb-4" src="/img/icons/icon-7.png" loading="lazy" decoding="async">
+                                <h3 class="mb-3 h4">Commercial Painting</h3>
+                                <p class="mb-4">Efficient commercial painting for offices and businesses with minimal disruption.</p>
+                            </div>
+                            <div>
+                                <a href="/service-commercial-painting.html" class="btn"><svg class="icon text-primary me-2" aria-hidden="true"><use href="/img/icons.svg#fa-plus"/></svg><span class="btn-text">Read More</span><span class="visually-hidden"> about commercial painting</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Serviço 4: Kitchen Cabinets Refinishing -->
+                <div class="wow fadeInUp col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.4s">
+                    <div class="d-flex h-100 position-relative service-item text-center">
+                        <img alt="Kitchen Cabinets Refinishing" class="bg-img" src="/img/service-5.jpg" loading="lazy" decoding="async">
+                        <div class="p-4 py-5 service-text d-flex flex-column justify-content-between h-100 w-100">
+                            <div>
+                                <img alt="Kitchen Cabinets Refinishing Icon" class="mb-4" src="/img/icons/icon-9.png" loading="lazy" decoding="async">
+                                <h3 class="mb-3 h4">Kitchen Cabinets Refinishing</h3>
+                                <p class="mb-4">Factory-smooth spray refinishing transforming existing cabinets affordably.</p>
+                            </div>
+                            <div>
+                                <a href="/service-kitchen-cabinet-refinishing.html" class="btn"><svg class="icon text-primary me-2" aria-hidden="true"><use href="/img/icons.svg#fa-plus"/></svg><span class="btn-text">Read More</span><span class="visually-hidden"> about kitchen cabinet refinishing</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Serviço 5: Kitchen Renovation -->
+                <div class="wow fadeInUp col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.1s">
+                    <div class="d-flex h-100 position-relative service-item text-center">
+                        <img alt="Kitchen Renovation" class="bg-img" src="/img/about-16.jpg" loading="lazy" decoding="async">
+                        <div class="p-4 py-5 service-text d-flex flex-column justify-content-between h-100 w-100">
+                            <div>
+                                <img alt="Kitchen Renovation Icon" class="mb-4" src="/img/icons/icon-10.png" loading="lazy" decoding="async">
+                                <h3 class="mb-3 h4">Kitchen Renovation</h3>
+                                <p class="mb-4">Turnkey kitchen remodeling from custom layouts and cabinets to countertops.</p>
+                            </div>
+                            <div>
+                                <a href="/kitchen-renovation.html" class="btn"><svg class="icon text-primary me-2" aria-hidden="true"><use href="/img/icons.svg#fa-plus"/></svg><span class="btn-text">Read More</span><span class="visually-hidden"> about kitchen renovation</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Serviço 6: Bathroom Renovation -->
+                <div class="wow fadeInUp col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.2s">
+                    <div class="d-flex h-100 position-relative service-item text-center">
+                        <img alt="Bathroom Renovation" class="bg-img" src="/img/bathroom-1.jpg" loading="lazy" decoding="async">
+                        <div class="p-4 py-5 service-text d-flex flex-column justify-content-between h-100 w-100">
+                            <div>
+                                <img alt="Bathroom Renovation Icon" class="mb-4" src="/img/icons/icon-3.png" loading="lazy" decoding="async">
+                                <h3 class="mb-3 h4">Bathroom Renovation</h3>
+                                <p class="mb-4">Modern bathroom transformations with premium tile, vanities, and waterproofing.</p>
+                            </div>
+                            <div>
+                                <a href="/bathroom-renovation.html" class="btn"><svg class="icon text-primary me-2" aria-hidden="true"><use href="/img/icons.svg#fa-plus"/></svg><span class="btn-text">Read More</span><span class="visually-hidden"> about bathroom renovation</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Serviço 7: Basement Renovation -->
+                <div class="wow fadeInUp col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.3s">
+                    <div class="d-flex h-100 position-relative service-item text-center">
+                        <img alt="Basement Renovation" class="bg-img" src="/img/basement-1.jpg" loading="lazy" decoding="async">
+                        <div class="p-4 py-5 service-text d-flex flex-column justify-content-between h-100 w-100">
+                            <div>
+                                <img alt="Basement Renovation Icon" class="mb-4" src="/img/icons/icon-xx.png" loading="lazy" decoding="async">
+                                <h3 class="mb-3 h4">Basement Renovation</h3>
+                                <p class="mb-4">Converting lower levels into functional family lounges, gyms, and suites.</p>
+                            </div>
+                            <div>
+                                <a href="/basement-renovation.html" class="btn"><svg class="icon text-primary me-2" aria-hidden="true"><use href="/img/icons.svg#fa-plus"/></svg><span class="btn-text">Read More</span><span class="visually-hidden"> about basement renovation</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Serviço 8: Light Carpentry -->
+                <div class="wow fadeInUp col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.4s">
+                    <div class="d-flex h-100 position-relative service-item text-center">
+                        <img alt="Light Carpentry" class="bg-img" src="/img/service-4.jpg" loading="lazy" decoding="async">
+                        <div class="p-4 py-5 service-text d-flex flex-column justify-content-between h-100 w-100">
+                            <div>
+                                <img alt="Light Carpentry Icon" class="mb-4" src="/img/icons/icon-8.png" loading="lazy" decoding="async">
+                                <h3 class="mb-3 h4">Light Carpentry</h3>
+                                <p class="mb-4">Masterful carpentry repairs, crown moldings, trim, and finish woodworking.</p>
+                            </div>
+                            <div>
+                                <a href="/service-light-carpentry.html" class="btn"><svg class="icon text-primary me-2" aria-hidden="true"><use href="/img/icons.svg#fa-plus"/></svg><span class="btn-text">Read More</span><span class="visually-hidden"> about light carpentry</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim Linha de Serviços -->
+        </div>
+    </div>
+    <!-- Fim Container Principal -->
+
+    <!-- Início Seção Principal -->
+    <div class="py-5 container-xxl">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <!-- Início Coluna Imagem -->
+                <div class="wow fadeInUp col-lg-6" data-wow-delay="0.1s">
+                    <img alt="Juliney Santana" class="img-fluid w-100 bio-photo" src="/img/team-1.jpg" loading="lazy" decoding="async">
+                </div>
+                <!-- Fim Coluna Imagem -->
+
+                <!-- Início Coluna Texto -->
+                <div class="wow fadeInUp col-lg-6" data-wow-delay="0.5s">
+                    <div class="h4 section-title">About Me</div>
+                    <h2 class="display-5">Juliney Santana</h2>
+
+                    <div class="row g-3">
+                        <!-- Início Linha Designação -->
+                        <div class="d-flex align-items-baseline col-12">
+                            <div class="h4 mb-0 me-2 bio-label">Designation</div>
+                            <p class="mb-0 fs-5">CEO &amp; Founder</p>
+                        </div>
+                        <!-- Fim Linha Designação -->
+
+                        <!-- Início Linha Expertise -->
+                        <div class="d-flex align-items-baseline col-12">
+                            <div class="h4 mb-0 me-2 bio-label">Expertise</div>
+                            <p class="mb-0 fs-5">Interior &amp; Exterior Painting, Cabinet Refinishing, Kitchen &amp; Bathroom Remodeling, Basement Finishing, Light Carpentry</p>
+                        </div>
+                        <!-- Fim Linha Expertise -->
+
+                        <!-- Início Linha Experience -->
+                        <div class="d-flex align-items-baseline col-12">
+                            <div class="h4 mb-0 me-2 bio-label">Experience</div>
+                            <p class="mb-0 fs-5">15+ Years</p>
+                        </div>
+                        <!-- Fim Linha Experience -->
+
+                        <!-- Início Linha E-mail -->
+                        <div class="d-flex align-items-baseline col-12">
+                            <div class="h4 mb-0 me-2 bio-label">E-mail</div>
+                            <p class="mb-0 fs-5">
+                                <a href="mailto:office@opportunity-painting.com">office@opportunity-painting.com</a>
+                            </p>
+                        </div>
+                        <!-- Fim Linha E-mail -->
+
+                        <!-- Início Linha Phone -->
+                        <div class="d-flex align-items-baseline col-12">
+                            <div class="h4 mb-0 me-2 bio-label">Phone</div>
+                            <p class="mb-0 fs-5"><a href="tel:+15082159441" class="text-decoration-none text-dark">508 215 9441</a></p>
+                        </div>
+                        <!-- Fim Linha Phone -->
+
+                        <!-- Início Linha Licensing -->
+                        <div class="d-flex align-items-baseline col-12">
+                            <div class="h4 mb-0 me-2 bio-label">Licensing</div>
+                            <p class="mb-0 fs-5">MA CSL (Supervisor) &amp; HIC Registered</p>
+                        </div>
+                        <!-- Fim Linha Licensing -->
+
+                        <!-- Início Linha Insurance -->
+                        <div class="d-flex align-items-baseline col-12">
+                            <div class="h4 mb-0 me-2 bio-label">Insurance</div>
+                            <p class="mb-0 fs-5">$2M General Liability · $1M Workers' Comp</p>
+                        </div>
+                        <!-- Fim Linha Insurance -->
+
+                        <!-- Início Linha Social -->
+                        <div class="d-flex align-items-baseline col-12">
+                            <div class="h4 mb-0 me-2 bio-label">Social</div>
+                            <div class="d-flex">
+                                <a href="http://www.instagram.com/opportunity_painting" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-outline-body btn-square me-1" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="/img/icons.svg#fa-instagram"/></svg></a>
+                                <a href="https://www.facebook.com/profile.php?id=100050506784663" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-outline-body btn-square me-1" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="/img/icons.svg#fa-facebook-f"/></svg></a>
+                                <a href="https://www.google.com/search?q=opportunity+painting+reviews&rlz=1CDGOYI_enUS777US777&oq=opportunity+painting+reviews&aqs=chrome..69i57j0i546l5.954j0j4&hl=en-US&sourceid=chrome-mobile&ie=UTF-8#lkt=LocalPoiReviews&lpg=cid:CgIgAQ%3D%3D&trex=m_t:lcl_akp,rc_f" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-outline-body btn-square me-1" aria-label="Google Reviews"><svg class="icon" aria-hidden="true"><use href="/img/icons.svg#fa-google"/></svg></a>
+                                <a href="http://yelp.com/biz/opportunity-painting-holliston-3?hrid=FUbnm0Mtc4LOxRuI0VStiA&utm_campaign=bizapp_ios_review_share_popup&utm_medium=copy_link&utm_source=(direct)" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-outline-body btn-square me-1" aria-label="Yelp"><svg class="icon" aria-hidden="true"><use href="/img/icons.svg#fa-yelp"/></svg></a>
+                                <a href="https://wa.me/message/K3QVFUZOUZVXO1" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-outline-body btn-square me-0" aria-label="WhatsApp"><svg class="icon" aria-hidden="true"><use href="/img/icons.svg#fa-whatsapp"/></svg></a>
+                                <a href="https://www.youtube.com/@opportunity-painting" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-outline-body btn-square me-0" aria-label="YouTube"><svg class="icon" aria-hidden="true"><use href="/img/icons.svg#fa-youtube"/></svg></a>
+                            </div>
+                        </div>
+                        <!-- Fim Linha Social -->
+
+                        <!-- Início Box de Garantia e COI -->
+                        <div class="col-12 mt-3">
+                            <div class="p-3 bg-light border-start border-4 border-primary rounded">
+                                <p class="mb-0 small text-dark">
+                                    <strong>State Compliance &amp; Coverage:</strong> Meets all Massachusetts residential requirements. Full liability insurance up to $2,000,000 and workman's compensation up to $1,000,000. Certificate of Insurance (COI) provided prior to start.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Fim Box de Garantia e COI -->
+                    </div>
+                </div>
+                <!-- Fim Coluna Texto -->
+            </div>
+        </div>
+    </div>
+    <!-- Fim Seção Principal -->
+
+
+    <!-- Início Seção Personal Skills / Proven Track Record (Opção B - Credenciais Numéricas de Alta Confiança) -->
+    <div class="py-5 container-xxl">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+
+                <!-- Início Coluna 1: Título, Descrição e CTAs Rápidos -->
+                <div class="wow fadeInUp col-lg-5" data-wow-delay="0.1s">
+                    <div class="h4 section-title">Proven Track Record</div>
+                    <h2 class="mb-4 display-5">Painting &amp; Renovation Expert: Transforming Massachusetts Homes</h2>
+                    <p class="mb-3">
+                        As the CEO and Founder of Opportunity Painting &amp; Renovation Services Inc., Juliney Santana brings over 15 years of hands-on expertise to every project. His commitment to excellence is evident in fine interior &amp; exterior painting, turnkey kitchen &amp; bathroom remodeling, finished basements, cabinet restoration, and architectural carpentry.
+                    </p>
+                    <p class="mb-4">
+                        From our Holliston workshop to residences across MetroWest, Juliney personally supervises each milestone, ensuring strict Massachusetts building code compliance and lasting craftsmanship.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2 align-items-center">
+                        <a href="/request-free-quote.html" class="btn btn-primary py-2 px-4">Request a Free Quote</a>
+                        <a href="sms:+15082159441?&body=Hi%20Ney,%20I'd%20like%20to%20discuss%20a%20home%20renovation%20project" class="btn btn-dark py-2 px-3 d-inline-flex align-items-center justify-content-center text-center">
+                            Text US
+                        </a>
+                    </div>
+                </div>
+                <!-- Fim Coluna 1 -->
+
+                <!-- Início Coluna 2: Cartões de Credenciais Numéricas (Opção B) -->
+                <div class="wow fadeInUp col-lg-7" data-wow-delay="0.3s">
+                    <div class="row g-3">
+
+                        <!-- Métrica 1: Anos de Experiência -->
+                        <div class="col-sm-6">
+                            <div class="metric-card p-4 rounded h-100 position-relative" style="background: #FFFFFF; border: 1px solid rgba(183, 141, 101, 0.28); box-shadow: 0 8px 24px rgba(0,0,0,0.04); transition: transform 0.25s ease;">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <span class="badge" style="background: #FAF5EF; border: 1px solid rgba(183, 141, 101, 0.22); color: var(--primary); font-size: 0.72rem; letter-spacing: 0.85px; text-transform: uppercase; font-weight: 700; padding: 0.32rem 0.75rem; border-radius: 6px;">Track Record</span>
+                                    <div class="metric-icon-wrap mb-0">
+                                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-baseline mb-1">
+                                    <span style="font-family: 'Teko', sans-serif; font-size: 3.5rem; font-weight: 700; color: var(--primary); line-height: 1;" data-toggle="counter-up">15</span>
+                                    <span style="font-family: 'Teko', sans-serif; font-size: 2.5rem; font-weight: 700; color: var(--primary); line-height: 1;">+</span>
+                                    <span class="ms-2 text-dark font-weight-bold" style="font-size: 1.05rem;">Years</span>
+                                </div>
+                                <h3 class="h6 font-weight-bold text-dark mb-1">MetroWest Mastery</h3>
+                                <p class="small text-muted mb-0">Deep experience with New England architecture and weather durability.</p>
+                            </div>
+                        </div>
+
+                        <!-- Métrica 2: Projetos Entregues -->
+                        <div class="col-sm-6">
+                            <div class="metric-card p-4 rounded h-100 position-relative" style="background: #FFFFFF; border: 1px solid rgba(183, 141, 101, 0.28); box-shadow: 0 8px 24px rgba(0,0,0,0.04); transition: transform 0.25s ease;">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <span class="badge" style="background: #FAF5EF; border: 1px solid rgba(183, 141, 101, 0.22); color: var(--primary); font-size: 0.72rem; letter-spacing: 0.85px; text-transform: uppercase; font-weight: 700; padding: 0.32rem 0.75rem; border-radius: 6px;">Delivered</span>
+                                    <div class="metric-icon-wrap mb-0">
+                                        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-baseline mb-1">
+                                    <span style="font-family: 'Teko', sans-serif; font-size: 3.5rem; font-weight: 700; color: var(--primary); line-height: 1;" data-toggle="counter-up">350</span>
+                                    <span style="font-family: 'Teko', sans-serif; font-size: 2.5rem; font-weight: 700; color: var(--primary); line-height: 1;">+</span>
+                                    <span class="ms-2 text-dark font-weight-bold" style="font-size: 1.05rem;">Homes</span>
+                                </div>
+                                <h3 class="h6 font-weight-bold text-dark mb-1">Completed Projects</h3>
+                                <p class="small text-muted mb-0">Kitchens, basements, cabinetry, and fine-finish home painting.</p>
+                            </div>
+                        </div>
+
+                        <!-- Métrica 3: Licenciado e Segurado -->
+                        <div class="col-sm-6">
+                            <div class="metric-card p-4 rounded h-100 position-relative" style="background: #FFFFFF; border: 1px solid rgba(183, 141, 101, 0.28); box-shadow: 0 8px 24px rgba(0,0,0,0.04); transition: transform 0.25s ease;">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <span class="badge" style="background: #FAF5EF; border: 1px solid rgba(183, 141, 101, 0.22); color: var(--primary); font-size: 0.72rem; letter-spacing: 0.85px; text-transform: uppercase; font-weight: 700; padding: 0.32rem 0.75rem; border-radius: 6px;">Compliance</span>
+                                    <div class="metric-icon-wrap mb-0">
+                                        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-baseline mb-1">
+                                    <span style="font-family: 'Teko', sans-serif; font-size: 3.5rem; font-weight: 700; color: var(--primary); line-height: 1;" data-toggle="counter-up">100</span>
+                                    <span style="font-family: 'Teko', sans-serif; font-size: 2.5rem; font-weight: 700; color: var(--primary); line-height: 1;">%</span>
+                                    <span class="ms-2 text-dark font-weight-bold" style="font-size: 1.05rem;">Coverage</span>
+                                </div>
+                                <h3 class="h6 font-weight-bold text-dark mb-1">Licensed &amp; $2M Insured</h3>
+                                <p class="small text-muted mb-0">Active MA CSL Supervisor, MA HIC Contractor &amp; EPA Lead-Safe certified.</p>
+                            </div>
+                        </div>
+
+                        <!-- Métrica 4: Avaliação 5 Estrelas -->
+                        <div class="col-sm-6">
+                            <div class="metric-card p-4 rounded h-100 position-relative" style="background: #FFFFFF; border: 1px solid rgba(183, 141, 101, 0.28); box-shadow: 0 8px 24px rgba(0,0,0,0.04); transition: transform 0.25s ease;">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <span class="badge" style="background: #FAF5EF; border: 1px solid rgba(183, 141, 101, 0.22); color: var(--primary); font-size: 0.72rem; letter-spacing: 0.85px; text-transform: uppercase; font-weight: 700; padding: 0.32rem 0.75rem; border-radius: 6px;">Reputation</span>
+                                    <div class="metric-icon-wrap mb-0">
+                                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-baseline mb-1">
+                                    <span style="font-family: 'Teko', sans-serif; font-size: 3.5rem; font-weight: 700; color: var(--primary); line-height: 1;">5.0</span>
+                                    <span class="ms-1" style="font-size: 1.6rem; color: #E5A93C;">★★★★★</span>
+                                </div>
+                                <h3 class="h6 font-weight-bold text-dark mb-1">Google &amp; Yelp Reputation</h3>
+                                <p class="small text-muted mb-0">Top-rated homeowner satisfaction across MetroWest Massachusetts.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Fim Coluna 2 -->
+
+            </div>
+        </div>
+    </div>
+    <!-- Fim Seção Personal Skills / Proven Track Record -->
+
+    <div class="py-5 container-xxl">
+        <!-- Início da Seção: Get A Free Quote -->
+        <div class="container">
+            <div class="row g-5">
+                <!-- Início da Coluna Esquerda -->
+                <div class="wow fadeInUp col-lg-6" data-wow-delay="0.1s">
+                    <div class="h4 section-title">Get A Free Quote</div>
+                    <h2 class="mb-4 display-5">Make An Get A Free Quote To Start Your Dream Project</h2>
+                    <p class="mb-4">Begin your dream project by requesting a free estimate. Our specialized team is
+                        ready
+                        to provide the best solutions, ensuring excellence and quality in every service we offer.
+                    </p>
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="d-flex">
+                                <div class="d-flex align-items-center justify-content-center bg-light flex-shrink-0"
+                                    style="width:65px;height:65px">
+                                    <svg class="icon text-primary fa-2x" aria-hidden="true"><use href="/img/icons.svg#fa-phone-alt"/></svg>
+                                </div>
+                                <div class="ms-4">
+                                    <p class="mb-2">Call Us Now</p>
+                                    <h3 class="mb-0"><a href="tel:+15082159441" class="text-decoration-none text-dark">508 215 9441</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex">
+                                <div class="d-flex align-items-center justify-content-center bg-light flex-shrink-0"
+                                    style="width:65px;height:65px">
+                                    <svg class="icon text-primary fa-2x" aria-hidden="true"><use href="/img/icons.svg#fa-envelope-open"/></svg>
+                                </div>
+                                <div class="ms-4">
+                                    <p class="mb-2">Mail Us Now</p>
+                                    <h3 class="mb-0"><a href="mailto:office@opportunity-painting.com" class="text-decoration-none text-dark">office@opportunity-painting.com</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fim da Coluna Esquerda -->
+
+                <!-- Início da Coluna Direita (Formulário Corrigido - Tag <form> envolvendo o row) -->
+                <div class="wow fadeInUp col-lg-6" data-wow-delay="0.5s">
+                    <form action="https://formsubmit.co/office@opportunity-painting.com" method="POST">
+                        <input name="_captcha" type="hidden" value="false">
+                        <input name="_next" type="hidden" value="https://opportunity-painting.com/thank-you.html">
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6">
+                                <input name="name" class="form-control" placeholder="Your Name" aria-label="Your Name" type="text" autocomplete="name" required style="height:55px">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input name="email" class="form-control" placeholder="Your Email" aria-label="Your Email" type="email" autocomplete="email" required style="height:55px">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input name="mobile" class="form-control" placeholder="Your Mobile" aria-label="Your Mobile" type="tel" autocomplete="tel" required style="height:55px">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <select class="form-select" name="service" aria-label="Choose Service" required style="height:55px">
+                                    <option value="" selected disabled>Choose Service</option>
+                                    <option value="Interior painting">Interior painting</option>
+                                    <option value="Exterior painting">Exterior painting</option>
+                                    <option value="Commercial painting">Commercial painting</option>
+                                    <option value="Kitchen cabinets refinishing">Kitchen cabinets refinishing</option>
+                                    <option value="Light carpentry">Light carpentry</option>
+                                    <option value="Kitchen renovation">Kitchen renovation</option>
+                                    <option value="Bathroom renovation">Bathroom renovation</option>
+                                    <option value="Basement renovation">Basement renovation</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="date" name="date" class="form-control" placeholder="Choose Date" aria-label="Choose Date" autocomplete="off" required style="height:55px">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="time" name="time" class="form-control" placeholder="Choose Time" aria-label="Choose Time" autocomplete="off" required style="height:55px">
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control" name="message"
+                                    placeholder="Please, provide a brief project description and your address for on-site estimates" aria-label="Please, provide a brief project description and your address for on-site estimates"
+                                    required rows="5"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary py-3 w-100" type="submit">Book Get A Free Quote</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Fim da Coluna Direita -->
+            </div>
+        </div>
+        <!-- Fim da Seção: Get A Free Quote -->
+    </div>
+
+    <!-- Início Seção Testimonial -->
+    <div class="py-5 container-xxl">
+        <div class="container">
+            <!-- Início Cabeçalho Testimonial -->
+            <div class="wow fadeInUp mb-5 mx-auto text-center" data-wow-delay="0.1s" style="max-width:600px;">
+                <div class="h4 section-title">Testimonial</div>
+                <h2 class="mb-4 display-5">Authentic Testimonials: Check them out on Google now!</h2>
+            </div>
+            <!-- Fim Cabeçalho Testimonial -->
+
+            <!-- Início Carrossel de Depoimentos -->
+            <div class="wow fadeInUp owl-carousel testimonial-carousel" data-wow-delay="0.1s">
+                <div class="text-center testimonial-item"
+                    data-dot="<img class='img-fluid' src='/img/testimonial-1.jpg' alt='Katie McIntosh'>">
+                    <p class="fs-5">
+                        Opportunity Painting was exceptional in their customer care, communication and quality of
+                        workmanship. They were efficient and meticulous in their work, and kept the work area very clean
+                        throughout the two-day process. We are very pleased with the results (drywall repair and
+                        interior
+                        painting of walls and 20ft ceiling). We highly recommend OP and will certainly hire them again
+                        for
+                        our next painting project.
+                    </p>
+                    <h3>Katie McIntosh</h3>
+                    <span class="text-primary">Client</span>
+                </div>
+
+                <div class="text-center testimonial-item"
+                    data-dot="<img class='img-fluid' src='/img/testimonial-2.jpg' alt='Diane Healey'>">
+                    <p class="fs-5">
+                        Ney and his crew did an outstanding job on our kitchen cabinets. They were professional,
+                        respectful
+                        of our property, responsive and polite. I would definitely hire Opportunity Painting again.
+                    </p>
+                    <h3>Diane Healey</h3>
+                    <span class="text-primary">Client</span>
+                </div>
+
+                <div class="text-center testimonial-item"
+                    data-dot="<img class='img-fluid' src='/img/testimonial-3.jpg' alt='Jeffrey Coady'>">
+                    <p class="fs-5">
+                        These are the guys you want. We had three rooms done as well as a stairway and hall area. The
+                        work
+                        included stripping wallpaper, sheet rock patching, ceiling repair, plastering, skim coating,
+                        priming
+                        and two coats of paint. It turned out to be an eight day project. The work was done to
+                        perfection,
+                        we couldn't have been happier. The people were easy to work with, diligent and hard working. We
+                        highly recommend Opportunity Painting.
+                    </p>
+                    <h3>Jeffrey Coady</h3>
+                    <span class="text-primary">Client</span>
+                </div>
+            </div>
+            <!-- Fim Carrossel de Depoimentos -->
+        </div>
+    </div>
+    <!-- Fim Seção Testimonial -->
+</LayoutLive>

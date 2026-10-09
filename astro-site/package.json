@@ -1,0 +1,29 @@
+{
+  "name": "opportunity-painting-astro",
+  "type": "module",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "sync-assets": "node sync-assets.js",
+    "predev": "node sync-assets.js",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "prebuild": "node sync-assets.js && node tools/make-webp.mjs",
+    "build": "astro build",
+    "postbuild": "node tools/postbuild-img.mjs && node check-dist.js",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.2.0",
+    "@fontsource/open-sans": "^5.0.0",
+    "@fontsource/teko": "^5.0.0",
+    "astro": "^4.16.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@fullhuman/postcss-purgecss": "^7.0.2",
+    "bootstrap-icons": "^1.11.3",
+    "typescript": "^5.9.3"
+  }
+}

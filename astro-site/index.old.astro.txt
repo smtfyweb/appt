@@ -1,0 +1,373 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+import FAQ from '../components/FAQ.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
+
+const services = [
+  {
+    title: "Kitchen Renovation",
+    image: "/img/about-10.jpg",
+    link: "/kitchen-renovation.html",
+    badge: "Most Popular",
+    description: "Complete kitchen transformations from demolition and structural adjustments to custom cabinetry, countertops, tile backsplashes, and high-end lighting.",
+    features: ["Custom Cabinetry & Islands", "Stone Countertops & Tile", "Plumbing & Electrical to Code"]
+  },
+  {
+    title: "Bathroom Renovation",
+    image: "/img/about-11.jpg",
+    link: "/bathroom-renovation.html",
+    badge: "High ROI",
+    description: "Turn your bathroom into a luxury retreat. Expert waterproofing, custom tile showers, modern vanities, durable fixtures, and premium ventilation.",
+    features: ["Schluter Waterproofing Systems", "Walk-In Tile Showers", "Vanity & Plumbing Upgrades"]
+  },
+  {
+    title: "Basement Finishing",
+    image: "/img/about-16.jpg",
+    link: "/basement-renovation.html",
+    badge: "Space Expansion",
+    description: "Maximize your home's square footage with finished basements: home theaters, private gyms, guest suites, home offices, and custom wet bars.",
+    features: ["Moisture & Insulation Protection", "Code-Compliant Egress & Framing", "Custom Ceilings & Recessed Lights"]
+  },
+  {
+    title: "Cabinet Refinishing",
+    image: "/img/service-1.jpg",
+    link: "/cabinet-refinishing.html",
+    description: "Factory-grade cabinet spray painting and refinishing that transforms your kitchen at a fraction of replacement cost. Flawless smooth finish.",
+    features: ["Industrial Spray Finish", "Zero Brush Marks", "Durable Polyurethane Enamels"]
+  },
+  {
+    title: "Interior & Exterior Painting",
+    image: "/img/service-2.jpg",
+    link: "/interior-exterior-painting.html",
+    description: "Expert residential & commercial painting. Rigorous surface preparation, drywall repair, power washing, and premium Benjamin Moore & Sherwin-Williams paints.",
+    features: ["Thorough Surface Prep & Masking", "Trim & Crown Molding Detailing", "Exterior Weatherproof Coatings"]
+  },
+  {
+    title: "Light Carpentry & Trim",
+    image: "/img/service-4.jpg",
+    link: "/service-light-carpentry.html",
+    description: "Custom trim installation, baseboards, wainscoting, crown molding, door framing, and deck rot repairs that elevate your home's interior elegance.",
+    features: ["Crown Molding & Baseboards", "Door & Window Casing", "Wood Rot Repair & Replacement"]
+  }
+];
+
+const homeFaqs = [
+  {
+    question: "Is Opportunity Painting & Renovation fully insured in Massachusetts?",
+    answer: "Yes. Our team carries full liability and workers' compensation coverage, ensuring peace of mind for every residential and commercial project in Holliston and the MetroWest Boston area."
+  },
+  {
+    question: "Do you offer free written estimates?",
+    answer: "Yes, we provide 100% free, detailed in-home consultations and written quotes with itemized scopes of work, transparent pricing, and clear project timelines."
+  },
+  {
+    question: "What towns and cities do you serve in Massachusetts?",
+    answer: "We are based in Holliston, MA (01746) and actively serve homeowners and businesses across MetroWest Boston, including Hopkinton, Medway, Milford, Natick, Framingham, Sherborn, Ashland, Franklin, and surrounding communities."
+  },
+  {
+    question: "How long does a typical kitchen or bathroom renovation take?",
+    answer: "Most bathroom renovations are completed within 2 to 3 weeks, while comprehensive kitchen renovations typically take 3 to 5 weeks depending on custom cabinetry lead times and layout adjustments. We provide an exact project schedule before starting."
+  },
+  {
+    question: "What paint brands and materials do you use?",
+    answer: "We exclusively use top-tier paints and architectural materials from Benjamin Moore (Regal Select, Aura, Advance) and Sherwin-Williams (Emerald, Duration), paired with premium primers and waterproofing membranes."
+  }
+];
+
+const testimonials = [
+  {
+    author: "Katie McIntosh",
+    role: "Client",
+    text: "Opportunity Painting was exceptional in their customer care, communication and quality of workmanship. They were efficient and meticulous in their work, and kept the work area very clean throughout the two-day process. We are very pleased with the results (drywall repair and interior painting of walls and 20ft ceiling). We highly recommend OP and will certainly hire them again for our next painting project."
+  },
+  {
+    author: "Diane Healey",
+    role: "Client",
+    text: "Ney and his crew did an outstanding job on our kitchen cabinets. They were professional, respectful of our property, responsive and polite. I would definitely hire Opportunity Painting again."
+  },
+  {
+    author: "Jeffrey Coady",
+    role: "Client",
+    text: "These are the guys you want. We had three rooms done as well as a stairway and hall area. The work included stripping wallpaper, sheet rock patching, ceiling repair, plastering, skim coating, priming and two coats of paint. It turned out to be an eight-day project. The work was done to perfection, we couldn't have been happier. The people were easy to work with, diligent and hard working. We highly recommend Opportunity Painting."
+  }
+];
+---
+
+<Layout
+  title="Home Renovation & Painting Contractors in Holliston, MA | Opportunity Painting Inc."
+  description="Opportunity Painting & Renovation Services Inc. provides premier kitchen remodeling, bathroom renovation, basement finishing, cabinet refinishing, and interior/exterior painting in Holliston & MetroWest MA. Call (508) 215-9441 for a free estimate."
+  canonical="https://www.opportunity-painting.com/"
+  faqs={homeFaqs}
+  chat={true}
+>
+  <!-- Hero Section -->
+  <section class="hero-section text-white py-5 position-relative">
+    <div class="hero-bg-overlay"></div>
+    <div class="container position-relative py-5">
+      <div class="row align-items-center">
+        <div class="col-lg-7 py-4">
+          <span class="badge-service">METROWEST BOSTON'S TRUSTED CONTRACTORS</span>
+          <h1 class="hero-title text-white mb-3">
+            Expert Painting &amp; Complete Home Renovation Services
+          </h1>
+          <p class="hero-subtitle mb-4 text-light" style="font-size: 1.15rem; max-width: 600px;">
+            Transforming homes in <strong>Holliston, Hopkinton, and MetroWest MA</strong> with precision craftsmanship. From chef-ready kitchens and luxury bathrooms to factory-smooth cabinet refinishing and flawless interior painting.
+          </p>
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="/request-free-quote.html" class="btn btn-primary btn-lg">
+              Get Your Free Estimate
+            </a>
+            <a href="tel:+15082159441" class="btn btn-outline-light btn-lg d-inline-flex align-items-center">
+              <svg class="me-2" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              (508) 215-9441
+            </a>
+          </div>
+          <!-- Trust Badges -->
+          <div class="hero-trust d-flex flex-wrap gap-4 pt-3 border-top border-secondary">
+            <div><strong>Over 12 Years</strong> <span class="text-muted d-block" style="font-size: 0.8rem;">Experience</span></div>
+            <div><strong>100%</strong> <span class="text-muted d-block" style="font-size: 0.8rem;">Satisfaction Focus</span></div>
+            <div><strong>Free</strong> <span class="text-muted d-block" style="font-size: 0.8rem;">On-Site Quotes</span></div>
+            <div><strong>Fully Insured</strong> <span class="text-muted d-block" style="font-size: 0.8rem;">&amp; Experienced</span></div>
+          </div>
+        </div>
+
+        <div class="col-lg-5 py-4">
+          <QuoteForm 
+            title="Fast Free Estimate" 
+            subtitle="Get a written quote for your next renovation or painting project."
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Proposition Section -->
+  <section class="value-prop py-5 bg-light">
+    <div class="container">
+      <div class="row g-4 text-center">
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow-sm h-100">
+            <div class="mb-3 text-primary">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3>Master Craftsmanship</h3>
+            <p class="text-muted m-0">
+              We never cut corners on prep work, priming, or structural framing. Every project is built to endure New England seasons.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow-sm h-100">
+            <div class="mb-3 text-primary">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h3>On-Time &amp; On-Budget</h3>
+            <p class="text-muted m-0">
+              Transparent project management with defined milestones, respectful crew etiquette, and daily cleanup of your home.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow-sm h-100">
+            <div class="mb-3 text-primary">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <h3>Family-Owned Care</h3>
+            <p class="text-muted m-0">
+              Founded by Juliney 'Ney' Santana. Direct communication with the business owner ensures complete accountability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="services-section py-5">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <span class="badge-service">WHAT WE DO</span>
+        <h2>Comprehensive Renovation &amp; Painting Solutions</h2>
+        <p class="text-muted mx-auto" style="max-width: 650px;">
+          Whether updating a single bathroom or embarking on a whole-home interior overhaul, our dedicated trades deliver designer-grade results.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        {services.map((srv) => (
+          <div class="col-md-6 col-lg-4">
+            <ServiceCard {...srv} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- About Ney & Opportunity Painting -->
+  <section class="about-summary py-5 bg-light">
+    <div class="container py-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="position-relative">
+            <img 
+              src="/img/about-8.jpg" 
+              alt="Opportunity Painting craftsman working on interior renovation" 
+              width="580" 
+              height="420" 
+              class="rounded shadow-lg w-100" 
+              style="object-fit: cover;" 
+              loading="lazy"
+            />
+            <div class="experience-badge p-4 bg-primary text-white text-center rounded position-absolute shadow">
+              <span class="d-block" style="font-size: 2.2rem; font-family: var(--font-heading); line-height: 1;">OVER 12 YEARS</span>
+              <span style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">in MetroWest</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <span class="badge-service">ABOUT OPPORTUNITY PAINTING INC.</span>
+          <h2>A Reputation Built on Trust, Cleanliness &amp; Precision</h2>
+          <p>
+            At <strong>Opportunity Painting &amp; Renovation Services Inc.</strong>, we understand that inviting contractors into your home requires complete confidence. Based in Holliston, Massachusetts, our mission is to transform living spaces with surgical attention to detail and zero stress.
+          </p>
+          <p>
+            From high-end interior residential painting to structural kitchen remodeling and basement transformations, our craftsmen combine premium materials with timeless techniques. We protect your floors, seal off dust zones, and leave every job site cleaner than we found it.
+          </p>
+
+          <!-- Contact & Social Details (identical to live site index.html) -->
+          <div class="row g-3 my-2 pt-2 border-top border-light">
+            <div class="d-flex align-items-baseline col-12">
+              <h5 class="mb-0 me-3 text-dark">Phone</h5>
+              <a href="tel:+15082159441" class="mb-0 fs-5 text-primary text-decoration-none"><strong>(508) 215-9441</strong></a>
+            </div>
+            <div class="d-flex align-items-center col-12">
+              <h5 class="mb-0 me-3 text-dark">Social</h5>
+              <div class="d-flex gap-1 align-items-center">
+                <a href="http://www.instagram.com/opportunity_painting" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="btn btn-outline-body btn-square me-1">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100050506784663" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="btn btn-outline-body btn-square me-1">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+                <a href="https://www.google.com/search?q=opportunity+painting+reviews&rlz=1CDGOYI_enUS777US777&oq=opportunity+painting+reviews&aqs=chrome..69i57j0i546l5.954j0j4&hl=en-US&sourceid=chrome-mobile&ie=UTF-8#lkt=LocalPoiReviews&lpg=cid:CgIgAQ%3D%3D&trex=m_t:lcl_akp,rc_f" target="_blank" rel="noopener noreferrer" aria-label="Google Reviews" class="btn btn-outline-body btn-square me-1">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
+                </a>
+                <a href="http://yelp.com/biz/opportunity-painting-holliston-3?hrid=FUbnm0Mtc4LOxRuI0VStiA&utm_campaign=bizapp_ios_review_share_popup&utm_medium=copy_link&utm_source=(direct)" target="_blank" rel="noopener noreferrer" aria-label="Yelp" class="btn btn-outline-body btn-square me-1">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12.064 0c-.235 0-.463.076-.653.22L4.032 5.76a.997.997 0 0 0-.25 1.368l3.824 5.374a.428.428 0 0 1-.418.665l-6.4-.827a.998.998 0 0 0-1.08.736L.29 16.48a.998.998 0 0 0 .548 1.228l6.19 2.582a.428.428 0 0 1 .232.556l-3.344 5.513a.998.998 0 0 0 .515 1.43l3.648 1.394c.484.185 1.026-.046 1.23-.523l2.87-6.721a.428.428 0 0 1 .593-.218l5.727 3.32a.998.998 0 0 0 1.408-.458l1.62-3.834a.998.998 0 0 0-.324-1.218l-5.753-3.676a.428.428 0 0 1-.039-.685l5.042-4.227a.998.998 0 0 0 .285-1.258l-2.45-3.39a.998.998 0 0 0-1.3-.263l-5.834 3.376a.428.428 0 0 1-.617-.384l.328-6.577A.998.998 0 0 0 12.064 0z"/></svg>
+                </a>
+                <a href="https://wa.me/message/K3QVFUZOUZVXO1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="btn btn-outline-body btn-square me-1">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                </a>
+                <a href="https://www.youtube.com/@opportunity-painting" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="btn btn-outline-body btn-square me-0">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex gap-3 mt-4">
+            <a href="/about.html" class="btn btn-primary">
+              Learn More About Us
+            </a>
+            <a href="/testimonial.html" class="btn btn-outline-primary">
+              Read Client Reviews
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section py-5">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <span class="badge-service">CLIENT EXPERIENCES</span>
+        <h2>
+          <a href="https://www.google.com/search?q=opportunity+painting+reviews&rlz=1CDGOYI_enUS777US777&oq=opportunity+painting+reviews&aqs=chrome..69i57j0i546l5.954j0j4&hl=en-US&sourceid=chrome-mobile&ie=UTF-8#lkt=LocalPoiReviews&lpg=cid:CgIgAQ%3D%3D&trex=m_t:lcl_akp,rc_f" target="_blank" rel="noopener noreferrer" class="text-dark text-decoration-none">
+            Authentic Testimonials: Check them out on Google now!
+          </a>
+        </h2>
+        <p class="text-muted mx-auto" style="max-width: 600px;">
+          What homeowners in Holliston, Hopkinton, Medway, and surrounding Massachusetts towns say about working with us.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        {testimonials.map((t) => (
+          <div class="col-md-4">
+            <TestimonialCard {...t} />
+          </div>
+        ))}
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="/testimonial.html" class="btn btn-outline-primary">
+          View All Testimonials &amp; Projects
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section for SEO / AEO / GEO -->
+  <FAQ items={homeFaqs} />
+
+  <!-- Bottom CTA Banner -->
+  <section class="cta-banner py-5 bg-dark text-white text-center">
+    <div class="container py-4">
+      <span class="badge-service mb-3">READY TO RENOVATE?</span>
+      <h2 class="text-white mb-3" style="font-size: 2.8rem;">Let's Bring Your Vision to Life</h2>
+      <p class="text-light mx-auto mb-4" style="max-width: 650px; font-size: 1.1rem;">
+        Contact Juliney 'Ney' Santana and the Opportunity Painting team today for your free, no-obligation estimate in Holliston and MetroWest MA.
+      </p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="/request-free-quote.html" class="btn btn-primary btn-lg">
+          Schedule Free In-Home Consultation
+        </a>
+        <a href="tel:+15082159441" class="btn btn-outline-light btn-lg">
+          Call (508) 215-9441
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero-section {
+    background-color: #1a1a1a;
+    background-image: url('/img/carousel-3.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+  }
+  .hero-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(18, 18, 18, 0.92) 0%, rgba(26, 26, 26, 0.85) 100%);
+  }
+  .hero-title {
+    font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+    letter-spacing: 0.5px;
+    line-height: 1.15;
+  }
+  .experience-badge {
+    bottom: -25px;
+    right: 25px;
+    min-width: 160px;
+  }
+</style>

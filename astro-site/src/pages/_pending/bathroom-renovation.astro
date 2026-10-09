@@ -1,0 +1,188 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import QuoteForm from '../../components/QuoteForm.astro';
+import FAQ from '../../components/FAQ.astro';
+
+const bathroomFaqs = [
+  {
+    question: "How long does a bathroom renovation take from start to finish?",
+    answer: "A standard full bathroom remodel (tub-to-shower conversion, new vanity, tile flooring, and lighting) takes approximately 2 to 3 weeks. Master bathroom suites with freestanding soaking tubs and double vanities take around 3 to 4 weeks."
+  },
+  {
+    question: "How do you prevent water leaks and moisture damage behind the tiles?",
+    answer: "We utilize industrial waterproofing systems (such as Schluter-KERDI membranes or cement board with multi-coat liquid waterproofing) in all wet areas, shower curbs, and niches before a single tile is set. We pressure-test all plumbing and perform flood testing on shower pans."
+  },
+  {
+    question: "Can you convert an old bathtub into a modern walk-in shower?",
+    answer: "Yes, tub-to-shower conversions are one of our specialties. We reconfigure the drain line, install low-barrier or curbless shower bases, waterproof the walls, and install custom frameless glass enclosures."
+  },
+  {
+    question: "Do you install bathroom exhaust fans vented to the outside?",
+    answer: "Yes, adequate ventilation is critical to prevent mold and mildew in Massachusetts homes. We install ultra-quiet, code-compliant Panasonic or Broan exhaust fans with dedicated exterior ducting."
+  }
+];
+
+const scopeSteps = [
+  {
+    step: "01",
+    title: "Demolition & Site Preparation",
+    desc: "Careful tear-out of old tubs, showers, tiles, vanities, toilets, and subflooring. Debris is hauled away cleanly, and containment plastic protects adjacent bedrooms."
+  },
+  {
+    step: "02",
+    title: "Framing & Structural Work",
+    desc: "Inspecting studs for moisture damage, squaring framing for straight tile walls, and adding solid backing for grab bars, floating vanities, and heavy glass shower doors."
+  },
+  {
+    step: "03",
+    title: "Plumbing Relocation & Fixtures",
+    desc: "Rough-in and relocation of water supply lines and drain stacks. Installing high-flow valves, handheld sprays, thermostatic diverters, and toilet flanges."
+  },
+  {
+    step: "04",
+    title: "Electrical, Lighting & GFCI",
+    desc: "Wiring GFCI-protected circuits, LED vanity light bars, recessed ceiling shower lights, and quiet exterior-vented exhaust fans to meet current electrical codes."
+  },
+  {
+    step: "05",
+    title: "Waterproofing & Precision Tiling",
+    desc: "Installing Schluter waterproof membranes, custom niches, and slope-tested pans. Setting porcelain, ceramic, or marble tile with mold-resistant epoxy or urethane grout."
+  },
+  {
+    step: "06",
+    title: "Moisture-Resistant Drywall & Paint",
+    desc: "Hanging green board or purple mold-resistant drywall, smooth skim coating, and applying mildew-resistant Benjamin Moore Aura Bath & Spa primer and finish paint."
+  },
+  {
+    step: "07",
+    title: "Vanity, Tops & Hardware",
+    desc: "Setting single or double sink vanities, templating quartz or marble vanity tops, mounting undermount sinks, mirrors, medicine cabinets, and towel bars."
+  },
+  {
+    step: "08",
+    title: "Glass Doors & Finishing Touches",
+    desc: "Installing custom frameless glass shower doors, setting high-efficiency toilets, and caulking all wet perimeter joints with 100% silicone sealant."
+  },
+  {
+    step: "09",
+    title: "Final Walkthrough & Cleaning",
+    desc: "Thorough sanitization and cleaning of all glass and tile, water testing all fixtures, and delivering a spotless, move-in-ready bathroom."
+  }
+];
+
+const breadcrumbs = [
+  { name: "Home", url: "https://www.opportunity-painting.com/" },
+  { name: "Services", url: "/interior-exterior-painting.html" },
+  { name: "Bathroom Renovation", url: "/bathroom-renovation.html" }
+];
+---
+
+<Layout
+  title="Bathroom Renovation Contractors | Opportunity Painting Inc. - Holliston, MA"
+  description="Expert bathroom remodeling in Holliston, MA & MetroWest Boston. Walk-in showers, vanity installations, tile flooring, and master bath renovations. Call (508) 215-9441 for a free estimate."
+  serviceName="Bathroom Renovation and Remodeling"
+  serviceDescription="Complete bathroom remodeling services including tub-to-shower conversions, Schluter waterproofing, custom tile showers, vanity installation, and premium fixture plumbing."
+  faqs={bathroomFaqs}
+  breadcrumbs={breadcrumbs}
+>
+  <!-- Page Header -->
+  <section class="page-header py-5 bg-dark text-white position-relative">
+    <div class="container py-4">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <span class="badge-service">BATHROOM REMODELING SPECIALISTS</span>
+          <h1 class="text-white mb-3" style="font-size: 3.2rem;">
+            Luxury Bathroom Renovations in Holliston &amp; MetroWest MA
+          </h1>
+          <p class="text-light mb-4" style="font-size: 1.1rem;">
+            From spa-inspired master suites to smart powder room refreshes. We combine watertight construction, designer tilework, and reliable local craftsmanship.
+          </p>
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="#quote-section" class="btn btn-primary btn-lg">Request Free In-Home Estimate</a>
+            <a href="tel:+15082159441" class="btn btn-outline-light btn-lg">(508) 215-9441</a>
+          </div>
+        </div>
+        <div class="col-lg-5 mt-4 mt-lg-0">
+          <img 
+            src="/img/about-11.jpg" 
+            alt="Modern luxury bathroom with walk-in tile shower and vanity" 
+            width="500" 
+            height="340" 
+            class="rounded shadow-lg w-100" 
+            style="object-fit: cover;" 
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Overview -->
+  <section class="py-5">
+    <div class="container py-3">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <img 
+            src="/img/about-12.jpg" 
+            alt="Custom tile installation in modern renovated bathroom" 
+            width="550" 
+            height="400" 
+            class="rounded shadow w-100" 
+            style="object-fit: cover;" 
+          />
+        </div>
+        <div class="col-lg-6">
+          <span class="badge-service">PRACTICAL ELEGANCE</span>
+          <h2>A Bathroom That Delivers Comfort, Functionality &amp; High ROI</h2>
+          <p>
+            A well-executed bathroom renovation should feel like a sanctuary while withstanding daily moisture and heavy usage. At <strong>Opportunity Painting And Renovation Services Inc.</strong>, we prioritize the unseen structural details just as much as the visible tile finishes.
+          </p>
+          <p>
+            Whether replacing an outdated fiberglass stall with an elegant walk-in shower or updating double vanities with quartz surfaces and matte black fixtures, our Holliston-based team delivers a seamless renovation experience from demo to final caulking.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9-Step Scope of Work -->
+  <section class="py-5 bg-light">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <span class="badge-service">COMPREHENSIVE SCOPE OF WORK</span>
+        <h2>Our Step-by-Step Bathroom Renovation Process</h2>
+        <p class="text-muted mx-auto" style="max-width: 650px;">
+          Tested methodology ensuring 100% leak-proof waterproofing and showroom-grade craftsmanship.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        {scopeSteps.map((item) => (
+          <div class="col-md-6 col-lg-4">
+            <div class="p-4 bg-white rounded shadow-sm border h-100 d-flex flex-column">
+              <span class="text-primary font-weight-bold mb-2" style="font-size: 1.5rem; font-family: var(--font-heading);">{item.step}</span>
+              <h4 class="mb-2">{item.title}</h4>
+              <p class="text-muted m-0" style="font-size: 0.92rem;">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Section -->
+  <section id="quote-section" class="py-5">
+    <div class="container py-3">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <QuoteForm 
+            title="Get a Free Bathroom Renovation Estimate" 
+            subtitle="Contact our Holliston contractors for an in-home assessment and detailed proposal."
+            defaultService="Bathroom Renovation"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={bathroomFaqs} />
+</Layout>

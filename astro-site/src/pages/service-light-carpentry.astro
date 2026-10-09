@@ -1,0 +1,435 @@
+---
+import LayoutLive from '../layouts/LayoutLive.astro';
+import { getHousePainterSchema, getBreadcrumbSchema } from '../utils/schema';
+import { siteConfig } from '../siteConfig';
+
+const housePainterSchema = getHousePainterSchema();
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: "Home", url: "https://www.opportunity-painting.com/" },
+  { name: "Services", url: "https://www.opportunity-painting.com/#services" },
+  { name: "Light Carpentry", url: "https://www.opportunity-painting.com/service-light-carpentry.html" }
+]);
+---
+
+<LayoutLive
+  title="Light Carpentry in Holliston, MA | Opportunity Painting"
+  description="Light carpentry in Holliston, MA and nearby towns: trim, baseboards, casing and rot repair, ready for paint. Serving Framingham, Hopkinton and Milford."
+  canonical="https://www.opportunity-painting.com/service-light-carpentry.html"
+  keywords="Light carpentry, Carpentry repair, Carpentry services"
+  ogTitle="Light Carpentry in Holliston, MA | Opportunity Painting"
+  ogDescription="Light carpentry in Holliston, MA and nearby towns: trim, baseboards, casing and rot repair, ready for paint. Serving Framingham, Hopkinton and Milford."
+  ogUrl="https://www.opportunity-painting.com/service-light-carpentry.html"
+  ogImage="https://www.opportunity-painting.com/img/carousel-3.jpg"
+  chat={false}
+  activePage="service-light-carpentry"
+>
+  <Fragment slot="jsonld">
+    <!-- Início JSON-LD Schema -->
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(housePainterSchema, null, 2)} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbSchema, null, 2)} />
+    <!-- Fim JSON-LD Schema -->
+  </Fragment>
+
+    <!-- Início Page Header -->
+    <div class="wow fadeIn container-fluid mb-5 page-header py-5" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="text-white animated display-1 slideInDown">Light Carpentry in Holliston, MA</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="mb-0 breadcrumb text-uppercase">
+                    <li class="breadcrumb-item"><a href="/" class="text-white">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/#services" class="text-white">Services</a></li>
+                    <li class="text-primary active breadcrumb-item" aria-current="page">Light Carpentry</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Fim Page Header -->
+
+    <!-- Início Section Content -->
+    <div class="py-5 container-xxl">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Início Content Left -->
+                <div class="wow col-lg-6 fadeInUp" data-wow-delay="0.1s">
+                    <div class="h4 section-title">Precision Carpentry</div>
+                    <h2 class="mb-4 display-5">Masterful Craftsmanship for Enduring Repairs</h2>
+                    <p class="mb-4">
+                        With over 15 years of professional carpentry experience, Opportunity Painting delivers masterful craftsmanship for lasting
+                        excellence.
+                        Our skilled artisans infuse precision into every project, ensuring enduring solutions for both
+                        homes and commercial spaces.
+                        From intricate renovations to structural enhancements, our mastery guarantees lasting results.
+                        Explore our gallery and witness the symphony of skill, where every repair narrates a tale of
+                        enduring craftsmanship in the realm of carpentry.
+                    </p>
+
+                    <!-- Início Features -->
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Craftsmanship Icon" class="flex-shrink-0" src="/img/icons/icon-2.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Craftsmanship</h3>
+                                    <p class="mb-0">Experience top-tier precision in every carpentry detail for
+                                        resilient and flawless repairs.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Versatility Icon" class="flex-shrink-0" src="/img/icons/icon-3.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Versatility</h3>
+                                    <p class="mb-0">Adaptable solutions tailored to diverse carpentry needs, ensuring
+                                        excellence in every project.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Quality Materials Icon" class="flex-shrink-0" src="/img/icons/icon-4.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Quality Materials</h3>
+                                    <p class="mb-0">Utilizing premium materials to guarantee durability, strength, and
+                                        aesthetic appeal in every carpentry endeavor.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Features -->
+                </div>
+                <!-- Fim Content Left -->
+
+                <!-- Início Content Right -->
+                <div class="wow col-lg-6 fadeInUp" data-wow-delay="0.5s">
+                    <div class="feature-img">
+                        <img alt="Light Carpentry Sample 1" class="img-fluid" src="/img/about-14.jpg" loading="lazy" decoding="async">
+                        <img alt="Light Carpentry Sample 2" class="img-fluid" src="/img/about-13.jpg" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <!-- Fim Content Right -->
+            </div>
+        </div>
+    </div>
+    <!-- Fim Section Content -->
+
+    <!-- Início Conteúdo Principal -->
+    <div class="container">
+        <div class="row">
+            <div class="mx-auto col-md-10 mt-5">
+                <!-- Título Principal -->
+                <h2 class="mb-4 text-center">Custom Carpentry Services by <a
+                        href="/">Opportunity Painting</a></h2>
+                <div class="mb-4"></div>
+
+                <!-- Introdução -->
+                <h2>Introduction</h2>
+                <p class="text-justify">
+                    Put an end to issues and enhance the beauty and comfort of your home with just one click. Our
+                    experts provide high-quality residential carpentry services. Schedule your free estimate now by
+                    clicking the button below.
+                </p>
+
+                <p class="text-justify">
+                    Carpentry and painting go together. Repaired trim is ready for <a href="/service-interior-painting.html">interior painting</a> or <a href="/service-exterior-painting.html">exterior painting</a>, and the same skills support our <a href="/kitchen-renovation.html">kitchen</a>, <a href="/bathroom-renovation.html">bathroom</a> and <a href="/basement-renovation.html">basement</a> renovations.
+                </p>
+
+                <p class="text-justify">
+                    Based in Holliston at 7 Franklin St, we also serve Framingham, Hopkinton, Milford, Medway, Ashland, Sherborn, Millis, Dover and the surrounding MetroWest area. See all <a href="/areas-we-serve.html">areas we serve</a>, and follow our latest projects on <a href="https://www.instagram.com/opportunity_painting" target="_blank" rel="noopener noreferrer">Instagram</a>.
+                </p>
+                <div class="mb-4"></div>
+
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
+                    <h2 class="m-0">Light Carpentry Capabilities &amp; Architectural Trim</h2>
+                </div>
+                
+                <p class="text-justify">
+                    Flawless paint finishes rely on pristine underlying woodwork. Opportunity Painting provides master-level finish carpentry and structural exterior repairs that elevate your home's character:
+                </p>
+
+                <div class="row g-4 my-3">
+                    <!-- Card 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Ceiling Accents</span>
+                                <span class="possibility-num">01</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="5" rx="1"/><rect x="5" y="8" width="4" height="13"/><rect x="15" y="8" width="4" height="13"/><line x1="3" y1="21" x2="21" y2="21"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Crown Molding &amp; Coffered Ceilings</h3>
+                            <p class="possibility-desc">
+                                Add regal elegance with single-piece or multi-component crown moldings, dental details, and decorative ceiling beams with precision compound miter corners.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Compound Miters</span>
+                                <span class="possibility-tag">Crown Molding</span>
+                                <span class="possibility-tag">Beam Details</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Finish Carpentry</span>
+                                <span class="possibility-pill-box">Tight Joints</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Interior Trim</span>
+                                <span class="possibility-num">02</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Baseboards &amp; Window Casings</h3>
+                            <p class="possibility-desc">
+                                Upgrade outdated skinny trims to tall architectural speed baseboards, backband window casings, apron stools, and craftsman-style door surrounds.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Speed Baseboards</span>
+                                <span class="possibility-tag">Window Stools</span>
+                                <span class="possibility-tag">Craftsman Casings</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Precision Trim</span>
+                                <span class="possibility-pill-box">Clean Reveal</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Rot Elimination</span>
+                                <span class="possibility-num">03</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Exterior Rot Repair &amp; AZEK PVC</h3>
+                            <p class="possibility-desc">
+                                Remove rotted eaves, soffits, fascia boards, and sill plates, replacing compromised wood with rot-proof cellular PVC (AZEK) or primed cedar.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Cellular PVC</span>
+                                <span class="possibility-tag">AZEK Trim</span>
+                                <span class="possibility-tag">Fascia &amp; Sills</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">MA CSL Licensed</span>
+                                <span class="possibility-pill-box">100% Rot-Proof</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Wall Paneling</span>
+                                <span class="possibility-num">04</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="12" y1="3" x2="12" y2="21"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Wainscoting &amp; Board &amp; Batten</h3>
+                            <p class="possibility-desc">
+                                Transform plain walls in hallways, dining rooms, and entry foyers with custom picture-frame wainscoting, beadboard paneling, and board-and-batten designs.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Picture Frame</span>
+                                <span class="possibility-tag">Board &amp; Batten</span>
+                                <span class="possibility-tag">Beadboard</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Fine Detailing</span>
+                                <span class="possibility-pill-box">Timeless Elegance</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Door Fitting</span>
+                                <span class="possibility-num">05</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><rect x="3" y="2" width="18" height="20" rx="1"/><line x1="9" y1="12" x2="11" y2="12"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Doors, Jambs &amp; Hardware</h3>
+                            <p class="possibility-desc">
+                                Installation of new pre-hung solid core interior doors, pocket doors, adjustments to out-of-square jambs, lockset mortising, and hinge tuning.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Pre-Hung Doors</span>
+                                <span class="possibility-tag">Pocket Doors</span>
+                                <span class="possibility-tag">Jamb Adjustment</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Plumb Alignment</span>
+                                <span class="possibility-pill-box">Smooth Operation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Outdoor Wood</span>
+                                <span class="possibility-num">06</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Deck &amp; Porch Structural Repairs</h3>
+                            <p class="possibility-desc">
+                                Reinforcing loose porch railings, rebuilding deteriorated deck steps, swapping damaged deck boards, and reinforcing structural posts.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Railing Rebuild</span>
+                                <span class="possibility-tag">Step Replacement</span>
+                                <span class="possibility-tag">Deck Structural</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Code Compliant</span>
+                                <span class="possibility-pill-box">Structural Safety</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Início Seção Serviços de Carpintaria Editorial -->
+                <div class="content-section my-5">
+                    <span class="section-title">CARPENTRY &amp; ARCHITECTURAL MILLWORK</span>
+                    <h2 class="display-6 mt-1 mb-3">Carpentry Services</h2>
+
+                    <div class="editorial-process">
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">01.</span> Interior and Exterior Carpentry Services</h3>
+                            <p class="text-justify">
+                                At <a href="/">Opportunity Painting</a>, we offer
+                                custom carpentry services along with premium painting services. Our experts can help address
+                                carpentry issues that gradually become bigger concerns. From <strong><a
+                                        href="/service-kitchen-cabinet-refinishing.html">Kitchen
+                                        Cabinets</a></strong> to deck repairs, we offer a range of carpentry services to meet your
+                                needs.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">02.</span> Specific Carpentry Services</h3>
+                            <ul>
+                                <li><strong><a
+                                            href="/service-kitchen-cabinet-refinishing.html">Kitchen
+                                            Cabinets</a></strong>: We repair worn cabinets, loose hinges, and other issues before
+                                    they become irreversible.</li>
+                                <li><strong>Shelves and Doors</strong>: We address problems with damaged doors and shelves.</li>
+                                <li><strong>Wood Rot Replacement</strong>: We treat areas with rotted wood to prevent further
+                                    damage.</li>
+                            </ul>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">03.</span> Custom Carpentry</h3>
+                            <p class="text-justify">
+                                Our team of skilled carpenters is ready to provide personalized, high-quality service. From simple
+                                finishes to complex installations, we are committed to enhancing the beauty and value of your home.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Box: Serviços Relacionados (Crosslinks) -->
+                <div class="my-4">
+                    <h3>Explore Our Full Range of Home Enhancement Services</h3>
+                    <p class="text-justify">
+                        In addition to light carpentry, we offer a complete range of services to enhance your property.
+                        Our <strong><a href="/service-interior-painting.html">interior painting</a></strong> transforms the ambiance of indoor spaces, while our <strong><a href="/service-exterior-painting.html">exterior painting</a></strong> enhances the facade of your property. For full living space upgrades, explore our licensed <strong><a href="/kitchen-renovation.html">kitchen renovation</a></strong>, <strong><a href="/bathroom-renovation.html">bathroom renovation</a></strong>, and <strong><a href="/basement-renovation.html">basement renovation</a></strong> services, along with factory-grade <strong><a href="/service-kitchen-cabinet-refinishing.html">kitchen cabinet refinishing</a></strong> and <strong><a href="/service-commercial-painting.html">commercial painting</a></strong>.
+                    </p>
+                </div>
+
+                <!-- Seção FAQ Accordion -->
+                <div class="faq-section mb-5">
+                    <div class="text-center mb-4">
+                        <span class="section-title">Answers &amp; Clarity</span>
+                        <h2 class="display-6 mt-1 mb-2">Frequently Asked Questions</h2>
+                    </div>
+
+                    <div class="faq-accordion">
+                        <details>
+                            <summary>What types of light carpentry and trim do you install?</summary>
+                            <p class="faq-answer">
+                                We install custom interior baseboards, crown molding, picture frame molding, wainscoting, interior door frames, and window stools. On the exterior, we replace rotted cedar clapboards, corner boards, fascia, soffits, and deck floorboards.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do you use rot-proof PVC materials for exterior repairs?</summary>
+                            <p class="faq-answer">
+                                Yes, whenever exterior trim is exposed to high moisture, roof runoff, or ground contact, we recommend cellular PVC (such as AZEK). PVC never rots, absorbs water, or requires frequent repainting.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Can you fix sticky doors or install new pre-hung doors?</summary>
+                            <p class="faq-answer">
+                                Yes, our finish carpenters adjust out-of-square door jambs, plane sticking interior doors, and install new solid-core pre-hung interior and exterior doors complete with hardware.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>What kinds of carpentry jobs do you take on?</summary>
+                            <p class="faq-answer">
+                                We handle trim, baseboards, door and window casing, repairs and rot replacement, along with similar finish work. For a larger project, call us and we will tell you honestly whether it is a fit.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do you offer light carpentry in Framingham and nearby towns?</summary>
+                            <p class="faq-answer">
+                                Yes. We are based in Holliston and also serve Framingham, Hopkinton, Milford, Medway, Ashland, Sherborn, Millis, Dover, Medfield, Natick and Franklin. If you are not sure we cover your address, call us at (508) 215-9441.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do you offer free estimates and a warranty?</summary>
+                            <p class="faq-answer">
+                                Yes. We visit the property, talk through the work and give you a detailed quote at no cost. We also offer a written workmanship warranty, and the terms are detailed in your contract.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- Bloco de Citação / CTA -->
+                <div class="text-center my-4">
+                    <div class="h5 font-italic mb-3">Precision carpentry and custom architectural details that elevate every room.</div>
+                    <div class="my-3 d-flex flex-wrap justify-content-center gap-2">
+                        <a href="/request-free-quote.html" class="btn btn-primary btn-lg px-4" style="height: 48px; line-height: 32px;">Get a Free Quote</a>
+                        <a href="sms:+15082159441?&body=Hi%20Ney,%20I'd%20like%20a%20free%20quote%20for%20a%20light%20carpentry%20project" class="btn btn-dark btn-lg px-4 d-inline-flex align-items-center justify-content-center text-center" style="height: 48px; line-height: 32px;">
+                            Text US
+                        </a>
+                    </div>
+                    <div class="text-muted small">
+                        By the <a href="/">© Opportunity Painting And Renovation Services Inc.</a> Team
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim Conteúdo Principal -->
+</LayoutLive>

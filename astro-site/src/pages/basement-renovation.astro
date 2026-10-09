@@ -1,0 +1,492 @@
+---
+import LayoutLive from '../layouts/LayoutLive.astro';
+import { getHousePainterSchema, getBreadcrumbSchema } from '../utils/schema';
+import { siteConfig } from '../siteConfig';
+
+const housePainterSchema = getHousePainterSchema();
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: "Home", url: "https://www.opportunity-painting.com/" },
+  { name: "Services", url: "https://www.opportunity-painting.com/#services" },
+  { name: "Basement Renovation", url: "https://www.opportunity-painting.com/basement-renovation.html" }
+]);
+---
+
+<LayoutLive
+  title="Basement Finishing & Renovation Contractors | Opportunity Painting Inc. - Holliston, MA"
+  description="Basement renovation in Holliston, MA: turn unused space into a dry, comfortable living area. Serving Framingham, Hopkinton and nearby towns. Free estimates."
+  canonical="https://www.opportunity-painting.com/basement-renovation.html"
+  keywords="Basement renovation, Basement finishing, Finished basement, Living space, Holliston MA"
+  ogTitle="Basement Finishing & Renovation Contractors | Opportunity Painting Inc. - Holliston, MA"
+  ogDescription="Basement renovation in Holliston, MA: turn unused space into a dry, comfortable living area. Serving Framingham, Hopkinton and nearby towns. Free estimates."
+  ogUrl="https://www.opportunity-painting.com/basement-renovation.html"
+  ogImage="https://www.opportunity-painting.com/img/basement-1.jpg"
+  chat={false}
+  activePage="basement-renovation"
+>
+  <Fragment slot="jsonld">
+    <!-- Início do JSON-LD -->
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(housePainterSchema, null, 2)} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbSchema, null, 2)} />
+    <!-- Fim do JSON-LD -->
+  </Fragment>
+
+    <!-- Início Page Header -->
+    <div class="wow fadeIn container-fluid mb-5 page-header py-5" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="text-white animated display-1 slideInDown">Basement Renovation in Holliston, MA</h1>
+
+            <!-- Início Breadcrumb -->
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="mb-0 breadcrumb text-uppercase">
+                    <li class="breadcrumb-item"><a href="/" class="text-white">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/#services" class="text-white">services</a></li>
+                    <li class="text-primary active breadcrumb-item" aria-current="page">Basement Renovation</li>
+                </ol>
+            </nav>
+            <!-- Fim Breadcrumb -->
+        </div>
+    </div>
+    <!-- Fim Page Header -->
+
+    <!-- Início Main Content -->
+    <div class="py-5 container-xxl">
+        <div class="container">
+            <div class="row g-5">
+
+                <!-- Início Texto Principal -->
+                <div class="wow col-lg-6 fadeInUp" data-wow-delay="0.1s">
+                    <div class="h4 section-title">BASEMENT RENOVATION EXPERTISE</div>
+                    <h2 class="mb-4 display-5">Transform Your Basement into a Functional and Stylish Living Space</h2>
+                    <p class="mb-4">Explore Opportunity Painting's expertise in Basement Renovation and finishing services. Backed by over 15 years of industry experience,
+                        we transform unfinished lower levels into vibrant family lounges, home theaters, personal gyms, and private suites
+                        with durable building science and meticulous craftsmanship. Discover why we are the trusted choice in Holliston and MetroWest MA.
+                    </p>
+
+                    <!-- Início Benefícios -->
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Complete Basement Transformation Icon" class="flex-shrink-0" src="/img/icons/icon-2.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Complete Basement Transformation</h3>
+                                    <p class="mb-0">Licensed renovation contractors handle moisture assessment, framing, insulation,
+                                        and mechanical upgrades for a seamless lower-level transformation.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="High-Quality Craftsmanship Icon" class="flex-shrink-0" src="/img/icons/icon-3.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>High-Quality Craftsmanship</h3>
+                                    <p class="mb-0">Expert framing, drywall, waterproof subfloors, trim, and painting ensure durable
+                                        and stylish finished basement living areas built to Massachusetts code.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Custom Design Solutions Icon" class="flex-shrink-0" src="/img/icons/icon-4.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Custom Design Solutions</h3>
+                                    <p class="mb-0">Tailored layouts, layered lighting, acoustic soundproofing, and built-in storage
+                                        maximize every square foot and reflect your lifestyle goals.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Benefícios -->
+                </div>
+                <!-- Fim Texto Principal -->
+
+                <!-- Início Imagens -->
+                <div class="wow col-lg-6 fadeInUp" data-wow-delay="0.5s">
+                    <div class="feature-img">
+                        <img alt="Basement renovation by Opportunity Painting, Holliston MA" class="img-fluid" src="/img/basement-1.jpg" loading="lazy" decoding="async">
+                        <img alt="Basement renovation by Opportunity Painting, Holliston MA" class="img-fluid" src="/img/basement-2.jpg" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <!-- Fim Imagens -->
+            </div>
+        </div>
+    </div>
+    <!-- Fim Main Content -->
+
+    <!-- Início Container Principal -->
+    <div class="container">
+        <!-- Início Linha -->
+        <div class="row">
+            <div class="mx-auto col-md-10 mt-5">
+                <h2 class="mb-4 text-center">The Art of Basement Renovation: Transforming Spaces with Precision</h2>
+
+                <!-- Espaço para Margem -->
+                <div class="mb-4"></div>
+
+                <h2>Introduction</h2>
+                <p class="text-justify">
+                    When it comes to <strong><a href="/basement-renovation.html">basement renovation</a></strong>, attention to detail and precision are paramount.
+                    At <a href="/"><strong>© Opportunity Painting And Renovation Services Inc.</strong></a>, we unlock the full potential of your home by converting dark, underutilized basements into bright, comfortable, and functional living spaces.
+                    Whether you envision a dedicated home office, an entertainment center, an athletic gym, or an inviting guest suite, our building science approach ensures moisture-protected, energy-efficient comfort year-round.
+                    In this guide, we detail our turnkey basement finishing process and how it maximizes both square footage and property value.
+                </p>
+
+                <p class="text-justify">
+                    Also planning a <a href="/kitchen-renovation.html">kitchen renovation</a> or a <a href="/bathroom-renovation.html">bathroom renovation</a>? We can coordinate them as one project.
+                </p>
+
+                <p class="text-justify">
+                    Based in Holliston at 7 Franklin St, we also serve Framingham, Hopkinton, Milford, Medway, Ashland, Sherborn, Millis, Dover and the surrounding MetroWest area. See all <a href="/areas-we-serve.html">areas we serve</a>, and follow our latest projects on <a href="https://www.instagram.com/opportunity_painting" target="_blank" rel="noopener noreferrer">Instagram</a>.
+                </p>
+
+                <!-- Espaço para Margem -->
+                <div class="mb-4"></div>
+
+                <h2>Basement Renovation Possibilities &amp; Custom Solutions</h2>
+                <p class="text-justify">
+                    Finishing your lower level is the most cost-effective way to expand your home's usable living space without expanding its physical footprint. Opportunity Painting &amp; Renovation combines licensed structural expertise with New England building science to turn cold, damp basements into warm, inviting rooms for work, play, and relaxation:
+                </p>
+
+                <div class="row g-4 my-3">
+                    <!-- Possibilidade 1: Home Theaters -->
+                    <div class="col-md-6">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Acoustic Engineering</span>
+                                <span class="possibility-num">01</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><circle cx="8" cy="10" r="1.5"/><circle cx="16" cy="10" r="1.5"/><path d="M11 10h2"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Home Theaters &amp; Media Lounges</h3>
+                            <p class="possibility-desc">
+                                Create the ultimate cinematic retreat. We incorporate acoustic Rockwool mineral wool insulation between ceiling joists and studs, resilient sound channels, concealed in-wall 7.1/Atmos speaker wiring, recessed television media niches, and dimmable smart LED cove lighting.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Rockwool Insulation</span>
+                                <span class="possibility-tag">Resilient Channels</span>
+                                <span class="possibility-tag">Dolby Atmos 7.1</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Acoustic Decibel Isolation</span>
+                                <span class="possibility-pill-box">Cinematic Grade</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Possibilidade 2: Wet Bars -->
+                    <div class="col-md-6">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Hospitality &amp; Entertaining</span>
+                                <span class="possibility-num">02</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><path d="M5 4h14l-2 9H7L5 4z"/><path d="M10 13v7"/><path d="M14 13v7"/><line x1="7" y1="20" x2="17" y2="20"/><path d="M9 7h6"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Basement Wet Bars, Kitchenettes &amp; Pubs</h3>
+                            <p class="possibility-desc">
+                                Elevate entertaining with a custom lower-level bar or kitchenette. From quartz or granite bar tops and undermount prep sinks to built-in wine chillers, under-counter beverage centers, draft taps, floating display shelves, and custom tile splash zones.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Quartz Bar Tops</span>
+                                <span class="possibility-tag">Wine Chillers &amp; Taps</span>
+                                <span class="possibility-tag">Prep Sinks &amp; Backsplash</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Dedicated Water &amp; Drain Lines</span>
+                                <span class="possibility-pill-box">Custom Wet Bar</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Possibilidade 3: Full & Half Bathrooms -->
+                    <div class="col-md-6">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Subterranean Plumbing</span>
+                                <span class="possibility-num">03</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><path d="M4 12h16a1 1 0 0 1 1 1v3a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-3a1 1 0 0 1 1-1z"/><path d="M6 12V5a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v2"/><circle cx="9" cy="8" r="0.5"/><line x1="5" y1="20" x2="5" y2="22"/><line x1="19" y1="20" x2="19" y2="22"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Full &amp; Half Basement Bathrooms</h3>
+                            <p class="possibility-desc">
+                                Eliminate endless trips up and down the stairs. Our licensed plumbing specialists rough in underground drain trenches, install heavy-duty sewage ejector pump pits or macerating systems, and construct luxury tile walk-in showers with dedicated high-CFM exterior venting.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Sewage Ejector Systems</span>
+                                <span class="possibility-tag">Slab Drain Trenching</span>
+                                <span class="possibility-tag">Walk-In Tile Showers</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">MA Licensed Plumbing Code</span>
+                                <span class="possibility-pill-box">Turnkey Wet Area</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Possibilidade 4: Legal Guest Suites -->
+                    <div class="col-md-6">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Code Compliance &amp; Egress</span>
+                                <span class="possibility-num">04</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="12" y1="3" x2="12" y2="21"/><path d="M7 7h2v2H7z"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Legal Guest Suites &amp; In-Law Apartments</h3>
+                            <p class="possibility-desc">
+                                Accommodate extended family or weekend guests in private luxury. We cut and frame code-compliant egress window wells into concrete foundations with safety ladders, install egress escape wells, full walk-in closets, and multi-zone heating controls to meet Massachusetts 780 CMR building regulations.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Foundation Egress Wells</span>
+                                <span class="possibility-tag">MA 780 CMR Code</span>
+                                <span class="possibility-tag">Multi-Zone Climate</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Structural Egress Permitted</span>
+                                <span class="possibility-pill-box">Code Certified</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Possibilidade 5: Home Gyms -->
+                    <div class="col-md-6">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Athletic Conditioning</span>
+                                <span class="possibility-num">05</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><path d="M6 5v14"/><path d="M18 5v14"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="6" y1="12" x2="18" y2="12"/><rect x="4" y="8" width="2" height="8" rx="1"/><rect x="18" y="8" width="2" height="8" rx="1"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Home Gyms &amp; Athletic Fitness Studios</h3>
+                            <p class="possibility-desc">
+                                Design your personal workout oasis with shock-absorbing commercial rubber interlocking flooring, reinforced ceiling beams for heavy bags and suspension trainers, full-length mirror walls, dedicated high-power equipment circuits, and mini-split climate control.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Shock-Absorbing Rubber</span>
+                                <span class="possibility-tag">Reinforced Joist Mounts</span>
+                                <span class="possibility-tag">Mirror Walls &amp; Circuits</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Heavy Load-Bearing Support</span>
+                                <span class="possibility-pill-box">Athletic Grade</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Possibilidade 6: Dedicated Home Offices -->
+                    <div class="col-md-6">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Executive Workspace</span>
+                                <span class="possibility-num">06</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1"/><line x1="3" y1="16" x2="21" y2="16"/><line x1="7" y1="16" x2="7" y2="20"/><line x1="17" y1="16" x2="17" y2="20"/><line x1="7" y1="20" x2="17" y2="20"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Dedicated Home Offices &amp; Studios</h3>
+                            <p class="possibility-desc">
+                                Maximize productivity away from household noise. We build private, sound-isolated executive work suites with hardwired Cat6 high-speed Ethernet cabling, built-in custom desks, file storage cabinetry, and daylight-balanced flicker-free LED architectural fixtures.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Cat6 High-Speed Ethernet</span>
+                                <span class="possibility-tag">Soundproof Quiet Suites</span>
+                                <span class="possibility-tag">Custom Built Desks</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Low-Voltage Structured Wiring</span>
+                                <span class="possibility-pill-box">Executive Build</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Editorial Callout: Ciência da Construção e Engenharia -->
+                <div class="my-4">
+                    <h3>Building Science: Moisture Engineering &amp; Warm Subfloors</h3>
+                    <p class="text-justify">
+                        A basement is only as durable as its moisture protection. Because concrete foundation walls and slabs are porous and naturally cold, standard above-grade building methods can lead to hidden condensation and mildew. We adhere strictly to New England building science: continuous closed-cell XPS rigid foam thermal breaks on concrete walls (R-10+) to stop thermal bridging, sealed vapor retarders, and raised subfloor panels (like DRIcore) that create an air gap above the slab. Finished with 100% waterproof luxury vinyl plank (LVP) or glazed porcelain tile, your basement stays dry, warm, and odor-free for decades.
+                    </p>
+                </div>
+
+                <!-- Seção Metodologia Editorial -->
+                <div class="content-section my-5">
+                    <span class="section-title">COMPREHENSIVE SCOPE OF WORK</span>
+                    <h2 class="display-6 mt-1 mb-3">Our 10-Step Basement Finishing Process</h2>
+                    <p class="text-justify mb-4">
+                        From foundation prep to final trim, every detail is built to Massachusetts building code standards:
+                    </p>
+
+                    <div class="editorial-process">
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">01.</span> Moisture Assessment &amp; Demo</h3>
+                            <p class="text-justify">
+                                Clearing out debris, inspecting foundation walls for efflorescence or dampness, and applying waterproofing barriers before any framing begins.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">02.</span> Framing, Partitions &amp; Soffits</h3>
+                            <p class="text-justify">
+                                Erecting perimeter walls with thermal breaks off concrete surfaces, framing room partitions for home offices or gyms, and building custom soffits to conceal ductwork and pipes.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">03.</span> Thermal Insulation &amp; Soundproofing</h3>
+                            <p class="text-justify">
+                                Installing rigid foam or closed-cell spray foam insulation to prevent condensation, along with Roxul/mineral wool soundproofing batts in ceiling joists for acoustic control.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">04.</span> Electrical, Media &amp; Recessed Lighting</h3>
+                            <p class="text-justify">
+                                Installing dedicated circuits, code-required outlets every 12 feet, LED slim recessed ceiling lights, hardwired smoke/CO detectors, and AV cabling.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">05.</span> Plumbing Rough-Ins (Wet Bars / Bath)</h3>
+                            <p class="text-justify">
+                                Tying into waste stacks or installing sewage ejector pits for basement bathrooms, laundry rooms, or custom entertainment wet bars.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">06.</span> HVAC Duct Extension &amp; Ventilation</h3>
+                            <p class="text-justify">
+                                Extending heating and cooling branch ducts to balance basement airflow and temperature year-round, adding supply and return registers.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">07.</span> Moisture-Barrier Subfloors &amp; Flooring</h3>
+                            <p class="text-justify">
+                                Laying moisture-sealed subfloor membranes followed by 100% waterproof luxury vinyl plank (LVP), engineered hardwood, or glazed porcelain tile.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">08.</span> Ceilings, Baseboards &amp; Millwork</h3>
+                            <p class="text-justify">
+                                Installing seamless drywall ceilings or architectural acoustic drop ceilings with access points, plus baseboards, door casings, and crown molding.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">09.</span> Drywall Taping &amp; Fine Painting</h3>
+                            <p class="text-justify">
+                                Level 4 drywall finishing, primer application, and two coats of premium washable Benjamin Moore paint on all walls, ceilings, and trim.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">10.</span> Final Inspection &amp; Move-In Readiness</h3>
+                            <p class="text-justify">
+                                Detailed cleanup, fixture testing, air quality check, and final walkthrough with the client to deliver a fully functional, move-in-ready living space.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Box: Serviços Relacionados (Crosslinks) -->
+                <div class="my-4">
+                    <h3>Explore Our Full Range of Home Enhancement Services</h3>
+                    <p class="text-justify">
+                        In addition to basement renovation, we offer an extensive portfolio of home improvement services. Bring new life to your culinary space with our
+                        <strong><a href="/kitchen-renovation.html">kitchen renovation</a></strong> solutions, or update existing woodwork with our
+                        <strong><a href="/service-kitchen-cabinet-refinishing.html">kitchen cabinet refinishing</a></strong> service. Create a spa-like retreat with our
+                        <strong><a href="/bathroom-renovation.html">bathroom renovation</a></strong> expertise. We also provide premier
+                        <strong><a href="/service-interior-painting.html">interior painting</a></strong>, durable
+                        <strong><a href="/service-exterior-painting.html">exterior painting</a></strong>, professional
+                        <strong><a href="/service-commercial-painting.html">commercial painting</a></strong>, and skilled
+                        <strong><a href="/service-light-carpentry.html">light carpentry</a></strong> services.
+                    </p>
+                </div>
+
+                <!-- Seção FAQ Accordion -->
+                <div class="faq-section mb-5">
+                    <div class="text-center mb-4">
+                        <span class="section-title">Answers &amp; Clarity</span>
+                        <h2 class="display-6 mt-1 mb-2">Frequently Asked Questions</h2>
+                    </div>
+
+                    <div class="faq-accordion">
+                        <details>
+                            <summary>How do you manage moisture and mold risks in New England basements?</summary>
+                            <p class="faq-answer">
+                                Prior to framing, we inspect foundation walls and concrete slabs for hydrostatic pressure and moisture transmission. We install vapor barriers, rigid foam insulation against concrete walls, and moisture-resistant subfloor panels to ensure a dry, warm, and mold-free environment.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do finished basements in Massachusetts require an egress window or door?</summary>
+                            <p class="faq-answer">
+                                If your finished basement design includes a bedroom, Massachusetts building code requires a code-compliant egress window or walk-out door for emergency escape. We help assess your layout and coordinate egress requirements.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Can you add a full or half bathroom to a finished basement?</summary>
+                            <p class="faq-answer">
+                                Yes. If underground plumbing rough-ins do not already exist, our licensed plumbing partners saw-cut the concrete slab to tie into the main sewer line, or install high-reliability sewage ejector pump systems.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>What flooring options work best in a finished basement?</summary>
+                            <p class="faq-answer">
+                                Luxury Vinyl Plank (LVP) and glazed porcelain tile are the most durable and water-resistant choices for Massachusetts basements. They provide realistic wood aesthetics while remaining 100% waterproof.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do you offer basement renovation in Framingham and nearby towns?</summary>
+                            <p class="faq-answer">
+                                Yes. We are based in Holliston and also serve Framingham, Hopkinton, Milford, Medway, Ashland, Sherborn, Millis, Dover, Medfield, Natick and Franklin. If you are not sure we cover your address, call us at (508) 215-9441.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do you offer free estimates and a warranty?</summary>
+                            <p class="faq-answer">
+                                Yes. We visit the property, talk through the work and give you a detailed quote at no cost. We also offer a written workmanship warranty, and the terms are detailed in your contract.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- Bloco de Citação / CTA -->
+                <div class="text-center my-4">
+                    <div class="h5 font-italic mb-3">Unlock the full potential of your home with a finished basement built to last.</div>
+                    <div class="my-3 d-flex flex-wrap justify-content-center gap-2">
+                        <a href="/request-free-quote.html" class="btn btn-primary btn-lg px-4" style="height: 48px; line-height: 32px;">Get a Free Quote</a>
+                        <a href="sms:+15082159441?&body=Hi%20Ney,%20I'd%20like%20a%20free%20quote%20for%20a%20basement%20renovation" class="btn btn-dark btn-lg px-4 d-inline-flex align-items-center justify-content-center text-center" style="height: 48px; line-height: 32px;">
+                            Text US
+                        </a>
+                    </div>
+                    <div class="text-muted small">
+                        By the <a href="/">© Opportunity Painting And Renovation Services Inc.</a> Team
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Fim Linha -->
+    </div>
+    <!-- Fim Container Principal -->
+</LayoutLive>

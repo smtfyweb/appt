@@ -1,0 +1,493 @@
+---
+import LayoutLive from '../layouts/LayoutLive.astro';
+import { getHousePainterSchema, getBreadcrumbSchema } from '../utils/schema';
+import { siteConfig } from '../siteConfig';
+
+const housePainterSchema = getHousePainterSchema();
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: "Home", url: "https://www.opportunity-painting.com/" },
+  { name: "Services", url: "https://www.opportunity-painting.com/#services" },
+  { name: "Bathroom Renovation", url: "https://www.opportunity-painting.com/bathroom-renovation.html" }
+]);
+---
+
+<LayoutLive
+  title="Bathroom Renovation Scope & Process | Opportunity Painting Inc. - Holliston, MA"
+  description="Bathroom renovation in Holliston, MA: showers, tile, vanities and finishes built to last. Serving Framingham, Hopkinton, Milford and nearby towns."
+  canonical="https://www.opportunity-painting.com/bathroom-renovation.html"
+  keywords="Bathroom renovation, Bathroom remodeling, Walk-in shower, Tile installation, Holliston MA"
+  ogTitle="Bathroom Renovation Scope & Process | Opportunity Painting Inc. - Holliston, MA"
+  ogDescription="Bathroom renovation in Holliston, MA: showers, tile, vanities and finishes built to last. Serving Framingham, Hopkinton, Milford and nearby towns."
+  ogUrl="https://www.opportunity-painting.com/bathroom-renovation.html"
+  ogImage="https://www.opportunity-painting.com/img/bathroom-1.jpg"
+  chat={false}
+  activePage="bathroom-renovation"
+>
+  <Fragment slot="jsonld">
+    <!-- Início do JSON-LD -->
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(housePainterSchema, null, 2)} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbSchema, null, 2)} />
+    <!-- Fim do JSON-LD -->
+  </Fragment>
+
+    <!-- Início Page Header -->
+    <div class="wow fadeIn container-fluid mb-5 page-header py-5" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="text-white animated display-1 slideInDown">Bathroom Renovation in Holliston, MA</h1>
+
+            <!-- Início Breadcrumb -->
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="mb-0 breadcrumb text-uppercase">
+                    <li class="breadcrumb-item"><a href="/" class="text-white">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/#services" class="text-white">services</a></li>
+                    <li class="text-primary active breadcrumb-item" aria-current="page">Bathroom Renovation</li>
+                </ol>
+            </nav>
+            <!-- Fim Breadcrumb -->
+        </div>
+    </div>
+    <!-- Fim Page Header -->
+
+    <!-- Início Main Content -->
+    <div class="py-5 container-xxl">
+        <div class="container">
+            <div class="row g-5">
+
+                <!-- Início Texto Principal -->
+                <div class="wow col-lg-6 fadeInUp" data-wow-delay="0.1s">
+                    <div class="h4 section-title">BATHROOM RENOVATION EXPERTS</div>
+                    <h2 class="mb-4 display-5">Transformative Bathroom Remodeling Services</h2>
+                    <p class="mb-4">Explore Opportunity Painting's expertise in Bathroom Renovation services. With over 15 years of professional construction and remodeling experience, we transform
+                        bathrooms into relaxing, functional, and spa-like retreats with precision and superior waterproofing.
+                        Discover why we are the trusted choice for bathroom renovations in Holliston and MetroWest MA.
+                    </p>
+
+                    <!-- Início Benefícios -->
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Demolition and Preparation Icon" class="flex-shrink-0" src="/img/icons/icon-2.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Demolition &amp; Preparation</h3>
+                                    <p class="mb-0">Professional bathroom demolition removes dated fixtures, tile, and flooring,
+                                        safeguards adjacent spaces with protective containment, and prepares subfloors and framing
+                                        for precise installation.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Structural Plumbing and Electrical Icon" class="flex-shrink-0" src="/img/icons/icon-3.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Structural, Plumbing &amp; Electrical</h3>
+                                    <p class="mb-0">Our specialists adjust framing, install solid blocking for vanities and glass doors,
+                                        relocate water and drain lines, and upgrade wiring, GFCI protection, and quiet ventilation to code.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Finishes and Final Walkthrough Icon" class="flex-shrink-0" src="/img/icons/icon-4.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Finishes &amp; Final Walkthrough</h3>
+                                    <p class="mb-0">We deliver 100% watertight Schluter membranes, custom tilework, elegant vanities,
+                                        and premium moisture-resistant paint, concluding with a comprehensive quality inspection.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Benefícios -->
+                </div>
+                <!-- Fim Texto Principal -->
+
+                <!-- Início Imagens -->
+                <div class="wow col-lg-6 fadeInUp" data-wow-delay="0.5s">
+                    <div class="feature-img">
+                        <img alt="Bathroom renovation by Opportunity Painting, Holliston MA" class="img-fluid" src="/img/bathroom-1.jpg" loading="lazy" decoding="async">
+                        <img alt="Bathroom renovation by Opportunity Painting, Holliston MA" class="img-fluid" src="/img/bathroom-2.jpg" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <!-- Fim Imagens -->
+            </div>
+        </div>
+    </div>
+    <!-- Fim Main Content -->
+
+    <!-- Início Container Principal -->
+    <div class="container">
+        <!-- Início Linha -->
+        <div class="row">
+            <div class="mx-auto col-md-10 mt-5">
+                <h2 class="mb-4 text-center">The Art of Bathroom Renovation: Transforming Spaces with Precision</h2>
+
+                <!-- Espaço para Margem -->
+                <div class="mb-4"></div>
+
+                <h2>Introduction</h2>
+                <p class="text-justify">
+                    When it comes to <strong><a href="/bathroom-renovation.html">bathroom renovation</a></strong>, attention to detail and precision are paramount.
+                    At <a href="/"><strong>© Opportunity Painting And Renovation Services Inc.</strong></a>, we understand that a bathroom should balance daily function with spa-like comfort and lasting moisture resistance.
+                    From master suites and guest baths to powder room updates, our Holliston-based team manages every phase with craftsmanship and care.
+                    In this guide, we explore our proven bathroom remodeling process and how it delivers a seamless, high-ROI transformation for your home.
+                </p>
+
+                <p class="text-justify">
+                    Also planning a <a href="/kitchen-renovation.html">kitchen renovation</a> or a <a href="/basement-renovation.html">basement renovation</a>? We can coordinate them as one project.
+                </p>
+
+                <p class="text-justify">
+                    Based in Holliston at 7 Franklin St, we also serve Framingham, Hopkinton, Milford, Medway, Ashland, Sherborn, Millis, Dover and the surrounding MetroWest area. See all <a href="/areas-we-serve.html">areas we serve</a>, and follow our latest projects on <a href="https://www.instagram.com/opportunity_painting" target="_blank" rel="noopener noreferrer">Instagram</a>.
+                </p>
+
+                <!-- Espaço para Margem -->
+                <div class="mb-4"></div>
+
+                <h2>Bathroom Renovation Possibilities &amp; Luxury Features</h2>
+                <p class="text-justify">
+                    A well-designed bathroom balances daily functionality with personal serenity and long-term moisture protection. Opportunity Painting &amp; Renovation transforms outdated bathrooms into spa-inspired spaces through meticulous planning and superior craftsmanship:
+                </p>
+
+                <div class="row g-4 my-3">
+                    <!-- Possibilidade 1: Spa Master -->
+                    <div class="col-md-6">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">En-Suite Architecture</span>
+                                <span class="possibility-num">01</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><path d="M4 12h16"/><path d="M4 12V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><circle cx="10" cy="15" r="1"/><circle cx="14" cy="15" r="1"/><circle cx="12" cy="18" r="1"/><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Spa Master En-Suites &amp; Walk-In Showers</h3>
+                            <p class="possibility-desc">
+                                Replace restrictive tub inserts with curbless, zero-threshold walk-in showers featuring frameless heavy glass enclosures, linear trench drains, ceiling-mounted rainfall showerheads, handheld spray wands, and built-in recessed shampoo niches with subtle accent lighting.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Curbless Walk-In</span>
+                                <span class="possibility-tag">Frameless Heavy Glass</span>
+                                <span class="possibility-tag">Rainfall &amp; Trench Drains</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Zero-Threshold Accessibility</span>
+                                <span class="possibility-pill-box">Spa Master Class</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Possibilidade 2: Schluter Waterproofing -->
+                    <div class="col-md-6">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Waterproofing Science</span>
+                                <span class="possibility-num">02</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">100% Watertight Schluter-KERDI Protection</h3>
+                            <p class="possibility-desc">
+                                Water management is paramount. We install commercial-grade Schluter-KERDI waterproofing membranes and uncoupling subfloor systems beneath all tile installations, eliminating moisture penetration, framing rot, and mold risk behind your walls.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Schluter-KERDI Membrane</span>
+                                <span class="possibility-tag">Uncoupling Subfloor</span>
+                                <span class="possibility-tag">Lifetime Mold Barrier</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">100% Sealed Wet Envelope</span>
+                                <span class="possibility-pill-box">Schluter Certified</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Possibilidade 3: Double Vanities -->
+                    <div class="col-md-6">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Custom Vanities &amp; Millwork</span>
+                                <span class="possibility-num">03</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="15" rx="2"/><line x1="2" y1="12" x2="22" y2="12"/><circle cx="7" cy="9" r="1.5"/><circle cx="17" cy="9" r="1.5"/><circle cx="7" cy="16" r="1"/><circle cx="17" cy="16" r="1"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Double Vanities &amp; Custom Storage Towers</h3>
+                            <p class="possibility-desc">
+                                Double your morning efficiency with furniture-grade double vanities, quartz or marble tops, undermount ceramic sinks, soft-close dovetailed drawers, dedicated electrical outlets inside vanity cabinets, and matching tall linen storage towers.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Dual Undermount Sinks</span>
+                                <span class="possibility-tag">In-Cabinet Power</span>
+                                <span class="possibility-tag">Solid Wood Towers</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Furniture-Grade Joinery</span>
+                                <span class="possibility-pill-box">Custom Storage</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Possibilidade 4: Freestanding Tubs -->
+                    <div class="col-md-6">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Luxury Fixtures &amp; Accents</span>
+                                <span class="possibility-num">04</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><path d="M3 11h18c0 4.42-3.58 8-8 8H9c-4.42 0-8-3.58-8-8v-1h2v1z"/><path d="M5 19v2"/><path d="M19 19v2"/><path d="M7 6a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v5H7V6z"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Freestanding Soaking Tubs &amp; Feature Walls</h3>
+                            <p class="possibility-desc">
+                                Create an architectural statement with a freestanding acrylic or stone resin soaking tub, complemented by a floor-mounted gooseneck tub filler with hand shower, backed by a vertical textured tile or fluted wood accent wall.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Stone Resin Soakers</span>
+                                <span class="possibility-tag">Gooseneck Tub Fillers</span>
+                                <span class="possibility-tag">Textured Accent Walls</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Floor-Mounted Rough-In</span>
+                                <span class="possibility-pill-box">Statement Piece</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Possibilidade 5: Radiant Heating -->
+                    <div class="col-md-6">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Thermal Comfort &amp; Flooring</span>
+                                <span class="possibility-num">05</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><path d="M4 4c0 3 2 5 2 7s-2 4-2 7"/><path d="M12 4c0 3 2 5 2 7s-2 4-2 7"/><path d="M20 4c0 3 2 5 2 7s-2 4-2 7"/><line x1="2" y1="21" x2="22" y2="21"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">In-Floor Radiant Heating &amp; Large-Format Tile</h3>
+                            <p class="possibility-desc">
+                                Say goodbye to cold New England bathroom floors with electric radiant in-floor heating mats controlled by programmable digital touchscreen thermostats, installed seamlessly beneath luxury heated porcelain or marble tile floors.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Electric Radiant Heat</span>
+                                <span class="possibility-tag">Touchscreen Thermostats</span>
+                                <span class="possibility-tag">Large-Format Porcelain</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Digital Zone Thermostat</span>
+                                <span class="possibility-pill-box">Heated Floors</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Possibilidade 6: Powder Rooms -->
+                    <div class="col-md-6">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Compact Space Optimization</span>
+                                <span class="possibility-num">06</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><circle cx="6" cy="12" r="1"/><path d="M13 8h5"/><path d="M13 12h5"/><path d="M13 16h5"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Powder Rooms &amp; Half-Bath Conversions</h3>
+                            <p class="possibility-desc">
+                                Maximize small ground-floor spaces. We convert underutilized closets or awkward corners into stylish half-baths with floating wall-hung vanities, compact toilets, decorative wall paneling, and statement wallpaper or tile accents.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Floating Vanities</span>
+                                <span class="possibility-tag">Space-Saving Fixtures</span>
+                                <span class="possibility-tag">Designer Wall Finishes</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Turnkey Space Addition</span>
+                                <span class="possibility-pill-box">Half-Bath Build</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Editorial Callout: Padrões de Ventilação e Proteção -->
+                <div class="my-4">
+                    <h3>Ventilation &amp; Mold Prevention Standards</h3>
+                    <p class="text-justify">
+                        In New England's climate, improper bathroom ventilation causes peeling paint and mildew. Every bathroom renovation we complete includes quiet, high-CFM Panasonic WhisperCeiling exhaust fans properly ducted through exterior walls or soffits, moisture-sensing automatic switches, and two coats of mildew-resistant premium bathroom paint.
+                    </p>
+                </div>
+
+                <!-- Seção Metodologia Editorial -->
+                <div class="content-section my-5">
+                    <span class="section-title">COMPREHENSIVE SCOPE OF WORK</span>
+                    <h2 class="display-6 mt-1 mb-3">Our Step-by-Step Bathroom Renovation Process</h2>
+                    <p class="text-justify mb-4">
+                        Tested methodology ensuring 100% leak-proof waterproofing and showroom-grade craftsmanship:
+                    </p>
+
+                    <div class="editorial-process">
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">01.</span> Demolition &amp; Site Preparation</h3>
+                            <p class="text-justify">
+                                Careful tear-out of old tubs, showers, tiles, vanities, toilets, and subflooring. Debris is hauled away cleanly, and containment plastic protects adjacent bedrooms.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">02.</span> Framing &amp; Structural Work</h3>
+                            <p class="text-justify">
+                                Inspecting studs for moisture damage, squaring framing for straight tile walls, and adding solid backing for grab bars, floating vanities, and heavy glass shower doors.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">03.</span> Plumbing Relocation &amp; Fixtures</h3>
+                            <p class="text-justify">
+                                Rough-in and relocation of water supply lines and drain stacks. Installing high-flow valves, handheld sprays, thermostatic diverters, and toilet flanges.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">04.</span> Electrical, Lighting &amp; GFCI</h3>
+                            <p class="text-justify">
+                                Wiring GFCI-protected circuits, LED vanity light bars, recessed ceiling shower lights, and quiet exterior-vented exhaust fans to meet current electrical codes.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">05.</span> Waterproofing &amp; Precision Tiling</h3>
+                            <p class="text-justify">
+                                Installing Schluter waterproof membranes, custom niches, and slope-tested pans. Setting porcelain, ceramic, or marble tile with mold-resistant epoxy or urethane grout.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">06.</span> Moisture-Resistant Drywall &amp; Paint</h3>
+                            <p class="text-justify">
+                                Hanging green board or purple mold-resistant drywall, smooth skim coating, and applying mildew-resistant Benjamin Moore Aura Bath &amp; Spa primer and finish paint.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">07.</span> Vanity, Tops &amp; Hardware</h3>
+                            <p class="text-justify">
+                                Setting single or double sink vanities, templating quartz or marble vanity tops, mounting undermount sinks, mirrors, medicine cabinets, and towel bars.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">08.</span> Glass Doors &amp; Finishing Touches</h3>
+                            <p class="text-justify">
+                                Installing custom frameless glass shower doors, setting high-efficiency toilets, and caulking all wet perimeter joints with 100% silicone sealant.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">09.</span> Final Walkthrough &amp; Cleaning</h3>
+                            <p class="text-justify">
+                                Thorough sanitization and cleaning of all glass and tile, water testing all fixtures, and delivering a spotless, move-in-ready bathroom.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Box: Serviços Relacionados (Crosslinks) -->
+                <div class="my-4">
+                    <h3>Explore Our Complete Home Enhancement Services</h3>
+                    <p class="text-justify">
+                        In addition to bathroom renovation, we offer a comprehensive suite of home improvement services. Upgrade your culinary space with our
+                        <strong><a href="/kitchen-renovation.html">kitchen renovation</a></strong> solutions, or refresh your existing cabinetry with our
+                        <strong><a href="/service-kitchen-cabinet-refinishing.html">kitchen cabinet refinishing</a></strong> service. Expand your home's livable area with our expert
+                        <strong><a href="/basement-renovation.html">basement renovation</a></strong> services. We also specialize in high-end
+                        <strong><a href="/service-interior-painting.html">interior painting</a></strong>, durable
+                        <strong><a href="/service-exterior-painting.html">exterior painting</a></strong>, professional
+                        <strong><a href="/service-commercial-painting.html">commercial painting</a></strong>, and precision
+                        <strong><a href="/service-light-carpentry.html">light carpentry</a></strong>.
+                    </p>
+                </div>
+
+                <!-- Seção FAQ Accordion -->
+                <div class="faq-section mb-5">
+                    <div class="text-center mb-4">
+                        <span class="section-title">Answers &amp; Clarity</span>
+                        <h2 class="display-6 mt-1 mb-2">Frequently Asked Questions</h2>
+                    </div>
+
+                    <div class="faq-accordion">
+                        <details>
+                            <summary>How long does a bathroom renovation take from start to finish?</summary>
+                            <p class="faq-answer">
+                                A standard full bathroom remodel (tub-to-shower conversion, new vanity, tile flooring, and lighting) takes approximately 2 to 3 weeks. Master bathroom suites with freestanding soaking tubs and double vanities take around 3 to 4 weeks.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>How do you prevent water leaks and moisture damage behind the tiles?</summary>
+                            <p class="faq-answer">
+                                We utilize industrial waterproofing systems (such as Schluter-KERDI membranes or cement board with multi-coat liquid waterproofing) in all wet areas, shower curbs, and niches before a single tile is set. We pressure-test all plumbing and perform flood testing on shower pans.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Can you convert an old bathtub into a modern walk-in shower?</summary>
+                            <p class="faq-answer">
+                                Yes, tub-to-shower conversions are one of our specialties. We reconfigure the drain line, install low-barrier or curbless shower bases, waterproof the walls, and install custom frameless glass enclosures.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do you install bathroom exhaust fans vented to the outside?</summary>
+                            <p class="faq-answer">
+                                Yes, adequate ventilation is critical to prevent mold and mildew in Massachusetts homes. We install ultra-quiet, code-compliant Panasonic or Broan exhaust fans with dedicated exterior ducting.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do you handle plumbing and electrical work in a bathroom renovation?</summary>
+                            <p class="faq-answer">
+                                Plumbing and electrical work is handled by licensed professionals, with permits and inspections as required, and we coordinate it with the rest of the project.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do you offer bathroom renovation in Framingham and nearby towns?</summary>
+                            <p class="faq-answer">
+                                Yes. We are based in Holliston and also serve Framingham, Hopkinton, Milford, Medway, Ashland, Sherborn, Millis, Dover, Medfield, Natick and Franklin. If you are not sure we cover your address, call us at (508) 215-9441.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do you offer free estimates and a warranty?</summary>
+                            <p class="faq-answer">
+                                Yes. We visit the property, talk through the work and give you a detailed quote at no cost. We also offer a written workmanship warranty, and the terms are detailed in your contract.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- Bloco de Citação / CTA -->
+                <div class="text-center my-4">
+                    <div class="h5 font-italic mb-3">A luxurious, watertight bathroom is your daily personal retreat.</div>
+                    <div class="my-3 d-flex flex-wrap justify-content-center gap-2">
+                        <a href="/request-free-quote.html" class="btn btn-primary btn-lg px-4" style="height: 48px; line-height: 32px;">Get a Free Quote</a>
+                        <a href="sms:+15082159441?&body=Hi%20Ney,%20I'd%20like%20a%20free%20quote%20for%20a%20bathroom%20renovation" class="btn btn-dark btn-lg px-4 d-inline-flex align-items-center justify-content-center text-center" style="height: 48px; line-height: 32px;">
+                            Text US
+                        </a>
+                    </div>
+                    <div class="text-muted small">
+                        By the <a href="/">© Opportunity Painting And Renovation Services Inc.</a> Team
+                    </div>
+                </div>
+                <!-- Fim Bloco de Citação -->
+
+            </div>
+        </div>
+        <!-- Fim Linha -->
+    </div>
+    <!-- Fim Container Principal -->
+</LayoutLive>

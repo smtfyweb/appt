@@ -1,0 +1,161 @@
+---
+import '@fontsource/open-sans/400.css';
+import '@fontsource/open-sans/500.css';
+import '@fontsource/open-sans/600.css';
+import '@fontsource/teko/400.css';
+import '@fontsource/teko/500.css';
+import '@fontsource/teko/600.css';
+import '../styles/bootstrap.min.css';
+import '../styles/style.css';
+import HeaderLive from '../components/HeaderLive.astro';
+import FooterLive from '../components/FooterLive.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  keywords?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogUrl?: string;
+  ogImage?: string;
+  chat?: boolean;
+  carousel?: boolean;
+  activePage?: string;
+  robots?: string;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  keywords,
+  ogTitle,
+  ogDescription,
+  ogUrl,
+  ogImage,
+  chat = false,
+  carousel = false,
+  activePage,
+  robots
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{title}</title>
+    
+    <!-- Meta SEO -->
+    <meta name="author" content="Opportunity Painting Inc.">
+    {robots && <meta name="robots" content={robots}>}
+    {keywords && <meta name="keywords" content={keywords}>}
+    <meta name="description" content={description}>
+    {canonical && <link rel="canonical" href={canonical}>}
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content={ogTitle || title}>
+    <meta property="og:description" content={ogDescription || description}>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content={ogUrl || canonical || (Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : "https://smtfyweb.github.io/appt/")}>
+    <meta property="og:image" content={ogImage || (Astro.site ? new URL('/img/carousel-3.jpg', Astro.site).toString() : "https://smtfyweb.github.io/appt/img/carousel-3.jpg")}>
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content={ogTitle || title}>
+    <meta name="twitter:description" content={ogDescription || description}>
+    <meta name="twitter:image" content={ogImage || (Astro.site ? new URL('/img/carousel-3.jpg', Astro.site).toString() : "https://smtfyweb.github.io/appt/img/carousel-3.jpg")}>
+
+
+    <slot name="jsonld" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:,">
+
+    {activePage === 'home' && (
+    <link rel="preload" as="image" href="/img/carousel-3.jpg">
+    )}
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="/css/animate-lite.css">
+    {carousel && (
+    <link rel="stylesheet" href="/lib/owlcarousel/assets/owl.carousel.min.css">
+    )}
+
+    <!-- Google Tag Manager -->
+    <script is:inline>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-N64XLKBT');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google tag (gtag.js) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-393984382"></script>
+    <script is:inline>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-393984382');
+    </script>
+
+</head>
+
+<body>
+    <!-- Link pular para o conteúdo -->
+    <a href="#main-content" class="visually-hidden-focusable btn btn-primary position-absolute top-0 start-0 m-2" style="z-index: 99999;">Skip to main content</a>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-N64XLKBT" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager -->
+
+    <HeaderLive activePage={activePage} />
+
+    <main id="main-content">
+        <slot />
+    </main>
+
+    <FooterLive />
+
+    <!-- Início Scripts -->
+    <script is:inline defer src="/js/bootstrap.bundle.min.js"></script>
+    <script is:inline defer src="/js/site.js"></script>
+
+    {carousel && (
+    <>
+        <script is:inline defer src="/js/jquery-3.6.4.min.js"></script>
+        <script is:inline defer src="/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script is:inline defer src="/js/carousels.js"></script>
+    </>
+    )}
+
+    {chat && (
+    <script is:inline>
+        !function (e, t, r, d) {
+            try {
+                var a = t.head || t.getElementsByTagName("head")[0],
+                    n = t.createElement("script");
+                n.setAttribute("src", "https://cdn.leadster.com.br/neurolead/neurolead.min.js");
+                n.setAttribute("charset", "UTF-8");
+                n.defer = !0;
+                e.neuroleadId = "5S5Ke1EYL55DdkQ3woVJP7zrt";
+                a.appendChild(n);
+            } catch (e) { }
+        }(window, document);
+    </script>
+    )}
+
+</body>
+
+</html>

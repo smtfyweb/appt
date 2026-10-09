@@ -1,0 +1,488 @@
+---
+import LayoutLive from '../layouts/LayoutLive.astro';
+import { getHousePainterSchema, getBreadcrumbSchema } from '../utils/schema';
+import { siteConfig } from '../siteConfig';
+
+const housePainterSchema = getHousePainterSchema();
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: "Home", url: "https://www.opportunity-painting.com/" },
+  { name: "Services", url: "https://www.opportunity-painting.com/#services" },
+  { name: "Kitchen Renovation", url: "https://www.opportunity-painting.com/kitchen-renovation.html" }
+]);
+---
+
+<LayoutLive
+  title="Kitchen Renovation Contractors | Opportunity Painting Inc. - Holliston, MA"
+  description="Kitchen renovation in Holliston, MA: planning, cabinetry, tile, trim and paint. Serving Framingham, Hopkinton, Milford and nearby towns. Free estimates."
+  canonical="https://www.opportunity-painting.com/kitchen-renovation.html"
+  keywords="Kitchen renovation, Kitchen remodeling, Custom cabinets, Countertops, Holliston MA"
+  ogTitle="Kitchen Renovation Contractors | Opportunity Painting Inc. - Holliston, MA"
+  ogDescription="Kitchen renovation in Holliston, MA: planning, cabinetry, tile, trim and paint. Serving Framingham, Hopkinton, Milford and nearby towns. Free estimates."
+  ogUrl="https://www.opportunity-painting.com/kitchen-renovation.html"
+  ogImage="https://www.opportunity-painting.com/img/about-15.jpg"
+  chat={false}
+  activePage="kitchen-renovation"
+>
+  <Fragment slot="jsonld">
+    <!-- Início do JSON-LD -->
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(housePainterSchema, null, 2)} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbSchema, null, 2)} />
+    <!-- Fim do JSON-LD -->
+  </Fragment>
+
+    <!-- Início Page Header -->
+    <div class="wow fadeIn container-fluid mb-5 page-header py-5" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="text-white animated display-1 slideInDown">Kitchen Renovation in Holliston, MA</h1>
+
+            <!-- Início Breadcrumb -->
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="mb-0 breadcrumb text-uppercase">
+                    <li class="breadcrumb-item"><a href="/" class="text-white">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/#services" class="text-white">services</a></li>
+                    <li class="text-primary active breadcrumb-item" aria-current="page">Kitchen Renovation</li>
+                </ol>
+            </nav>
+            <!-- Fim Breadcrumb -->
+        </div>
+    </div>
+    <!-- Fim Page Header -->
+
+    <!-- Início Main Content -->
+    <div class="py-5 container-xxl">
+        <div class="container">
+            <div class="row g-5">
+
+                <!-- Início Texto Principal -->
+                <div class="wow col-lg-6 fadeInUp" data-wow-delay="0.1s">
+                    <div class="h4 section-title">Expert Kitchen Renovation</div>
+                    <h2 class="mb-4 display-5">Transforming Kitchens with Precision!</h2>
+                    <p class="mb-4">Explore Opportunity Painting's expertise in Kitchen Renovation services, backed by over 15 years of residential remodeling experience. We transform
+                        culinary spaces with precision, craftsmanship, and building code compliance, ensuring unparalleled quality.
+                        Discover why we are the trusted choice to bring your dream kitchen to life in Holliston and MetroWest MA.
+                    </p>
+
+                    <!-- Início Benefícios -->
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Demolition and Preparation Icon" class="flex-shrink-0" src="/img/icons/icon-2.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Demolition &amp; Preparation</h3>
+                                    <p class="mb-0">Careful removal of old cabinets, countertops, flooring, and fixtures.
+                                        We erect dust containment barriers and floor protection to safeguard adjacent rooms,
+                                        followed by responsible debris disposal.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Framing Systems and Layout Icon" class="flex-shrink-0" src="/img/icons/icon-3.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Framing, Systems &amp; Layout</h3>
+                                    <p class="mb-0">Modifying framing, adding solid blocking for cabinetry and islands,
+                                        updating plumbing lines, and upgrading electrical service for modern appliances
+                                        and task lighting.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Cabinetry Surfaces and Finishes Icon" class="flex-shrink-0" src="/img/icons/icon-4.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Cabinetry, Surfaces &amp; Finishes</h3>
+                                    <p class="mb-0">Precision installation of custom or semi-custom cabinets, laser-templated
+                                        quartz and granite countertops, tile backsplashes, and flawless painting and trim detailing.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Benefícios -->
+                </div>
+                <!-- Fim Texto Principal -->
+
+                <!-- Início Imagens -->
+                <div class="wow col-lg-6 fadeInUp" data-wow-delay="0.5s">
+                    <div class="feature-img">
+                        <img alt="Kitchen Renovation Sample 1" class="img-fluid" src="/img/about-15.jpg" loading="lazy" decoding="async">
+                        <img alt="Kitchen Renovation Sample 2" class="img-fluid" src="/img/about-16.jpg" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <!-- Fim Imagens -->
+            </div>
+        </div>
+    </div>
+    <!-- Fim Main Content -->
+
+    <!-- Início Container Principal -->
+    <div class="container">
+        <!-- Início Linha -->
+        <div class="row">
+            <div class="mx-auto col-md-10 mt-5">
+                <h2 class="mb-4 text-center">The Art of Kitchen Renovation: Transforming Spaces with Precision</h2>
+
+                <!-- Espaço para Margem -->
+                <div class="mb-4"></div>
+
+                <h2>Introduction</h2>
+                <p class="text-justify">
+                    When it comes to <strong><a href="/kitchen-renovation.html">kitchen renovation</a></strong>, attention to detail and precision are paramount.
+                    At <a href="/"><strong>© Opportunity Painting And Renovation Services Inc.</strong></a>, we understand the significance of the kitchen as the true focal point of your home.
+                    It is where mornings begin, family dinners unfold, and memories are made.
+                    In this guide, we delve into the intricacies of our turnkey kitchen remodeling process and how it can elevate your lifestyle and home value.
+                </p>
+
+                <p class="text-justify">
+                    Also planning a <a href="/bathroom-renovation.html">bathroom renovation</a> or a <a href="/basement-renovation.html">basement renovation</a>? We can coordinate them as one project.
+                </p>
+
+                <p class="text-justify">
+                    Based in Holliston at 7 Franklin St, we also serve Framingham, Hopkinton, Milford, Medway, Ashland, Sherborn, Millis, Dover and the surrounding MetroWest area. See all <a href="/areas-we-serve.html">areas we serve</a>, and follow our latest projects on <a href="https://www.instagram.com/opportunity_painting" target="_blank" rel="noopener noreferrer">Instagram</a>.
+                </p>
+
+                <!-- Espaço para Margem -->
+                <div class="mb-4"></div>
+
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
+                    <h2 class="m-0">Kitchen Renovation Possibilities &amp; Custom Features</h2>
+                </div>
+                
+                <p class="text-justify">
+                    Every family uses their kitchen differently. Whether you need an expansive culinary workshop for entertaining or a highly functional open layout for daily living, Opportunity Painting &amp; Renovation turns design concepts into reality with exceptional craftsmanship:
+                </p>
+
+                <div class="row g-4 my-3">
+                    <!-- Possibilidade 1: Open-Concept -->
+                    <div class="col-md-6">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Structural Engineering</span>
+                                <span class="possibility-num">01</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="5" rx="1"/><rect x="5" y="8" width="4" height="13"/><rect x="15" y="8" width="4" height="13"/><line x1="3" y1="21" x2="21" y2="21"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Open-Concept Living &amp; Wall Removal</h3>
+                            <p class="possibility-desc">
+                                Expand your living space by removing non-bearing or load-bearing partition walls between your kitchen, dining room, and family area. Our licensed supervisor coordinates engineered LVL support beams and flush headers to create seamless sightlines and natural light flow.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">LVL Support Beams</span>
+                                <span class="possibility-tag">Flush Headers</span>
+                                <span class="possibility-tag">Open Sightlines</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">MA CSL &amp; HIC Licensed</span>
+                                <span class="possibility-pill-box">Turnkey Execution</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Possibilidade 2: Custom Islands -->
+                    <div class="col-md-6">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Custom Millwork</span>
+                                <span class="possibility-num">02</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><path d="M3 7h18l-1.5 13H4.5L3 7z"/><path d="M2 4h20v3H2z"/><path d="M12 7v13"/><path d="M7 11h2"/><path d="M15 11h2"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Custom Islands &amp; Breakfast Bars</h3>
+                            <p class="possibility-desc">
+                                Make your island the centerpiece of your home. We build multi-functional islands with waterfall quartz edges, integrated microwave drawers, under-counter beverage centers, prep sinks, pop-up electrical charging towers, and comfortable bar seating.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Waterfall Edges</span>
+                                <span class="possibility-tag">Integrated Appliances</span>
+                                <span class="possibility-tag">Prep Sinks &amp; Seating</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Custom Built On-Site</span>
+                                <span class="possibility-pill-box">Master Craftsman</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Possibilidade 3: Storage Optimization -->
+                    <div class="col-md-6">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Storage Architecture</span>
+                                <span class="possibility-num">03</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><circle cx="12" cy="6" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="18" r="1"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Storage Optimization &amp; Custom Pantries</h3>
+                            <p class="possibility-desc">
+                                Maximize kitchen efficiency with full-extension soft-close dovetail drawers, pull-out spice racks, double-tier cutlery dividers, blind-corner pull-outs, concealed trash/recycling centers, and built-in walk-in or reach-in pantries with adjustable solid wood shelving.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Soft-Close Dovetail</span>
+                                <span class="possibility-tag">Pull-Out Pantries</span>
+                                <span class="possibility-tag">Concealed Waste</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Heavy-Duty Hardware</span>
+                                <span class="possibility-pill-box">Lifetime Soft-Close</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Possibilidade 4: Countertops & Sinks -->
+                    <div class="col-md-6">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Precision Fabrication</span>
+                                <span class="possibility-num">04</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><rect x="3" y="14" width="18" height="7" rx="1"/><path d="M7 14V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8"/><path d="M12 4v3"/><path d="M3 10l4-4M17 6l4 4"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Countertops, Sinks &amp; Designer Backsplashes</h3>
+                            <p class="possibility-desc">
+                                Digital laser templating guarantees flawless seams for quartz, granite, quartzite, and marble countertops. We complete surfaces with handcrafted tile, herringbone subway, or full-height stone backsplashes sealed with stain-proof epoxy grout and deep undermount composite or stainless sinks.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Digital Laser Templating</span>
+                                <span class="possibility-tag">Quartz &amp; Granite</span>
+                                <span class="possibility-tag">Epoxy Grout Backsplash</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Laser 3D Templating</span>
+                                <span class="possibility-pill-box">Flawless Seams</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Possibilidade 5: Layered Lighting -->
+                    <div class="col-md-6">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Lighting Design</span>
+                                <span class="possibility-num">05</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="7"/><path d="M6 13a6 6 0 0 1 12 0H6z"/><line x1="9" y1="17" x2="7" y2="21"/><line x1="15" y1="17" x2="17" y2="21"/><line x1="12" y1="17" x2="12" y2="22"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Architectural Layered Lighting</h3>
+                            <p class="possibility-desc">
+                                Eliminate kitchen shadows with three layers of lighting: ambient slim recessed LED ceiling pot lights, task-focused high-CRI under-cabinet LED ribbons, and designer decorative pendants above your island and dining nook, all controlled via smart dimmers.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">High-CRI LED Ribbons</span>
+                                <span class="possibility-tag">Slim Recessed Pots</span>
+                                <span class="possibility-tag">Smart Dimming</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">MA Electrical Code</span>
+                                <span class="possibility-pill-box">Zero Shadow Glare</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Possibilidade 6: Flooring & Carpentry -->
+                    <div class="col-md-6">
+                        <div class="possibility-card h-100">
+                            <div class="possibility-top-bar">
+                                <span class="possibility-category">Surface &amp; Moldings</span>
+                                <span class="possibility-num">06</span>
+                            </div>
+                            <div class="possibility-header">
+                                <div class="possibility-icon-wrap">
+                                    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="10" y1="3" x2="10" y2="9"/><line x1="14" y1="9" x2="14" y2="15"/><line x1="8" y1="15" x2="8" y2="21"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="possibility-title">Flooring &amp; Finish Carpentry</h3>
+                            <p class="possibility-desc">
+                                From continuous wide-plank hardwood and 100% waterproof luxury vinyl plank (LVP) to large-format porcelain tile, we ensure laser-level subfloors and seamless threshold transitions, complemented by custom crown moldings, baseboards, and window casings.
+                            </p>
+                            <div class="possibility-tags">
+                                <span class="possibility-tag">Hardwood &amp; LVP</span>
+                                <span class="possibility-tag">Laser-Level Subfloors</span>
+                                <span class="possibility-tag">Crown &amp; Finish Trim</span>
+                            </div>
+                            <div class="possibility-footer">
+                                <span class="possibility-license">Waterproof Protection</span>
+                                <span class="possibility-pill-box">Laser Leveling</span>
+                            </div>
+                        </div>
+                    </div>
+                          <!-- Editorial Callout: Comparativo e Planejamento -->
+                <div class="my-4">
+                    <h3>Cabinet Refinishing vs. Full Kitchen Renovation</h3>
+                    <p class="text-justify">
+                        Not every kitchen requires a total gut remodel. If your current cabinet boxes and layout are in great structural condition, our factory-grade <strong><a href="/service-kitchen-cabinet-refinishing.html">kitchen cabinet refinishing</a></strong> service can transform your kitchen's color and aesthetic at roughly one-third the cost of replacement. However, if you desire an open layout, structural changes, new island configurations, or modern plumbing and electrical upgrades, our full <strong>kitchen renovation</strong> service delivers the turnkey transformation you need.
+                    </p>
+                </div>
+
+                <!-- Seção Metodologia Editorial -->
+                <div class="content-section my-5">
+                    <span class="section-title">COMPREHENSIVE SCOPE OF WORK</span>
+                    <h2 class="display-6 mt-1 mb-3">Our Step-by-Step Kitchen Renovation Process</h2>
+                    <p class="text-justify mb-4">
+                        We manage every stage with transparent scheduling, verified quality control, and strict Massachusetts building code standards:
+                    </p>
+
+                    <div class="editorial-process">
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">01.</span> Demolition &amp; Site Preparation</h3>
+                            <p class="text-justify">
+                                Careful removal of old cabinets, countertops, flooring, and appliances. We erect dust containment barriers and floor protection to safeguard adjacent rooms, followed by responsible debris disposal.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">02.</span> Framing &amp; Structural Adjustments</h3>
+                            <p class="text-justify">
+                                Modifying or building new wall framing, installing solid blocking for heavy wall-mounted cabinets and islands, and preparing rough openings for windows or pantries.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">03.</span> Electrical &amp; Task Lighting</h3>
+                            <p class="text-justify">
+                                Upgrading wiring to current MA electrical code. Adding dedicated circuits for high-draw appliances, installing GFCI outlets, recessed ceiling lights, and integrated under-cabinet lighting.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">04.</span> Plumbing Relocation &amp; Rough-Ins</h3>
+                            <p class="text-justify">
+                                Relocating or modernizing water supply and drain lines for kitchen sinks, dishwashers, pot-fillers, and refrigerator ice makers. All connections are thoroughly leak-tested.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">05.</span> Precision Cabinetry Installation</h3>
+                            <p class="text-justify">
+                                Setting base, wall, and island cabinets with laser precision. Adding specialty storage organizers, pull-out spice racks, soft-close hardware, and finishing with custom crown molding.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">06.</span> Countertops &amp; Backsplash</h3>
+                            <p class="text-justify">
+                                Digital laser templating, fabrication, and installation of premium granite, quartz, marble, or butcher block tops. Expert installation of tile, stone, or glass mosaic backsplashes with epoxy grout.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">07.</span> Flooring Installation</h3>
+                            <p class="text-justify">
+                                Subfloor leveling and moisture testing followed by the installation of luxury vinyl plank (LVP), hardwood, or porcelain floor tile with seamless transitions to adjoining rooms.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">08.</span> Drywall, Painting &amp; Detailing</h3>
+                            <p class="text-justify">
+                                Drywall patching, skim coating, and application of premium moisture-resistant primer and two coats of Benjamin Moore or Sherwin-Williams paint on walls, ceilings, and architectural trim.
+                            </p>
+                        </div>
+
+                        <div class="editorial-step">
+                            <h3 class="editorial-step-title"><span class="step-num-accent">09.</span> Final Walkthrough &amp; Turnover</h3>
+                            <p class="text-justify">
+                                Deep cleaning of the kitchen, appliance commissioning, final hardware adjustments, and a comprehensive client walkthrough to ensure 100% satisfaction before handing over your move-in-ready dream kitchen.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Box: Serviços Relacionados (Crosslinks) -->
+                <div class="my-4">
+                    <h3>Explore Our Full Range of Home Enhancement Services</h3>
+                    <p class="text-justify">
+                        In addition to kitchen renovation, we also offer a comprehensive range of home improvement services. Refresh your existing cabinets with our
+                        <strong><a href="/service-kitchen-cabinet-refinishing.html">kitchen cabinet refinishing</a></strong> service, upgrade other wet areas with our
+                        <strong><a href="/bathroom-renovation.html">bathroom renovation</a></strong> solutions, or maximize your livable space with a custom
+                        <strong><a href="/basement-renovation.html">basement renovation</a></strong>. We also specialize in premium
+                        <strong><a href="/service-interior-painting.html">interior painting</a></strong>, durable
+                        <strong><a href="/service-exterior-painting.html">exterior painting</a></strong>, professional
+                        <strong><a href="/service-commercial-painting.html">commercial painting</a></strong>, and expert
+                        <strong><a href="/service-light-carpentry.html">light carpentry</a></strong>.
+                    </p>
+                </div>
+
+                <!-- Seção FAQ Accordion -->
+                <div class="faq-section mb-5">
+                    <div class="text-center mb-4">
+                        <span class="section-title">Answers &amp; Clarity</span>
+                        <h2 class="display-6 mt-1 mb-2">Frequently Asked Questions</h2>
+                    </div>
+
+                    <div class="faq-accordion">
+                        <details>
+                            <summary>How long does a complete kitchen renovation take?</summary>
+                            <p class="faq-answer">
+                                A standard full kitchen remodel typically takes between 3 to 5 weeks from initial demolition to the final punch list walkthrough, depending on cabinet delivery schedules and custom countertop fabrication.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Can Opportunity Painting help with kitchen layout changes?</summary>
+                            <p class="faq-answer">
+                                Yes. Our team handles non-structural and structural framing adjustments, wall removals to create open-concept living, island relocations, and custom pantry framing in full compliance with local Massachusetts building codes.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do you install both custom and prefabricated cabinetry?</summary>
+                            <p class="faq-answer">
+                                Yes, we expertly install both fully custom hardwood cabinetry and semi-custom prefabricated cabinet lines. We ensure laser-level alignment, soft-close hardware tuning, crown molding, and custom light rail detailing.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do you manage plumbing and electrical upgrades?</summary>
+                            <p class="faq-answer">
+                                Yes, all plumbing relocations (sinks, dishwashers, ice makers) and electrical installations (dedicated 20A appliance circuits, GFCI outlets, under-cabinet LED task lighting, recessed lighting) are coordinated by licensed Massachusetts tradespeople.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do you offer kitchen renovation in Framingham and nearby towns?</summary>
+                            <p class="faq-answer">
+                                Yes. We are based in Holliston and also serve Framingham, Hopkinton, Milford, Medway, Ashland, Sherborn, Millis, Dover, Medfield, Natick and Franklin. If you are not sure we cover your address, call us at (508) 215-9441.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Do you offer free estimates and a warranty?</summary>
+                            <p class="faq-answer">
+                                Yes. We visit the property, talk through the work and give you a detailed quote at no cost. We also offer a written workmanship warranty, and the terms are detailed in your contract.
+                            </p>
+                        </details>
+                    </div>
+                </div>             </div>
+
+                <!-- Bloco de Citação / CTA -->
+                <div class="text-center my-4">
+                    <div class="h5 font-italic mb-3">A kitchen is the heart of the home, crafted with precision and passion.</div>
+                    <div class="my-3 d-flex flex-wrap justify-content-center gap-2">
+                        <a href="/request-free-quote.html" class="btn btn-primary btn-lg px-4" style="height: 48px; line-height: 32px;">Get a Free Quote</a>
+                        <a href="sms:+15082159441?&body=Hi%20Ney,%20I'd%20like%20a%20free%20quote%20for%20a%20kitchen%20renovation" class="btn btn-dark btn-lg px-4 d-inline-flex align-items-center justify-content-center text-center" style="height: 48px; line-height: 32px;">
+                            Text US
+                        </a>
+                    </div>
+                    <div class="text-muted small">
+                        By the <a href="/">© Opportunity Painting And Renovation Services Inc.</a> Team
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Fim Linha -->
+    </div>
+    <!-- Fim Container Principal -->
+</LayoutLive>

@@ -1,0 +1,253 @@
+---
+import LayoutLive from '../layouts/LayoutLive.astro';
+import { getHousePainterSchema, getBreadcrumbSchema } from '../utils/schema';
+
+const housePainterSchema = getHousePainterSchema();
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: "Home", url: "https://www.opportunity-painting.com/" },
+  { name: "Resources", url: "https://www.opportunity-painting.com/#resources" },
+  { name: "Areas We Serve", url: "https://www.opportunity-painting.com/areas-we-serve.html" }
+]);
+---
+
+<LayoutLive
+  title="Service Areas: Holliston & MetroWest | Opportunity Painting"
+  description="Opportunity Painting is based in Holliston, MA and serves Framingham, Hopkinton, Milford, Medway, Ashland, Sherborn, Millis and nearby MetroWest towns."
+  canonical="https://www.opportunity-painting.com/areas-we-serve.html"
+  keywords="Service areas, Holliston MA, Framingham MA, Hopkinton MA, Milford MA, Medway MA, MetroWest painters"
+  ogTitle="Service Areas: Holliston & MetroWest | Opportunity Painting"
+  ogDescription="Opportunity Painting is based in Holliston, MA and serves Framingham, Hopkinton, Milford, Medway, Ashland, Sherborn, Millis and nearby MetroWest towns."
+  ogUrl="https://www.opportunity-painting.com/areas-we-serve.html"
+  ogImage="https://www.opportunity-painting.com/img/carousel-1.jpg"
+  chat={false}
+  activePage="areas-we-serve"
+>
+  <Fragment slot="jsonld">
+    <!-- Início do JSON-LD -->
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(housePainterSchema, null, 2)} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbSchema, null, 2)} />
+    <!-- Fim do JSON-LD -->
+  </Fragment>
+
+    <!-- Início Page Header -->
+    <div class="wow fadeIn container-fluid mb-5 page-header py-5" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="text-white animated display-1 slideInDown">Areas We Serve: Holliston and MetroWest, MA</h1>
+
+            <!-- Início Breadcrumb -->
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="mb-0 breadcrumb text-uppercase">
+                    <li class="breadcrumb-item"><a href="/" class="text-white">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/#resources" class="text-white">Resources</a></li>
+                    <li class="text-primary active breadcrumb-item" aria-current="page">Areas We Serve</li>
+                </ol>
+            </nav>
+            <!-- Fim Breadcrumb -->
+        </div>
+    </div>
+    <!-- Fim Page Header -->
+
+    <!-- Início Main Content -->
+    <div class="py-5 container-xxl">
+        <div class="container">
+            <div class="row g-5">
+
+                <!-- Início Texto Principal -->
+                <div class="wow col-lg-6 fadeInUp" data-wow-delay="0.1s">
+                    <div class="h4 section-title">Areas We Serve</div>
+                    <h2 class="mb-4 display-5">Painting and Renovation Across Holliston and MetroWest</h2>
+                    <p class="mb-4">With over 15 years of hands-on experience, Opportunity Painting is based at 7 Franklin St in Holliston, Massachusetts, and we work with homeowners and property owners throughout the surrounding MetroWest area. Wherever your project is, you work directly with the same team, from the free estimate to the final walkthrough.
+                    </p>
+
+                    <!-- Início Benefícios -->
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Based in Holliston Icon" class="flex-shrink-0" src="/img/icons/icon-2.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Based in Holliston</h3>
+                                    <p class="mb-0">Our home base gives us a close view of the town's colonials, capes and newer homes, and of the New England weather that shapes how they should be painted and repaired.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="Serving Nearby Towns Icon" class="flex-shrink-0" src="/img/icons/icon-3.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>Serving Nearby Towns</h3>
+                                    <p class="mb-0">We work in the towns around Holliston, from Framingham and Hopkinton to Milford, Medway, Ashland, Sherborn and Millis.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img alt="One Team Every Service Icon" class="flex-shrink-0" src="/img/icons/icon-4.png" loading="lazy" decoding="async">
+                                <div class="ms-4">
+                                    <h3>One Team, Every Service</h3>
+                                    <p class="mb-0">Painting, carpentry, cabinet refinishing and renovation come from the same crew, so one call covers the whole project.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Benefícios -->
+                </div>
+                <!-- Fim Texto Principal -->
+
+                <!-- Início Imagens -->
+                <div class="wow col-lg-6 fadeInUp" data-wow-delay="0.5s">
+                    <div class="feature-img">
+                        <img alt="Painting and Renovation in Holliston MA" class="img-fluid" src="/img/about-1.jpg" loading="lazy" decoding="async">
+                        <img alt="Home Renovation in MetroWest MA" class="img-fluid" src="/img/about-2.jpg" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <!-- Fim Imagens -->
+            </div>
+        </div>
+    </div>
+    <!-- Fim Main Content -->
+
+    <!-- Início Seção Cidades e Cobertura -->
+    <div class="py-5 container-xxl">
+        <div class="container">
+            <div class="wow fadeInUp mb-5 text-center mx-auto" data-wow-delay="0.1s" style="max-width: 720px;">
+                <div class="h4 section-title">Where We Work</div>
+                <h2 class="mb-3 display-5">Understanding Our MetroWest Service Area</h2>
+                <p class="text-muted">
+                    We are a Holliston company based at 7 Franklin St, and most of our customers live within a short drive of our workshop. Explore our primary town coverage hubs below:
+                </p>
+            </div>
+
+            <!-- Grade de Cidades / Town Cards Grid -->
+            <div class="row g-4 mb-5">
+                <!-- Holliston (Sede) -->
+                <div class="wow fadeInUp col-lg-4 col-md-6" data-wow-delay="0.1s">
+                    <div class="town-card featured-town">
+                        <div>
+                            <span class="town-badge">⭐ Home Base &bull; 7 Franklin St</span>
+                        </div>
+                        <h3 class="town-title">Holliston, MA</h3>
+                        <p class="town-desc">
+                            Our home town. Interior and exterior painting, cabinet refinishing, architectural carpentry, and full kitchen, bathroom, and basement renovations for Holliston homes, with owner Juliney personally involved from estimate to finish.
+                        </p>
+                        <div class="town-tags">
+                            <span class="town-tag">Interior &amp; Exterior</span>
+                            <span class="town-tag">Cabinet Refinishing</span>
+                            <span class="town-tag">Basement Remodeling</span>
+                            <span class="town-tag">0-5 Min Response</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Framingham -->
+                <div class="wow fadeInUp col-lg-4 col-md-6" data-wow-delay="0.2s">
+                    <div class="town-card">
+                        <div>
+                            <span class="town-badge">Historic &amp; Residential Hub</span>
+                        </div>
+                        <h3 class="town-title">Framingham, MA</h3>
+                        <p class="town-desc">
+                            Painting, carpentry, cabinet refinishing, and complete home remodeling for Framingham homeowners, historic residences, condo associations, and rental property owners.
+                        </p>
+                        <div class="town-tags">
+                            <span class="town-tag">Historic Homes</span>
+                            <span class="town-tag">Condo Communities</span>
+                            <span class="town-tag">Full Remodeling</span>
+                            <span class="town-tag">Fine Carpentry</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hopkinton & Milford -->
+                <div class="wow fadeInUp col-lg-4 col-md-6" data-wow-delay="0.3s">
+                    <div class="town-card">
+                        <div>
+                            <span class="town-badge">Direct Service Corridor</span>
+                        </div>
+                        <h3 class="town-title">Hopkinton &amp; Milford</h3>
+                        <p class="town-desc">
+                            Interior and exterior painting, drywall repairs, and turnkey kitchen, bathroom, and finished basement renovations for growing family homes in Hopkinton and Milford.
+                        </p>
+                        <div class="town-tags">
+                            <span class="town-tag">Turnkey Kitchens</span>
+                            <span class="town-tag">Luxury Bathrooms</span>
+                            <span class="town-tag">Finished Basements</span>
+                            <span class="town-tag">Drywall &amp; Trim</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medway, Ashland, Sherborn & Millis -->
+                <div class="wow fadeInUp col-lg-6 col-md-6" data-wow-delay="0.4s">
+                    <div class="town-card">
+                        <div>
+                            <span class="town-badge">Immediate Neighboring Towns</span>
+                        </div>
+                        <h3 class="town-title">Medway, Ashland, Sherborn &amp; Millis</h3>
+                        <p class="town-desc">
+                            The same comprehensive painting and licensed renovation services for homeowners in the towns closest to our Holliston workshop, offering rapid project scheduling and dependable local crews.
+                        </p>
+                        <div class="town-tags">
+                            <span class="town-tag">Rapid Walkthroughs</span>
+                            <span class="town-tag">Factory-Smooth Cabinets</span>
+                            <span class="town-tag">Exterior Coatings</span>
+                            <span class="town-tag">Licensed CSL/HIC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medfield, Natick, Franklin & Dover -->
+                <div class="wow fadeInUp col-lg-6 col-md-12" data-wow-delay="0.5s">
+                    <div class="town-card">
+                        <div>
+                            <span class="town-badge">Extended MetroWest Coverage</span>
+                        </div>
+                        <h3 class="town-title">Medfield, Natick, Franklin &amp; Dover</h3>
+                        <p class="town-desc">
+                            We regularly undertake fine painting and premium remodeling projects in these nearby communities. Contact our team to schedule an on-site walkthrough and confirm your address.
+                        </p>
+                        <div class="town-tags">
+                            <span class="town-tag">Architectural Painting</span>
+                            <span class="town-tag">High-End Trim &amp; Moulding</span>
+                            <span class="town-tag">Major Renovations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box: Verificação de Endereço / Instant Callout -->
+            <div class="wow fadeInUp p-4 p-md-5 mb-5 rounded" data-wow-delay="0.2s" style="background: #FAF8F5; border: 1px solid rgba(183, 141, 101, 0.25);">
+                <span class="badge mb-2 px-3 py-2" style="background: var(--primary); color: #fff; font-size: 0.75rem; letter-spacing: 0.5px;">FAST SERVICE CHECK</span>
+                <h3 class="h4 mb-2">Wondering if your street is in our coverage area?</h3>
+                <p class="text-muted mb-0" style="line-height: 1.7;">
+                    If you live anywhere within a 20-mile radius of Holliston, Massachusetts, our team is almost certainly nearby. Reach out to verify your address and book a free on-site estimate.
+                </p>
+            </div>
+
+            <!-- Box: Serviços Relacionados (Crosslinks) -->
+            <div class="wow fadeInUp my-5 p-4 rounded bg-white shadow-sm border" data-wow-delay="0.3s">
+                <h3 class="h4 mb-3">Our Licensed Services Across Every Town</h3>
+                <p class="text-muted mb-0" style="line-height: 1.8;">
+                    Across every town we serve, we deliver our complete suite of craftsmanship: professional <strong><a href="/service-interior-painting.html">interior painting</a></strong>, durable <strong><a href="/service-exterior-painting.html">exterior painting</a></strong>, comprehensive <strong><a href="/service-commercial-painting.html">commercial painting</a></strong>, expert <strong><a href="/service-light-carpentry.html">light carpentry</a></strong>, and factory-smooth <strong><a href="/service-kitchen-cabinet-refinishing.html">kitchen cabinet refinishing</a></strong>. For homeowners planning broader living space upgrades, we also provide turnkey <strong><a href="/kitchen-renovation.html">kitchen renovation</a></strong>, luxury <strong><a href="/bathroom-renovation.html">bathroom renovation</a></strong>, and custom <strong><a href="/basement-renovation.html">basement renovation</a></strong> solutions.
+                </p>
+            </div>
+
+            <!-- Bloco de Citação / CTA -->
+            <div class="text-center my-4 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="h5 font-italic mb-3">Local work, done right.</div>
+                <div class="my-3 d-flex flex-wrap justify-content-center gap-2">
+                    <a href="/request-free-quote.html" class="btn btn-primary btn-lg px-4" style="height: 48px; line-height: 32px;">Get a Free Quote</a>
+                    <a href="sms:+15082159441?&body=Hi%20Ney,%20I'd%20like%20to%20request%20a%20free%20quote%20for%20a%20project" class="btn btn-dark btn-lg px-4 d-inline-flex align-items-center justify-content-center text-center" style="height: 48px; line-height: 32px;">
+                        Text US
+                    </a>
+                </div>
+                <div class="text-muted small">
+                    By the <a href="/">© Opportunity Painting And Renovation Services Inc.</a> Team
+                </div>
+            </div>
+
+        </div>
+    </div>
+</LayoutLive>

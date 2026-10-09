@@ -1,0 +1,11 @@
+ErrorDocument 404 /404.html
+
+AddType image/webp .webp
+<IfModule mod_rewrite.c>
+RewriteCond %{HTTP_ACCEPT} image/webp
+RewriteCond %{DOCUMENT_ROOT}/$1.$2.webp -f
+RewriteRule ^(.+)\.(jpe?g|png)$ $1.$2.webp [T=image/webp,E=WEBP:1,L]
+</IfModule>
+<IfModule mod_headers.c>
+Header append Vary Accept env=WEBP
+</IfModule>

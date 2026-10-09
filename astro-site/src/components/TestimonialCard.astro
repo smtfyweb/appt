@@ -1,0 +1,25 @@
+---
+export interface Props {
+  author: string;
+  role?: string;
+  text: string;
+}
+
+const {
+  author,
+  role = "Client",
+  text
+} = Astro.props;
+---
+
+<div class="testimonial-card">
+  <blockquote class="testimonial-text">
+    "{text}"
+  </blockquote>
+  <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top">
+    <div>
+      <span class="testimonial-author d-block">{author}</span>
+      <span class="testimonial-location text-primary d-block">{role}</span>
+    </div>
+  </div>
+</div>
