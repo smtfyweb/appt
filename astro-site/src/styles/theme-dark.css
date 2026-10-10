@@ -1,0 +1,319 @@
+/* ==========================================================================
+   OPPORTUNITY PAINTING & RENOVATION - THEME DARK
+   Inspirado no visual escuro original da marca (Grafite fosco #252525 + Bronze #B78D65)
+   Ativado exclusivamente quando html[data-theme="dark"] estiver presente.
+   ========================================================================== */
+
+html[data-theme="dark"] {
+    --light: #252525;
+    --card-bg: #2b2b2b;
+    --body-color: #d1d5db;
+    --bs-body-bg: #222222;
+    --bs-body-color: #d1d5db;
+    color-scheme: dark;
+}
+
+html[data-theme="dark"] body {
+    background-color: #222222 !important;
+    color: #d1d5db !important;
+}
+
+/* Tipografia e Títulos */
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6,
+html[data-theme="dark"] .h1,
+html[data-theme="dark"] .h2,
+html[data-theme="dark"] .h3,
+html[data-theme="dark"] .h4,
+html[data-theme="dark"] .h5,
+html[data-theme="dark"] .h6 {
+    color: #ffffff !important;
+}
+
+html[data-theme="dark"] p,
+html[data-theme="dark"] .text-body,
+html[data-theme="dark"] .text-muted,
+html[data-theme="dark"] small,
+html[data-theme="dark"] .small {
+    color: #c4c9d2 !important;
+}
+
+html[data-theme="dark"] .text-primary {
+    color: var(--primary) !important;
+}
+
+/* Seções e Fundos */
+html[data-theme="dark"] .bg-light,
+html[data-theme="dark"] .container-fluid.bg-light,
+html[data-theme="dark"] .bg-white {
+    background-color: #262626 !important;
+    color: #d1d5db !important;
+}
+
+html[data-theme="dark"] .bg-dark {
+    background-color: #1a1a1a !important;
+}
+
+/* Header & Topbar */
+html[data-theme="dark"] .topbar-wrap,
+html[data-theme="dark"] nav.navbar.bg-dark,
+html[data-theme="dark"] .navbar {
+    background-color: #1a1a1a !important;
+    border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] .navbar-light .navbar-nav .nav-link {
+    color: #e5e7eb !important;
+}
+
+html[data-theme="dark"] .navbar-light .navbar-nav .nav-link:hover,
+html[data-theme="dark"] .navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary) !important;
+}
+
+html[data-theme="dark"] .dropdown-menu {
+    background-color: #222222 !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .dropdown-item {
+    color: #e5e7eb !important;
+}
+
+html[data-theme="dark"] .dropdown-item:hover,
+html[data-theme="dark"] .dropdown-item.active {
+    background-color: rgba(183, 141, 101, 0.18) !important;
+    color: var(--primary) !important;
+}
+
+/* Cards, Itens de Serviço e Blocos */
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .service-item,
+html[data-theme="dark"] .town-card,
+html[data-theme="dark"] .metric-card,
+html[data-theme="dark"] .possibility-card,
+html[data-theme="dark"] .contact-card,
+html[data-theme="dark"] .testimonial-item,
+html[data-theme="dark"] .modal-content,
+html[data-theme="dark"] .bg-light.p-4,
+html[data-theme="dark"] .bg-light.p-5,
+html[data-theme="dark"] .p-4.bg-light,
+html[data-theme="dark"] .p-5.bg-light {
+    background-color: #2c2c2c !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+    color: #d1d5db !important;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.35) !important;
+}
+
+html[data-theme="dark"] .service-item:hover,
+html[data-theme="dark"] .town-card:hover,
+html[data-theme="dark"] .metric-card:hover,
+html[data-theme="dark"] .possibility-card:hover {
+    background-color: #333333 !important;
+    border-color: rgba(183, 141, 101, 0.4) !important;
+}
+
+/* Badges, Tags e Pílulas */
+html[data-theme="dark"] .town-badge,
+html[data-theme="dark"] .town-tag,
+html[data-theme="dark"] .possibility-tag,
+html[data-theme="dark"] .badge.bg-light {
+    background-color: #1f1f1f !important;
+    color: #e5e7eb !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+html[data-theme="dark"] .fact-item .fact-icon,
+html[data-theme="dark"] .possibility-icon-wrap,
+html[data-theme="dark"] .metric-icon-wrap {
+    background-color: #222222 !important;
+    border: 1px solid rgba(183, 141, 101, 0.3) !important;
+}
+
+/* Formulários e Inputs */
+html[data-theme="dark"] .form-control,
+html[data-theme="dark"] .form-select {
+    background-color: #1e1e1e !important;
+    border-color: rgba(255, 255, 255, 0.14) !important;
+    color: #ffffff !important;
+}
+
+html[data-theme="dark"] .form-control:focus,
+html[data-theme="dark"] .form-select:focus {
+    background-color: #242424 !important;
+    border-color: var(--primary) !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 0 3.5px rgba(183, 141, 101, 0.22) !important;
+}
+
+html[data-theme="dark"] .form-control::placeholder {
+    color: #8b929e !important;
+}
+
+/* Bordas e Divisores */
+html[data-theme="dark"] .border,
+html[data-theme="dark"] .border-top,
+html[data-theme="dark"] .border-bottom,
+html[data-theme="dark"] .border-start,
+html[data-theme="dark"] .border-end {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Botões de Redes Sociais e Botões Auxiliares no Modo Dark */
+html[data-theme="dark"] .btn-outline-body,
+html[data-theme="dark"] .btn-square,
+html[data-theme="dark"] .btn-sm-square {
+    background-color: #2b2b2b !important;
+    border: 1px solid rgba(183, 141, 101, 0.5) !important;
+    color: var(--primary) !important; /* Douradinho #B78D65 */
+    border-radius: 4px !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25) !important;
+    transition: all 0.25s ease !important;
+}
+
+html[data-theme="dark"] .btn-outline-body svg,
+html[data-theme="dark"] .btn-square svg,
+html[data-theme="dark"] .btn-sm-square svg,
+html[data-theme="dark"] .btn-outline-body .icon,
+html[data-theme="dark"] .btn-square .icon {
+    fill: var(--primary) !important;
+    color: var(--primary) !important;
+    transition: fill 0.25s ease, color 0.25s ease !important;
+}
+
+html[data-theme="dark"] .btn-outline-body:hover,
+html[data-theme="dark"] .btn-square:hover,
+html[data-theme="dark"] .btn-sm-square:hover {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(183, 141, 101, 0.4) !important;
+}
+
+html[data-theme="dark"] .btn-outline-body:hover svg,
+html[data-theme="dark"] .btn-square:hover svg,
+html[data-theme="dark"] .btn-sm-square:hover svg,
+html[data-theme="dark"] .btn-outline-body:hover .icon,
+html[data-theme="dark"] .btn-square:hover .icon {
+    fill: #ffffff !important;
+    color: #ffffff !important;
+}
+
+/* Botão Alternador de Tema */
+.theme-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #e5e7eb;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    user-select: none;
+    line-height: 1;
+}
+
+.theme-toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.theme-toggle-btn svg {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+}
+
+html[data-theme="dark"] .theme-toggle-btn {
+    background-color: #2b2b2b !important;
+    border: 1px solid rgba(183, 141, 101, 0.5) !important;
+    color: var(--primary) !important;
+}
+
+html[data-theme="dark"] .theme-toggle-btn:hover {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: #ffffff !important;
+}
+
+/* Mostra Sol no Dark e Lua no Light */
+html[data-theme="dark"] .theme-icon-moon {
+    display: none;
+}
+html[data-theme="dark"] .theme-icon-sun {
+    display: inline-block;
+}
+
+html:not([data-theme="dark"]) .theme-icon-moon {
+    display: inline-block;
+}
+html:not([data-theme="dark"]) .theme-icon-sun {
+    display: none;
+}
+
+/* ==========================================================================
+   CARDS DE SERVIÇOS NO MODO DARK (ESTILO DEFINITIVO: DARK GLASS CRISTAL)
+   ========================================================================== */
+
+html[data-theme="dark"] .service-item .service-text {
+    background: rgba(22, 22, 22, 0.78) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-radius: 4px !important;
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.5) !important;
+    transition: all 0.35s ease !important;
+}
+
+html[data-theme="dark"] .service-item .service-text h3 {
+    color: #ffffff !important;
+}
+
+html[data-theme="dark"] .service-item .service-text p {
+    color: #c4c9d2 !important;
+}
+
+html[data-theme="dark"] .service-item .service-text .btn {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
+    color: var(--primary) !important;
+}
+
+/* Efeito Hover Definitivo: Revela a foto de fundo 100% nítida e iluminada com zoom */
+html[data-theme="dark"] .service-item:hover .service-text {
+    background: rgba(0, 0, 0, 0.45) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-color: var(--primary) !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65) !important;
+}
+
+html[data-theme="dark"] .service-item:hover .service-text * {
+    color: #ffffff !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9) !important;
+}
+
+html[data-theme="dark"] .service-item:hover .service-text .btn {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: #ffffff !important;
+}
+
+html[data-theme="dark"] .service-item:hover .service-text .btn svg {
+    fill: #ffffff !important;
+    color: #ffffff !important;
+}
+
+

@@ -3,6 +3,7 @@ import LayoutLive from '../layouts/LayoutLive.astro';
 import { getHousePainterSchema } from '../utils/schema';
 
 const housePainterSchema = getHousePainterSchema();
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <LayoutLive
@@ -133,7 +134,7 @@ const housePainterSchema = getHousePainterSchema();
                         <img alt="Interior Painting" class="bg-img" src="/img/service-1.jpg" loading="lazy" decoding="async">
                         <div class="p-4 py-5 service-text d-flex flex-column justify-content-between h-100 w-100">
                             <div>
-                                <img alt="Interior Painting Icon" class="mb-4" src="/img/icons/icon-5.png" loading="lazy" decoding="async">
+                                <img alt="Interior Painting Icon" class="mb-4 d-block mx-auto" src="/img/icons/icon-5.png" loading="lazy" decoding="async">
                                 <h3 class="mb-3 h4">Interior Painting</h3>
                                 <p class="mb-4">Colors that tell stories, renewing your spaces with precision and style.</p>
                             </div>
@@ -150,7 +151,7 @@ const housePainterSchema = getHousePainterSchema();
                         <img alt="Exterior Painting" class="bg-img" src="/img/service-2.jpg" loading="lazy" decoding="async">
                         <div class="p-4 py-5 service-text d-flex flex-column justify-content-between h-100 w-100">
                             <div>
-                                <img alt="Exterior Painting Icon" class="mb-4" src="/img/icons/icon-6.png" loading="lazy" decoding="async">
+                                <img alt="Exterior Painting Icon" class="mb-4 d-block mx-auto" src="/img/icons/icon-6.png" loading="lazy" decoding="async">
                                 <h3 class="mb-3 h4">Exterior Painting</h3>
                                 <p class="mb-4">Vibrant exteriors and durable coatings that protect and rejuvenate your home.</p>
                             </div>
@@ -167,7 +168,7 @@ const housePainterSchema = getHousePainterSchema();
                         <img alt="Commercial Painting" class="bg-img" src="/img/service-3.jpg" loading="lazy" decoding="async">
                         <div class="p-4 py-5 service-text d-flex flex-column justify-content-between h-100 w-100">
                             <div>
-                                <img alt="Commercial Painting Icon" class="mb-4" src="/img/icons/icon-7.png" loading="lazy" decoding="async">
+                                <img alt="Commercial Painting Icon" class="mb-4 d-block mx-auto" src="/img/icons/icon-7.png" loading="lazy" decoding="async">
                                 <h3 class="mb-3 h4">Commercial Painting</h3>
                                 <p class="mb-4">Efficient commercial painting for offices and businesses with minimal disruption.</p>
                             </div>
@@ -184,7 +185,7 @@ const housePainterSchema = getHousePainterSchema();
                         <img alt="Kitchen Cabinets Refinishing" class="bg-img" src="/img/service-5.jpg" loading="lazy" decoding="async">
                         <div class="p-4 py-5 service-text d-flex flex-column justify-content-between h-100 w-100">
                             <div>
-                                <img alt="Kitchen Cabinets Refinishing Icon" class="mb-4" src="/img/icons/icon-9.png" loading="lazy" decoding="async">
+                                <img alt="Kitchen Cabinets Refinishing Icon" class="mb-4 d-block mx-auto" src="/img/icons/icon-9.png" loading="lazy" decoding="async">
                                 <h3 class="mb-3 h4">Kitchen Cabinets Refinishing</h3>
                                 <p class="mb-4">Factory-smooth spray refinishing transforming existing cabinets affordably.</p>
                             </div>
@@ -201,7 +202,7 @@ const housePainterSchema = getHousePainterSchema();
                         <img alt="Kitchen Renovation" class="bg-img" src="/img/about-16.jpg" loading="lazy" decoding="async">
                         <div class="p-4 py-5 service-text d-flex flex-column justify-content-between h-100 w-100">
                             <div>
-                                <img alt="Kitchen Renovation Icon" class="mb-4" src="/img/icons/icon-10.png" loading="lazy" decoding="async">
+                                <img alt="Kitchen Renovation Icon" class="mb-4 d-block mx-auto" src="/img/icons/icon-10.png" loading="lazy" decoding="async">
                                 <h3 class="mb-3 h4">Kitchen Renovation</h3>
                                 <p class="mb-4">Turnkey kitchen remodeling from custom layouts and cabinets to countertops.</p>
                             </div>
@@ -218,7 +219,7 @@ const housePainterSchema = getHousePainterSchema();
                         <img alt="Bathroom Renovation" class="bg-img" src="/img/bathroom-1.jpg" loading="lazy" decoding="async">
                         <div class="p-4 py-5 service-text d-flex flex-column justify-content-between h-100 w-100">
                             <div>
-                                <img alt="Bathroom Renovation Icon" class="mb-4" src="/img/icons/icon-3.png" loading="lazy" decoding="async">
+                                <img alt="Bathroom Renovation Icon" class="mb-4 d-block mx-auto" src="/img/icons/icon-3.png" loading="lazy" decoding="async">
                                 <h3 class="mb-3 h4">Bathroom Renovation</h3>
                                 <p class="mb-4">Modern bathroom transformations with premium tile, vanities, and waterproofing.</p>
                             </div>
@@ -235,7 +236,7 @@ const housePainterSchema = getHousePainterSchema();
                         <img alt="Basement Renovation" class="bg-img" src="/img/basement-1.jpg" loading="lazy" decoding="async">
                         <div class="p-4 py-5 service-text d-flex flex-column justify-content-between h-100 w-100">
                             <div>
-                                <img alt="Basement Renovation Icon" class="mb-4" src="/img/icons/icon-xx.png" loading="lazy" decoding="async">
+                                <img alt="Basement Renovation Icon" class="mb-4 d-block mx-auto" src="/img/icons/icon-xx.png" loading="lazy" decoding="async">
                                 <h3 class="mb-3 h4">Basement Renovation</h3>
                                 <p class="mb-4">Converting lower levels into functional family lounges, gyms, and suites.</p>
                             </div>
@@ -252,7 +253,7 @@ const housePainterSchema = getHousePainterSchema();
                         <img alt="Light Carpentry" class="bg-img" src="/img/service-4.jpg" loading="lazy" decoding="async">
                         <div class="p-4 py-5 service-text d-flex flex-column justify-content-between h-100 w-100">
                             <div>
-                                <img alt="Light Carpentry Icon" class="mb-4" src="/img/icons/icon-8.png" loading="lazy" decoding="async">
+                                <img alt="Light Carpentry Icon" class="mb-4 d-block mx-auto" src="/img/icons/icon-8.png" loading="lazy" decoding="async">
                                 <h3 class="mb-3 h4">Light Carpentry</h3>
                                 <p class="mb-4">Masterful carpentry repairs, crown moldings, trim, and finish woodworking.</p>
                             </div>
@@ -590,7 +591,7 @@ const housePainterSchema = getHousePainterSchema();
             <!-- Início Carrossel de Depoimentos -->
             <div class="wow fadeInUp owl-carousel testimonial-carousel" data-wow-delay="0.1s">
                 <div class="text-center testimonial-item"
-                    data-dot="<img class='img-fluid' src='/img/testimonial-1.jpg' alt='Katie McIntosh'>">
+                    data-dot={`<img class='img-fluid' src='${base}/img/testimonial-1.jpg' alt='Katie McIntosh'>`}>
                     <p class="fs-5">
                         Opportunity Painting was exceptional in their customer care, communication and quality of
                         workmanship. They were efficient and meticulous in their work, and kept the work area very clean
@@ -605,7 +606,7 @@ const housePainterSchema = getHousePainterSchema();
                 </div>
 
                 <div class="text-center testimonial-item"
-                    data-dot="<img class='img-fluid' src='/img/testimonial-2.jpg' alt='Diane Healey'>">
+                    data-dot={`<img class='img-fluid' src='${base}/img/testimonial-2.jpg' alt='Diane Healey'>`}>
                     <p class="fs-5">
                         Ney and his crew did an outstanding job on our kitchen cabinets. They were professional,
                         respectful
@@ -616,7 +617,7 @@ const housePainterSchema = getHousePainterSchema();
                 </div>
 
                 <div class="text-center testimonial-item"
-                    data-dot="<img class='img-fluid' src='/img/testimonial-3.jpg' alt='Jeffrey Coady'>">
+                    data-dot={`<img class='img-fluid' src='${base}/img/testimonial-3.jpg' alt='Jeffrey Coady'>`}>
                     <p class="fs-5">
                         These are the guys you want. We had three rooms done as well as a stairway and hall area. The
                         work

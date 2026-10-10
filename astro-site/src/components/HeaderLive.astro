@@ -54,15 +54,28 @@ const { activePage } = Astro.props;
                     aria-label="Yelp">
                     <svg class="icon" aria-hidden="true"><use href="/img/icons.svg#fa-yelp"/></svg>
                 </a>
-                <a href="https://wa.me/message/K3QVFUZOUZVXO1" class="btn btn-outline-body btn-square me-0"
+                <a href="https://wa.me/message/K3QVFUZOUZVXO1" class="btn btn-outline-body btn-square me-1"
                     aria-label="WhatsApp">
                     <svg class="icon" aria-hidden="true"><use href="/img/icons.svg#fa-whatsapp"/></svg>
                 </a>
                 <a href="https://www.youtube.com/channel/UC4Asa7w8FHFXJ0NzoZ4Xpyg"
-                    class="btn btn-outline-body btn-square me-0"
+                    class="btn btn-outline-body btn-square me-1"
                     aria-label="YouTube">
                     <svg class="icon" aria-hidden="true"><use href="/img/icons.svg#fa-youtube"/></svg>
                 </a>
+
+                <button type="button" 
+                        class="theme-toggle-btn js-theme-toggle ms-3" 
+                        aria-label="Toggle dark/light mode" 
+                        title="Alternar entre modo Claro e Escuro">
+                    <span class="theme-icon-moon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="13" height="13"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    </span>
+                    <span class="theme-icon-sun" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="13" height="13"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    </span>
+                    <span class="theme-label" style="font-size: 0.75rem;">Theme</span>
+                </button>
             </div>
         </div>
         <!-- Fim da Coluna de Links e Redes Sociais -->
@@ -133,6 +146,16 @@ const { activePage } = Astro.props;
 
             <!-- Botões Rápidos no Menu Mobile -->
             <div class="d-lg-none mt-3 pt-3 border-top border-secondary d-flex flex-column gap-2">
+                <button type="button" 
+                        class="theme-toggle-btn js-theme-toggle w-100 py-2 justify-content-center" 
+                        aria-label="Toggle dark/light mode">
+                    <span class="theme-icon-moon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="14" height="14" class="me-1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg> Modo Escuro
+                    </span>
+                    <span class="theme-icon-sun" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="14" height="14" class="me-1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg> Modo Claro
+                    </span>
+                </button>
                 <a href="/request-free-quote.html" class="btn btn-primary w-100 py-2">Get A Free Quote</a>
                 <a href="sms:+15082159441?&body=Hi%20Ney,%20I'd%20like%20to%20request%20a%20free%20quote" class="btn btn-outline-light w-100 py-2 d-flex align-items-center justify-content-center text-center">
                     Text US: (508) 215-9441
