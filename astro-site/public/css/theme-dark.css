@@ -46,6 +46,19 @@ html[data-theme="dark"] .text-primary {
     color: var(--primary) !important;
 }
 
+html[data-theme="dark"] .text-dark,
+html[data-theme="dark"] a.text-dark,
+html[data-theme="dark"] span.text-dark,
+html[data-theme="dark"] p.text-dark,
+html[data-theme="dark"] h1.text-dark,
+html[data-theme="dark"] h2.text-dark,
+html[data-theme="dark"] h3.text-dark,
+html[data-theme="dark"] h4.text-dark,
+html[data-theme="dark"] h5.text-dark,
+html[data-theme="dark"] h6.text-dark {
+    color: #ffffff !important;
+}
+
 /* Seções e Fundos */
 html[data-theme="dark"] .bg-light,
 html[data-theme="dark"] .container-fluid.bg-light,
@@ -91,13 +104,8 @@ html[data-theme="dark"] .dropdown-item.active {
     color: var(--primary) !important;
 }
 
-/* Cards, Itens de Serviço e Blocos */
+/* Cards Padrão e Modais no Dark */
 html[data-theme="dark"] .card,
-html[data-theme="dark"] .service-item,
-html[data-theme="dark"] .town-card,
-html[data-theme="dark"] .metric-card,
-html[data-theme="dark"] .possibility-card,
-html[data-theme="dark"] .contact-card,
 html[data-theme="dark"] .testimonial-item,
 html[data-theme="dark"] .modal-content,
 html[data-theme="dark"] .bg-light.p-4,
@@ -108,14 +116,6 @@ html[data-theme="dark"] .p-5.bg-light {
     border-color: rgba(255, 255, 255, 0.08) !important;
     color: #d1d5db !important;
     box-shadow: 0 6px 22px rgba(0, 0, 0, 0.35) !important;
-}
-
-html[data-theme="dark"] .service-item:hover,
-html[data-theme="dark"] .town-card:hover,
-html[data-theme="dark"] .metric-card:hover,
-html[data-theme="dark"] .possibility-card:hover {
-    background-color: #333333 !important;
-    border-color: rgba(183, 141, 101, 0.4) !important;
 }
 
 /* Badges, Tags e Pílulas */
@@ -151,8 +151,16 @@ html[data-theme="dark"] .form-select:focus {
     box-shadow: 0 0 0 3.5px rgba(183, 141, 101, 0.22) !important;
 }
 
-html[data-theme="dark"] .form-control::placeholder {
-    color: #8b929e !important;
+html[data-theme="dark"] .form-control::placeholder,
+html[data-theme="dark"] textarea.form-control::placeholder {
+    color: #a0aec0 !important;
+    opacity: 1 !important;
+}
+
+html[data-theme="dark"] input[type="date"].form-control,
+html[data-theme="dark"] input[type="time"].form-control {
+    color-scheme: dark !important;
+    color: #ffffff !important;
 }
 
 /* Bordas e Divisores */
@@ -315,4 +323,272 @@ html[data-theme="dark"] .service-item:hover .service-text .btn svg {
     fill: #ffffff !important;
     color: #ffffff !important;
 }
+
+/* ==========================================================================
+   CARDS DE POSSIBILIDADES (SERVICE PAGES) - MODO DARK (DARK GLASS CRISTAL)
+   ========================================================================== */
+
+html[data-theme="dark"] .possibility-card {
+    background: rgba(22, 22, 22, 0.78) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-radius: var(--radius-card, 8px) !important;
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.45) !important;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, background 0.35s ease !important;
+}
+
+html[data-theme="dark"] .possibility-card::before {
+    background: linear-gradient(90deg, var(--primary) 0%, rgba(183, 141, 101, 0.25) 100%) !important;
+    opacity: 0.85 !important;
+}
+
+html[data-theme="dark"] .possibility-card:hover {
+    background: rgba(30, 30, 30, 0.88) !important;
+    border-color: var(--primary) !important;
+    transform: translateY(-8px) !important;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.65), 0 0 20px rgba(183, 141, 101, 0.15) !important;
+}
+
+html[data-theme="dark"] .possibility-card:hover::before {
+    background: linear-gradient(90deg, var(--primary) 0%, var(--primary-hover) 100%) !important;
+    opacity: 1 !important;
+}
+
+html[data-theme="dark"] .possibility-category {
+    background: rgba(183, 141, 101, 0.14) !important;
+    color: var(--primary) !important;
+    border: 1px solid rgba(183, 141, 101, 0.32) !important;
+}
+
+html[data-theme="dark"] .possibility-num {
+    color: rgba(255, 255, 255, 0.28) !important;
+    transition: color 0.3s ease !important;
+}
+
+html[data-theme="dark"] .possibility-card:hover .possibility-num {
+    color: var(--primary) !important;
+}
+
+html[data-theme="dark"] .possibility-icon-wrap {
+    background: rgba(32, 32, 32, 0.9) !important;
+    border: 1px solid rgba(183, 141, 101, 0.35) !important;
+    color: var(--primary) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    transition: var(--transition-smooth) !important;
+}
+
+html[data-theme="dark"] .possibility-card:hover .possibility-icon-wrap {
+    background: var(--primary) !important;
+    color: #ffffff !important;
+    border-color: var(--primary) !important;
+    transform: scale(1.05) !important;
+}
+
+html[data-theme="dark"] .possibility-card:hover .possibility-icon-wrap svg {
+    color: #ffffff !important;
+    stroke: #ffffff !important;
+    fill: none;
+}
+
+html[data-theme="dark"] .possibility-title {
+    color: #ffffff !important;
+}
+
+html[data-theme="dark"] .possibility-desc {
+    color: #c4c9d2 !important;
+}
+
+html[data-theme="dark"] .possibility-tag {
+    background: rgba(255, 255, 255, 0.06) !important;
+    color: #e5e7eb !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    transition: all 0.25s ease !important;
+}
+
+html[data-theme="dark"] .possibility-card:hover .possibility-tag {
+    border-color: rgba(183, 141, 101, 0.45) !important;
+    color: #ffffff !important;
+}
+
+html[data-theme="dark"] .possibility-license {
+    color: #9ca3af !important;
+}
+
+html[data-theme="dark"] .possibility-pill-box {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    color: #f3f4f6 !important;
+    transition: all 0.25s ease !important;
+}
+
+html[data-theme="dark"] .possibility-card:hover .possibility-pill-box {
+    background: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: #ffffff !important;
+}
+
+/* ==========================================================================
+   FAQ ACCORDION NO MODO DARK (DARK GLASS CRISTAL)
+   ========================================================================== */
+
+html[data-theme="dark"] .faq-accordion details {
+    background: rgba(22, 22, 22, 0.78) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-radius: var(--radius-card-sm, 6px) !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35) !important;
+    transition: all 0.3s ease !important;
+}
+
+html[data-theme="dark"] .faq-accordion details:hover {
+    background: rgba(28, 28, 28, 0.88) !important;
+    border-color: rgba(183, 141, 101, 0.45) !important;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.45) !important;
+}
+
+html[data-theme="dark"] .faq-accordion details[open] {
+    background: rgba(26, 26, 26, 0.94) !important;
+    border-color: var(--primary) !important;
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.5), 0 0 14px rgba(183, 141, 101, 0.18) !important;
+}
+
+html[data-theme="dark"] .faq-accordion summary {
+    color: #ffffff !important;
+    transition: color 0.25s ease !important;
+}
+
+html[data-theme="dark"] .faq-accordion summary:hover {
+    color: var(--primary) !important;
+}
+
+html[data-theme="dark"] .faq-accordion details[open] summary {
+    color: var(--primary) !important;
+}
+
+html[data-theme="dark"] .faq-accordion summary::after {
+    color: var(--primary) !important;
+}
+
+html[data-theme="dark"] .faq-accordion .faq-answer {
+    color: #c4c9d2 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding-top: 14px !important;
+}
+
+/* ==========================================================================
+   CARDS AUXILIARES (TOWN-CARD, METRIC-CARD, CONTACT-CARD) - DARK GLASS CRISTAL
+   ========================================================================== */
+
+html[data-theme="dark"] .town-card,
+html[data-theme="dark"] .metric-card,
+html[data-theme="dark"] .contact-card,
+html[data-theme="dark"] .service-check-card,
+html[data-theme="dark"] .service-crosslinks-card {
+    background: rgba(22, 22, 22, 0.78) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.4) !important;
+    transition: all 0.3s ease !important;
+}
+
+html[data-theme="dark"] .town-card:hover,
+html[data-theme="dark"] .metric-card:hover,
+html[data-theme="dark"] .contact-card:hover,
+html[data-theme="dark"] .service-check-card:hover,
+html[data-theme="dark"] .service-crosslinks-card:hover {
+    background: rgba(30, 30, 30, 0.88) !important;
+    border-color: var(--primary) !important;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55), 0 0 15px rgba(183, 141, 101, 0.15) !important;
+}
+
+html[data-theme="dark"] .service-check-card h3,
+html[data-theme="dark"] .service-crosslinks-card h3 {
+    color: #ffffff !important;
+}
+
+html[data-theme="dark"] .service-check-card p,
+html[data-theme="dark"] .service-crosslinks-card p {
+    color: #c4c9d2 !important;
+}
+
+html[data-theme="dark"] .town-card.featured-town {
+    border-color: var(--primary) !important;
+    background: rgba(28, 25, 22, 0.88) !important;
+}
+
+/* ==========================================================================
+   CARDS DE CONTATO (CONTACT.ASTRO) - DARK GLASS CRISTAL
+   ========================================================================== */
+
+html[data-theme="dark"] .align-items-center.d-flex.w-100.bg-light.p-4,
+html[data-theme="dark"] .contact-info-card {
+    background: rgba(22, 22, 22, 0.78) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.45) !important;
+}
+
+html[data-theme="dark"] .align-items-center.d-flex.w-100.bg-light.p-4:hover,
+html[data-theme="dark"] .contact-info-card:hover {
+    background: rgba(30, 30, 30, 0.88) !important;
+    border-color: var(--primary) !important;
+    transform: translateY(-4px) !important;
+}
+
+html[data-theme="dark"] .align-items-center.d-flex.w-100.bg-light.p-4 p,
+html[data-theme="dark"] .contact-info-card p {
+    color: #9ca3af !important;
+}
+
+html[data-theme="dark"] .align-items-center.d-flex.w-100.bg-light.p-4 h3,
+html[data-theme="dark"] .align-items-center.d-flex.w-100.bg-light.p-4 h3 a,
+html[data-theme="dark"] .contact-info-card h3,
+html[data-theme="dark"] .contact-info-card h3 a {
+    color: #ffffff !important;
+}
+
+/* ==========================================================================
+   SEÇÃO BIOGRAFIA (ABOUT ME / JULINEY SANTANA - INDEX.ASTRO)
+   ========================================================================== */
+
+html[data-theme="dark"] .bio-label,
+html[data-theme="dark"] .d-flex.align-items-baseline .h4 {
+    color: var(--primary) !important;
+}
+
+html[data-theme="dark"] .d-flex.align-items-baseline p.fs-5,
+html[data-theme="dark"] p.fs-5,
+html[data-theme="dark"] .lead {
+    color: #f1f5f9 !important;
+}
+
+html[data-theme="dark"] .d-flex.align-items-baseline a {
+    color: var(--primary) !important;
+}
+
+html[data-theme="dark"] .p-3.bg-light.border-start {
+    background: rgba(22, 22, 22, 0.78) !important;
+    border-color: var(--primary) !important;
+}
+
+html[data-theme="dark"] .p-3.bg-light.border-start p {
+    color: #cbd5e1 !important;
+}
+
+/* ==========================================================================
+   BLOCOS DE CONTATO RÁPIDO (QUOTE & GET IN TOUCH - ICONS 65PX / 55PX)
+   ========================================================================== */
+
+html[data-theme="dark"] .d-flex.align-items-center.justify-content-center.bg-light[style*="65px"],
+html[data-theme="dark"] .align-items-center.d-flex.justify-content-center.bg-light[style*="65px"],
+html[data-theme="dark"] .bg-light.flex-shrink-0[style*="65px"] {
+    background-color: rgba(30, 30, 30, 0.9) !important;
+    border: 1px solid rgba(183, 141, 101, 0.35) !important;
+    border-radius: var(--radius-sm, 4px) !important;
+}
+
 

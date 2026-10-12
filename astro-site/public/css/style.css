@@ -1347,7 +1347,7 @@ input[type="time"].form-control:focus {
 
 .align-items-center.d-flex.w-100.bg-light.p-4 {
     border-radius: var(--radius-card) !important;
-    background: #FFFFFF !important;
+    background: #FFFFFF;
     border: var(--border-delicate);
     box-shadow: var(--shadow-float);
     transition: var(--transition-smooth);
@@ -1531,6 +1531,16 @@ input[type="time"].form-control:focus {
     border: 1px solid #E9ECEF;
     padding: 0.2rem 0.55rem;
     border-radius: 6px;
+}
+
+.service-check-card {
+    background: #FAF8F5;
+    border: 1px solid rgba(183, 141, 101, 0.25);
+}
+
+.service-crosslinks-card {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 /*** Personal Skills Progress Bars ***/
