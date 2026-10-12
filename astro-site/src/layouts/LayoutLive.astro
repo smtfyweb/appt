@@ -43,25 +43,31 @@ const {
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{title}</title>
 
-    <!-- Theme Detection (Light default / Dark on request or stored) -->
+    <!-- Theme Detection (Dark default / Persisted in localStorage) -->
     <script is:inline>
         (function() {
             try {
                 var params = new URLSearchParams(window.location.search);
                 var themeParam = params.get('theme');
                 var storedTheme = localStorage.getItem('op_theme');
-                if (themeParam === 'dark' || (!themeParam && storedTheme === 'dark')) {
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                } else if (themeParam === 'light') {
-                    document.documentElement.removeAttribute('data-theme');
+                
+                if (themeParam === 'light') {
                     localStorage.setItem('op_theme', 'light');
+                    document.documentElement.removeAttribute('data-theme');
+                } else if (themeParam === 'dark') {
+                    localStorage.setItem('op_theme', 'dark');
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                } else if (storedTheme === 'light') {
+                    document.documentElement.removeAttribute('data-theme');
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'dark');
                 }
             } catch (e) {}
         })();

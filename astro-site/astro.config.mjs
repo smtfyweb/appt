@@ -13,6 +13,10 @@ const getBasePath = () => {
 export default defineConfig({
   site: process.env.SITE_URL || 'https://www.opportunity-painting.com',
   base: getBasePath(),
+  server: {
+    port: 4322,
+    host: true
+  },
   build: {
     format: 'file'
   }
