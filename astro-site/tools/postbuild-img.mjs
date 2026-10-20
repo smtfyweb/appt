@@ -136,6 +136,10 @@ async function run() {
       const fullTag = m[0];
       const attrs = m[1];
 
+      // Ignora tags de imagem dentro de atributos como data-dot="<img ...>"
+      const lookback = content.substring(Math.max(0, m.index - 120), m.index);
+      if (lookback.includes('data-dot')) continue;
+
       // Ignora SVGs ou imagens sem src
       const srcMatch = attrs.match(/src=["']([^"']+)["']/i);
       if (!srcMatch) continue;

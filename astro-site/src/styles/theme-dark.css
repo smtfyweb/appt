@@ -118,6 +118,18 @@ html[data-theme="dark"] .p-5.bg-light {
     box-shadow: 0 6px 22px rgba(0, 0, 0, 0.35) !important;
 }
 
+/* Google Reviews Logo Dot nos Testimonials no Dark Mode */
+html[data-theme="dark"] .testimonial-carousel .owl-dots .owl-dot {
+    background: #ffffff !important;
+    border: 2px solid rgba(183, 141, 101, 0.4);
+}
+html[data-theme="dark"] .testimonial-carousel .owl-dots .owl-dot img {
+    opacity: 0.85;
+}
+html[data-theme="dark"] .testimonial-carousel .owl-dots .owl-dot.active img {
+    opacity: 1;
+}
+
 /* Badges, Tags e Pílulas */
 html[data-theme="dark"] .town-badge,
 html[data-theme="dark"] .town-tag,
