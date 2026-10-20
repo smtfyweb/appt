@@ -172,16 +172,8 @@ const {
             window.addEventListener(e, onUserActive, { passive: true, once: true });
         });
 
-        // Background idle fallback after page loads (after 8s so audit completes cleanly)
-        if (typeof window.requestIdleCallback === 'function') {
-            window.addEventListener('load', function() {
-                window.requestIdleCallback(initTrackingAndChat, { timeout: 8000 });
-            }, { once: true });
-        } else {
-            window.addEventListener('load', function() {
-                setTimeout(initTrackingAndChat, 7000);
-            }, { once: true });
-        }
+        // Background fallback: only after 10 full seconds of complete inactivity
+        setTimeout(initTrackingAndChat, 10000);
     </script>
 
 </head>
