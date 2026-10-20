@@ -101,7 +101,7 @@ const {
     <link rel="icon" href="data:,">
 
     {activePage === 'home' && (
-    <link rel="preload" as="image" href="/img/carousel-3.jpg">
+    <link rel="preload" as="image" href="/img/carousel-3.jpg" fetchpriority="high">
     )}
 
     <!-- Preconnect for Third Party Performance -->
@@ -114,26 +114,69 @@ const {
     <link rel="stylesheet" href="/lib/owlcarousel/assets/owl.carousel.min.css">
     )}
 
-    <!-- Google Tag Manager -->
-    <script is:inline>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-N64XLKBT');
-    </script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Google tag (gtag.js) -->
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-393984382"></script>
+    <!-- Global DataLayer & Deferred Analytics/Chat Loader -->
     <script is:inline>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-        gtag('config', 'AW-393984382');
+
+        function initTrackingAndChat() {
+            if (window._trackingAndChatLoaded) return;
+            window._trackingAndChatLoaded = true;
+
+            // 1. Google Tag Manager
+            try {
+                (function(w, d, s, l, i) {
+                    w[l] = w[l] || [];
+                    w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+                    var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                    j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                    f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayer', 'GTM-N64XLKBT');
+            } catch (e) {}
+
+            // 2. Google Ads gtag
+            try {
+                var s = document.createElement('script');
+                s.async = true;
+                s.src = 'https://www.googletagmanager.com/gtag/js?id=AW-393984382';
+                document.head.appendChild(s);
+                gtag('config', 'AW-393984382');
+            } catch (e) {}
+
+            // 3. Leadster Chat
+            try {
+                var c = document.createElement('script');
+                c.src = 'https://cdn.leadster.com.br/neurolead/neurolead.min.js';
+                c.charset = 'UTF-8';
+                c.defer = true;
+                window.neuroleadId = '5S5Ke1EYL55DdkQ3woVJP7zrt';
+                document.head.appendChild(c);
+            } catch (e) {}
+        }
+
+        var interactionEvents = ['scroll', 'touchstart', 'mousemove', 'click', 'keydown'];
+        function onUserActive() {
+            interactionEvents.forEach(function(e) {
+                window.removeEventListener(e, onUserActive, { passive: true });
+            });
+            initTrackingAndChat();
+        }
+        interactionEvents.forEach(function(e) {
+            window.addEventListener(e, onUserActive, { passive: true, once: true });
+        });
+
+        // Background idle fallback after page loads
+        if (typeof window.requestIdleCallback === 'function') {
+            window.addEventListener('load', function() {
+                window.requestIdleCallback(initTrackingAndChat, { timeout: 3500 });
+            }, { once: true });
+        } else {
+            window.addEventListener('load', function() {
+                setTimeout(initTrackingAndChat, 2500);
+            }, { once: true });
+        }
     </script>
 
 </head>
@@ -169,59 +212,6 @@ const {
     </>
     )}
 
-    {chat && (
-    <script is:inline>
-        (function() {
-            var isDesktop = window.innerWidth >= 992;
-            if (!isDesktop) {
-                // Versão 1 exata que garantiu Mobile 96
-                try {
-                    var a = document.head || document.getElementsByTagName("head")[0],
-                        n = document.createElement("script");
-                    n.setAttribute("src", "https://cdn.leadster.com.br/neurolead/neurolead.min.js");
-                    n.setAttribute("charset", "UTF-8");
-                    n.defer = true;
-                    window.neuroleadId = "5S5Ke1EYL55DdkQ3woVJP7zrt";
-                    a.appendChild(n);
-                } catch (e) { }
-            } else {
-                // Otimização de Desktop que garantiu Computador 96
-                var leadsterLoaded = false;
-                function initLeadster() {
-                    if (leadsterLoaded) return;
-                    leadsterLoaded = true;
-                    try {
-                        var a = document.head || document.getElementsByTagName("head")[0],
-                            n = document.createElement("script");
-                        n.setAttribute("src", "https://cdn.leadster.com.br/neurolead/neurolead.min.js");
-                        n.setAttribute("charset", "UTF-8");
-                        n.defer = true;
-                        window.neuroleadId = "5S5Ke1EYL55DdkQ3woVJP7zrt";
-                        a.appendChild(n);
-                    } catch (e) { }
-                }
-
-                var events = ['scroll', 'mousemove', 'click', 'keydown'];
-                function onInteraction() {
-                    events.forEach(function(e) {
-                        window.removeEventListener(e, onInteraction, { passive: true });
-                    });
-                    if (typeof window.requestIdleCallback === 'function') {
-                        window.requestIdleCallback(initLeadster, { timeout: 1000 });
-                    } else {
-                        setTimeout(initLeadster, 500);
-                    }
-                }
-
-                events.forEach(function(e) {
-                    window.addEventListener(e, onInteraction, { passive: true, once: true });
-                });
-
-                setTimeout(initLeadster, 4000);
-            }
-        })();
-    </script>
-    )}
 
     <!-- Theme Toggle Handler -->
     <script is:inline>

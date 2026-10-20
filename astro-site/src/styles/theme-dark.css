@@ -618,6 +618,36 @@ html[data-theme="dark"] .bg-light.flex-shrink-0[style*="65px"] {
     border-radius: var(--radius-sm, 4px) !important;
 }
 
+/* ==========================================================================
+   BOTÕES PRIMÁRIOS - CONTRASTE WCAG AAA (#121212 em bronze #B78D65)
+   ========================================================================== */
+html[data-theme="dark"] .btn-primary,
+html[data-theme="dark"] .btn.btn-primary {
+    color: #121212 !important;
+    font-weight: 700 !important;
+}
+
+html[data-theme="dark"] .btn-primary:hover,
+html[data-theme="dark"] .btn.btn-primary:hover {
+    color: #000000 !important;
+}
+
+/* ==========================================================================
+   ISOLAMENTO LEADSTER CHATBOT (EVITA VAZAMENTO DO TEMA ESCURO NO BALÃO BRANCO)
+   ========================================================================== */
+html[data-theme="dark"] [class*="nld-"],
+html[data-theme="dark"] [class*="nld-"] p,
+html[data-theme="dark"] [class*="nld-"] span,
+html[data-theme="dark"] [class*="nld-"] div,
+html[data-theme="dark"] [class*="nld-"] strong,
+html[data-theme="dark"] [class*="nld-"] b,
+html[data-theme="dark"] .nld-chatbot-invite-message,
+html[data-theme="dark"] .nld-chatbot-invite-message p,
+html[data-theme="dark"] .nld-chatbot-invite-message span {
+    color: #1a1a1a !important;
+}
+
+
 
 
 

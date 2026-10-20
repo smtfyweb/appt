@@ -218,14 +218,15 @@ img {
 
 .btn-primary {
   background-color: var(--primary);
-  color: var(--white);
+  color: #121212 !important;
+  font-weight: 700;
   border-color: var(--primary);
 }
 
 .btn-primary:hover {
   background-color: var(--primary-hover);
   border-color: var(--primary-hover);
-  color: var(--white);
+  color: #000000 !important;
   box-shadow: 0 4px 15px rgba(183, 141, 101, 0.4);
   transform: translateY(-2px);
 }
