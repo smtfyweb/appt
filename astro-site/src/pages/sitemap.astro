@@ -1,0 +1,103 @@
+---
+import LayoutLive from '../layouts/LayoutLive.astro';
+import HeaderLive from '../components/HeaderLive.astro';
+import FooterLive from '../components/FooterLive.astro';
+
+const title = "HTML Sitemap | Opportunity Painting & Renovation Services Inc. - Holliston, MA";
+const description = "Complete overview and directory of all pages, remodeling and painting services offered by Opportunity Painting & Renovation Services Inc. in Holliston and MetroWest MA.";
+---
+
+<LayoutLive
+  title={title}
+  description={description}
+  canonical="https://www.opportunity-painting.com/sitemap.html"
+  activePage="sitemap"
+  chat={true}
+>
+    <HeaderLive slot="header" />
+
+    <!-- Início Header do Sitemap -->
+    <div class="wow fadeIn container-fluid mb-5 page-header py-5" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="text-white animated display-1 slideInDown">Site Directory & Sitemap</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="mb-0 breadcrumb text-uppercase">
+                    <li class="breadcrumb-item"><a href="/" class="text-white">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#" class="text-white">Resources</a></li>
+                    <li class="text-primary active breadcrumb-item" aria-current="page">Sitemap</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Fim Header do Sitemap -->
+
+    <!-- Início Conteúdo do Sitemap -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 700px;">
+                <h4 class="section-title">Navigation Directory</h4>
+                <h2 class="display-5 mb-4">Complete Website Index</h2>
+                <p class="text-muted">Explore all our home renovation, custom carpentry, interior and exterior painting services across Holliston, MA and the MetroWest Boston region.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Coluna 1: Renovation Services -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="card h-100 p-4 border-0 shadow-sm" style="background: rgba(255, 255, 255, 0.04); border-radius: 12px; border: 1px solid rgba(255,255,255,0.08);">
+                        <h3 class="h4 text-primary mb-3">Home Renovation</h3>
+                        <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
+                            <li><a href="/bathroom-renovation.html" class="text-decoration-none">Bathroom Renovation</a></li>
+                            <li><a href="/basement-renovation.html" class="text-decoration-none">Basement Renovation</a></li>
+                            <li><a href="/kitchen-renovation.html" class="text-decoration-none">Kitchen Renovation</a></li>
+                            <li><a href="/service-kitchen-cabinet-refinishing.html" class="text-decoration-none">Kitchen Cabinet Refinishing</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Coluna 2: Painting & Carpentry -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="card h-100 p-4 border-0 shadow-sm" style="background: rgba(255, 255, 255, 0.04); border-radius: 12px; border: 1px solid rgba(255,255,255,0.08);">
+                        <h3 class="h4 text-primary mb-3">Painting & Carpentry</h3>
+                        <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
+                            <li><a href="/service-interior-painting.html" class="text-decoration-none">Interior Painting</a></li>
+                            <li><a href="/service-exterior-painting.html" class="text-decoration-none">Exterior Painting</a></li>
+                            <li><a href="/service-commercial-painting.html" class="text-decoration-none">Commercial Painting</a></li>
+                            <li><a href="/service-light-carpentry.html" class="text-decoration-none">Architectural Light Carpentry</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Coluna 3: Company & Contact -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="card h-100 p-4 border-0 shadow-sm" style="background: rgba(255, 255, 255, 0.04); border-radius: 12px; border: 1px solid rgba(255,255,255,0.08);">
+                        <h3 class="h4 text-primary mb-3">Company & Quotes</h3>
+                        <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
+                            <li><a href="/" class="text-decoration-none">Home</a></li>
+                            <li><a href="/about.html" class="text-decoration-none">About Us & Founder Story</a></li>
+                            <li><a href="/areas-we-serve.html" class="text-decoration-none">Areas We Serve (MetroWest MA)</a></li>
+                            <li><a href="/testimonial.html" class="text-decoration-none">Customer Testimonials</a></li>
+                            <li><a href="/request-free-quote.html" class="text-decoration-none font-weight-bold text-primary">Get A Free Quote</a></li>
+                            <li><a href="/contact.html" class="text-decoration-none">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Coluna 4: Legal & Machine Sitemaps -->
+                <div class="col-12 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="p-4" style="background: rgba(255, 255, 255, 0.03); border-radius: 12px; border: 1px solid rgba(255,255,255,0.06);">
+                        <h3 class="h5 text-muted mb-3">Legal, Compliance & Search Engines</h3>
+                        <div class="d-flex flex-wrap gap-4">
+                            <a href="/privacy-policy.html" class="text-decoration-none small text-muted">Privacy Policy</a>
+                            <a href="/terms-of-service.html" class="text-decoration-none small text-muted">Terms of Service</a>
+                            <a href="/sitemap.xml" class="text-decoration-none small text-primary" target="_blank">XML Sitemap (Google / Bing)</a>
+                            <a href="/robots.txt" class="text-decoration-none small text-primary" target="_blank">Robots.txt</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim Conteúdo do Sitemap -->
+
+    <FooterLive slot="footer" />
+</LayoutLive>

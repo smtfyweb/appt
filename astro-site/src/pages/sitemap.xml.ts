@@ -27,6 +27,7 @@ export const GET: APIRoute = async () => {
       file.endsWith('.astro') && 
       !file.startsWith('404') && 
       !file.startsWith('thank-you') &&
+      !file.startsWith('cards-preview') &&
       !file.startsWith('_') &&
       !pendingFiles.has(file)
     )
