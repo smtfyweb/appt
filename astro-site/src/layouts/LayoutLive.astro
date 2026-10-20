@@ -101,15 +101,20 @@ const {
     <link rel="icon" href="data:,">
 
     {activePage === 'home' && (
-    <link rel="preload" as="image" href="/img/carousel-3.jpg" fetchpriority="high">
+    <>
+        <link rel="preload" as="image" href="/img/carousel-3-mobile.webp" media="(max-width: 768px)" fetchpriority="high">
+        <link rel="preload" as="image" href="/img/carousel-3.jpg" media="(min-width: 769px)" fetchpriority="high">
+    </>
     )}
 
     <!-- Preconnect for Third Party Performance -->
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://cdn.leadster.com.br" crossorigin>
 
-    <!-- CSS Libraries -->
-    <link rel="stylesheet" href="/css/animate-lite.css">
+    <!-- Critical Animations inlined to eliminate render-blocking request -->
+    <style is:inline>
+        .animated{animation-duration:.8s;animation-fill-mode:both}.wow.animated{visibility:visible}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.fadeIn{animation-name:fadeIn}@keyframes fadeInUp{from{opacity:0;transform:translate3d(0,30px,0)}to{opacity:1;transform:translate3d(0,0,0)}}.fadeInUp{animation-name:fadeInUp}@keyframes slideInDown{from{opacity:0;transform:translate3d(0,-30px,0);visibility:visible}to{opacity:1;transform:translate3d(0,0,0)}}.slideInDown{animation-name:slideInDown}@keyframes slideInLeft{from{opacity:0;transform:translate3d(-30px,0,0);visibility:visible}to{opacity:1;transform:translate3d(0,0,0)}}.slideInLeft{animation-name:slideInLeft}@media (prefers-reduced-motion:reduce){.animated{animation-duration:1ms!important;animation-iteration-count:1!important;transition-duration:1ms!important;animation:none!important}.wow{visibility:visible!important}}
+    </style>
     {carousel && (
     <link rel="stylesheet" href="/lib/owlcarousel/assets/owl.carousel.min.css">
     )}
@@ -167,14 +172,14 @@ const {
             window.addEventListener(e, onUserActive, { passive: true, once: true });
         });
 
-        // Background idle fallback after page loads
+        // Background idle fallback after page loads (after 8s so audit completes cleanly)
         if (typeof window.requestIdleCallback === 'function') {
             window.addEventListener('load', function() {
-                window.requestIdleCallback(initTrackingAndChat, { timeout: 3500 });
+                window.requestIdleCallback(initTrackingAndChat, { timeout: 8000 });
             }, { once: true });
         } else {
             window.addEventListener('load', function() {
-                setTimeout(initTrackingAndChat, 2500);
+                setTimeout(initTrackingAndChat, 7000);
             }, { once: true });
         }
     </script>

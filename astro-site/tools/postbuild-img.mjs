@@ -174,32 +174,35 @@ async function run() {
         }
       }
 
-      // Se falta width ou height, insere mantendo tamanho original exibido
-      if (!hasWidth || !hasHeight) {
-        let replacement = fullTag;
+      let replacement = fullTag;
 
-        // Se for uma imagem com tamanho exibido específico (como icon-1.png = 210x64), usamos o tamanho exibido nos atributos
-        let targetWidth = dims.width;
-        let targetHeight = dims.height;
+      // Se for uma imagem com tamanho exibido específico (como icon-1.png = 210x64), usamos o tamanho exibido nos atributos
+      let targetWidth = dims.width;
+      let targetHeight = dims.height;
 
-        if (lowResKnown[fileName]) {
-          targetWidth = lowResKnown[fileName].displayWidth;
-          targetHeight = lowResKnown[fileName].displayHeight;
-        }
+      if (lowResKnown[fileName]) {
+        targetWidth = lowResKnown[fileName].displayWidth;
+        targetHeight = lowResKnown[fileName].displayHeight;
+      }
 
-        if (!hasWidth && !hasHeight) {
-          replacement = fullTag.replace(/<img\b/i, `<img width="${targetWidth}" height="${targetHeight}"`);
-        } else if (!hasWidth) {
-          replacement = fullTag.replace(/<img\b/i, `<img width="${targetWidth}"`);
-        } else if (!hasHeight) {
-          replacement = fullTag.replace(/<img\b/i, `<img height="${targetHeight}"`);
-        }
+      if (!hasWidth && !hasHeight) {
+        replacement = replacement.replace(/<img\b/i, `<img width="${targetWidth}" height="${targetHeight}"`);
+      } else if (!hasWidth) {
+        replacement = replacement.replace(/<img\b/i, `<img width="${targetWidth}"`);
+      } else if (!hasHeight) {
+        replacement = replacement.replace(/<img\b/i, `<img height="${targetHeight}"`);
+      }
 
-        if (replacement !== fullTag) {
-          newContent = newContent.replace(fullTag, replacement);
-          modified = true;
-          totalImgsFixed++;
-        }
+      // Se existir versão .webp mais leve para esta imagem, atualiza o src para .webp (exceto carousel hero)
+      const webpPath = `${localFile}.webp`;
+      if (fs.existsSync(webpPath) && !imgSrc.endsWith('.webp') && !imgSrc.includes('carousel-')) {
+        replacement = replacement.replace(imgSrc, `${imgSrc}.webp`);
+      }
+
+      if (replacement !== fullTag) {
+        newContent = newContent.replace(fullTag, replacement);
+        modified = true;
+        totalImgsFixed++;
       }
     }
 

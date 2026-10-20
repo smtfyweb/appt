@@ -647,6 +647,27 @@ html[data-theme="dark"] .nld-chatbot-invite-message span {
     color: #1a1a1a !important;
 }
 
+/* Testimonial Author Heading no Dark Mode (WCAG AAA) */
+html[data-theme="dark"] .testimonial-carousel .testimonial-item h3 {
+    color: #ffffff !important;
+}
+
+/* Links do Rodapé no Dark Mode (WCAG AAA) */
+html[data-theme="dark"] .footer .btn.btn-link {
+    color: #d1d5db !important;
+}
+
+html[data-theme="dark"] .footer .btn.btn-link:hover {
+    color: #e5b98f !important;
+}
+
+/* Badges de Métricas no Dark Mode (WCAG AAA) */
+html[data-theme="dark"] .metric-card .badge {
+    background: rgba(183, 141, 101, 0.18) !important;
+    border-color: rgba(183, 141, 101, 0.45) !important;
+    color: #e5c3a3 !important;
+}
+
 
 
 
