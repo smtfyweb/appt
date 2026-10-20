@@ -36,11 +36,28 @@
                         observer.unobserve(el);
                     }
                 });
-            }, { threshold: 0.02, rootMargin: '60px 0px 0px 0px' });
+            }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
 
-            wowElements.forEach(function (el) {
-                wowObserver.observe(el);
-            });
+            var isDesktop = window.innerWidth >= 992;
+            if (!isDesktop) {
+                // Versão 1 exata que garantiu Mobile 96
+                var vh = window.innerHeight || document.documentElement.clientHeight;
+                wowElements.forEach(function (el) {
+                    var rect = el.getBoundingClientRect();
+                    if (rect.top < vh && rect.bottom > 0) {
+                        el.classList.add('animated');
+                        el.style.visibility = 'visible';
+                    } else {
+                        el.style.visibility = 'hidden';
+                        wowObserver.observe(el);
+                    }
+                });
+            } else {
+                // Otimização de Desktop que garantiu Computador 96 (TBT 40ms)
+                wowElements.forEach(function (el) {
+                    wowObserver.observe(el);
+                });
+            }
         }
     }
 

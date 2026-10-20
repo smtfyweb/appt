@@ -172,10 +172,9 @@ const {
     {chat && (
     <script is:inline>
         (function() {
-            var leadsterLoaded = false;
-            function initLeadster() {
-                if (leadsterLoaded) return;
-                leadsterLoaded = true;
+            var isDesktop = window.innerWidth >= 992;
+            if (!isDesktop) {
+                // Versão 1 exata que garantiu Mobile 96
                 try {
                     var a = document.head || document.getElementsByTagName("head")[0],
                         n = document.createElement("script");
@@ -185,26 +184,41 @@ const {
                     window.neuroleadId = "5S5Ke1EYL55DdkQ3woVJP7zrt";
                     a.appendChild(n);
                 } catch (e) { }
-            }
-
-            var events = ['scroll', 'mousemove', 'touchstart', 'click', 'keydown'];
-            function onInteraction() {
-                events.forEach(function(e) {
-                    window.removeEventListener(e, onInteraction, { passive: true });
-                });
-                if (typeof window.requestIdleCallback === 'function') {
-                    window.requestIdleCallback(initLeadster, { timeout: 1000 });
-                } else {
-                    setTimeout(initLeadster, 500);
+            } else {
+                // Otimização de Desktop que garantiu Computador 96
+                var leadsterLoaded = false;
+                function initLeadster() {
+                    if (leadsterLoaded) return;
+                    leadsterLoaded = true;
+                    try {
+                        var a = document.head || document.getElementsByTagName("head")[0],
+                            n = document.createElement("script");
+                        n.setAttribute("src", "https://cdn.leadster.com.br/neurolead/neurolead.min.js");
+                        n.setAttribute("charset", "UTF-8");
+                        n.defer = true;
+                        window.neuroleadId = "5S5Ke1EYL55DdkQ3woVJP7zrt";
+                        a.appendChild(n);
+                    } catch (e) { }
                 }
+
+                var events = ['scroll', 'mousemove', 'click', 'keydown'];
+                function onInteraction() {
+                    events.forEach(function(e) {
+                        window.removeEventListener(e, onInteraction, { passive: true });
+                    });
+                    if (typeof window.requestIdleCallback === 'function') {
+                        window.requestIdleCallback(initLeadster, { timeout: 1000 });
+                    } else {
+                        setTimeout(initLeadster, 500);
+                    }
+                }
+
+                events.forEach(function(e) {
+                    window.addEventListener(e, onInteraction, { passive: true, once: true });
+                });
+
+                setTimeout(initLeadster, 4000);
             }
-
-            events.forEach(function(e) {
-                window.addEventListener(e, onInteraction, { passive: true, once: true });
-            });
-
-            // Fallback: load after 4 seconds even without interaction
-            setTimeout(initLeadster, 4000);
         })();
     </script>
     )}
