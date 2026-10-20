@@ -104,10 +104,18 @@ const {
     <link rel="preload" as="image" href="/img/carousel-3.jpg">
     )}
 
-    <!-- CSS Libraries -->
-    <link rel="stylesheet" href="/css/animate-lite.css">
+    <!-- Preconnect for Third Party Performance -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://cdn.leadster.com.br" crossorigin>
+
+    <!-- CSS Libraries (Non-blocking) -->
+    <link rel="stylesheet" href="/css/animate-lite.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/css/animate-lite.css"></noscript>
     {carousel && (
-    <link rel="stylesheet" href="/lib/owlcarousel/assets/owl.carousel.min.css">
+    <>
+        <link rel="stylesheet" href="/lib/owlcarousel/assets/owl.carousel.min.css" media="print" onload="this.media='all'">
+        <noscript><link rel="stylesheet" href="/lib/owlcarousel/assets/owl.carousel.min.css"></noscript>
+    </>
     )}
 
     <!-- Google Tag Manager -->
@@ -167,17 +175,41 @@ const {
 
     {chat && (
     <script is:inline>
-        !function (e, t, r, d) {
-            try {
-                var a = t.head || t.getElementsByTagName("head")[0],
-                    n = t.createElement("script");
-                n.setAttribute("src", "https://cdn.leadster.com.br/neurolead/neurolead.min.js");
-                n.setAttribute("charset", "UTF-8");
-                n.defer = !0;
-                e.neuroleadId = "5S5Ke1EYL55DdkQ3woVJP7zrt";
-                a.appendChild(n);
-            } catch (e) { }
-        }(window, document);
+        (function() {
+            var leadsterLoaded = false;
+            function initLeadster() {
+                if (leadsterLoaded) return;
+                leadsterLoaded = true;
+                try {
+                    var a = document.head || document.getElementsByTagName("head")[0],
+                        n = document.createElement("script");
+                    n.setAttribute("src", "https://cdn.leadster.com.br/neurolead/neurolead.min.js");
+                    n.setAttribute("charset", "UTF-8");
+                    n.defer = true;
+                    window.neuroleadId = "5S5Ke1EYL55DdkQ3woVJP7zrt";
+                    a.appendChild(n);
+                } catch (e) { }
+            }
+
+            var events = ['scroll', 'mousemove', 'touchstart', 'click', 'keydown'];
+            function onInteraction() {
+                events.forEach(function(e) {
+                    window.removeEventListener(e, onInteraction, { passive: true });
+                });
+                if (typeof window.requestIdleCallback === 'function') {
+                    window.requestIdleCallback(initLeadster, { timeout: 1000 });
+                } else {
+                    setTimeout(initLeadster, 500);
+                }
+            }
+
+            events.forEach(function(e) {
+                window.addEventListener(e, onInteraction, { passive: true, once: true });
+            });
+
+            // Fallback: load after 4 seconds even without interaction
+            setTimeout(initLeadster, 4000);
+        })();
     </script>
     )}
 

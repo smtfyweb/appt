@@ -14,13 +14,13 @@ const { activePage } = Astro.props;
         <!-- Início da Coluna de Contatos -->
         <div class="col-lg-7 px-5 text-start">
             <div class="me-3 align-items-center d-inline-flex h-100 py-3">
-                <a href="tel:+15082159441" class="text-body px-2" title="Call directly">
+                <a href="tel:+15082159441" class="text-body px-2" title="Call directly" aria-label="Call (508) 215-9441 directly">
                     <svg class="icon text-primary me-2" aria-hidden="true"><use href="/img/icons.svg#fa-phone-alt"/></svg>508 215 9441
                 </a>
-                <a href="sms:+15082159441?&body=Hi%20Ney,%20I'd%20like%20to%20request%20a%20free%20quote" class="text-body px-2" title="Send a direct SMS text">
+                <a href="sms:+15082159441?&body=Hi%20Ney,%20I'd%20like%20to%20request%20a%20free%20quote" class="text-body px-2" title="Send a direct SMS text" aria-label="Send a direct text SMS to (508) 215-9441">
                     Text US
                 </a>
-                <a href="mailto:office@opportunity-painting.com" class="text-body px-2">
+                <a href="mailto:office@opportunity-painting.com" class="text-body px-2" aria-label="Send email to office@opportunity-painting.com">
                     <svg class="icon text-primary me-2" aria-hidden="true"><use href="/img/icons.svg#fa-envelope-open"/></svg>office@opportunity-painting.com
                 </a>
             </div>
@@ -112,7 +112,7 @@ const { activePage } = Astro.props;
 
             <!-- Início do Dropdown de Services -->
             <div class="nav-item dropdown">
-                <a href="/#services" class={`nav-link dropdown-toggle ${activePage === 'services' || activePage?.startsWith('service-') || activePage === 'kitchen-renovation' || activePage === 'bathroom-renovation' || activePage === 'basement-renovation' ? 'active' : ''}`} data-bs-toggle="dropdown">Services</a>
+                <a href="/#services" class={`nav-link dropdown-toggle ${activePage === 'services' || activePage?.startsWith('service-') || activePage === 'kitchen-renovation' || activePage === 'bathroom-renovation' || activePage === 'basement-renovation' ? 'active' : ''}`} data-bs-toggle="dropdown" role="button" aria-expanded="false">Services</a>
                 <div class="m-0 border-0 dropdown-menu">
                     <a href="/bathroom-renovation.html" class={`dropdown-item ${activePage === 'bathroom-renovation' ? 'active' : ''}`}>Bathroom Renovation</a>
                     <a href="/basement-renovation.html" class={`dropdown-item ${activePage === 'basement-renovation' ? 'active' : ''}`}>Basement Renovation</a>
@@ -128,7 +128,7 @@ const { activePage } = Astro.props;
 
             <!-- Início do Dropdown de Resources -->
             <div class="nav-item dropdown">
-                <a href="#" class={`nav-link dropdown-toggle ${activePage === 'areas-we-serve' || activePage === 'testimonial' || activePage === 'request-free-quote' || activePage === 'terms-of-service' || activePage === 'privacy-policy' ? 'active' : ''}`} data-bs-toggle="dropdown">RESOURCES</a>
+                <a href="#" class={`nav-link dropdown-toggle ${activePage === 'areas-we-serve' || activePage === 'testimonial' || activePage === 'request-free-quote' || activePage === 'terms-of-service' || activePage === 'privacy-policy' ? 'active' : ''}`} data-bs-toggle="dropdown" role="button" aria-expanded="false">RESOURCES</a>
                 <div class="m-0 border-0 dropdown-menu">
                     <a href="/areas-we-serve.html" class={`dropdown-item ${activePage === 'areas-we-serve' ? 'active' : ''}`}>Areas We Serve</a>
                     <a href="/testimonial.html" class={`dropdown-item ${activePage === 'testimonial' ? 'active' : ''}`}>Testimonial</a>

@@ -36,19 +36,10 @@
                         observer.unobserve(el);
                     }
                 });
-            }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+            }, { threshold: 0.02, rootMargin: '60px 0px 0px 0px' });
 
-            var vh = window.innerHeight || document.documentElement.clientHeight;
             wowElements.forEach(function (el) {
-                var rect = el.getBoundingClientRect();
-                // Elements already in initial viewport display immediately without hiding or jumping
-                if (rect.top < vh && rect.bottom > 0) {
-                    el.classList.add('animated');
-                    el.style.visibility = 'visible';
-                } else {
-                    el.style.visibility = 'hidden';
-                    wowObserver.observe(el);
-                }
+                wowObserver.observe(el);
             });
         }
     }
