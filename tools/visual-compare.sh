@@ -10,7 +10,7 @@ if [ ! -d tools/shots/node_modules/playwright ]; then
 fi
 cat > tools/shots/shoot.mjs <<'JS'
 import { chromium } from 'playwright';
-const LIVE = 'https://www.opportunity-painting.com/', NEW = 'http://localhost:4321/';
+const LIVE = 'https://www.opportunity-painting.com/', NEW = 'http://localhost:4322/';
 const views = [['d', { width: 1440, height: 900 }], ['m', { width: 390, height: 844 }]];
 const pages = process.argv.slice(2);
 const browser = await chromium.launch();
@@ -34,7 +34,7 @@ for (const name of pages) for (const [tag, vp] of views) for (const [side, base]
 }
 await browser.close();
 JS
-curl -s -o /dev/null http://localhost:4321/index.html || { (cd astro-site && npx astro preview --port 4321 >/tmp/preview.log 2>&1 &); sleep 5; }
+curl -s -o /dev/null http://localhost:4322/index.html || { (cd astro-site && npx astro preview --port 4322 >/tmp/preview.log 2>&1 &); sleep 5; }
 (cd tools/shots && node shoot.mjs "${PAGES[@]}") || exit 1
 cd shots3 || exit 1
 for n in "${PAGES[@]}"; do for t in d m; do

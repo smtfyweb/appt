@@ -213,62 +213,77 @@ html[data-theme="dark"] .btn-square:hover .icon {
     color: #ffffff !important;
 }
 
-/* Botão Alternador de Tema */
+/* Botão Alternador de Tema (Design Circular Premium com Ícones Sol/Lua) */
 .theme-toggle-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    color: #e5e7eb;
-    border-radius: 4px;
-    padding: 5px 10px;
-    font-size: 0.8rem;
-    font-weight: 500;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: #4b5563;
+    border-radius: 50%;
     cursor: pointer;
-    transition: all 0.25s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     user-select: none;
-    line-height: 1;
 }
 
 .theme-toggle-btn:hover {
-    background-color: rgba(255, 255, 255, 0.12);
+    background-color: rgba(183, 141, 101, 0.15);
     border-color: var(--primary);
     color: var(--primary);
+    transform: rotate(15deg) scale(1.06);
 }
 
 .theme-toggle-btn svg {
-    width: 14px;
-    height: 14px;
-    fill: currentColor;
+    display: block;
+    transition: transform 0.3s ease;
 }
 
 html[data-theme="dark"] .theme-toggle-btn {
-    background-color: #2b2b2b !important;
-    border: 1px solid rgba(183, 141, 101, 0.5) !important;
-    color: var(--primary) !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
+    color: #f59e0b !important; /* Dourado solar aconchegante */
 }
 
 html[data-theme="dark"] .theme-toggle-btn:hover {
-    background-color: var(--primary) !important;
-    border-color: var(--primary) !important;
-    color: #ffffff !important;
+    background-color: rgba(245, 158, 11, 0.2) !important;
+    border-color: #f59e0b !important;
+    color: #fbbf24 !important;
+    box-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
 }
 
 /* Mostra Sol no Dark e Lua no Light */
 html[data-theme="dark"] .theme-icon-moon {
-    display: none;
+    display: none !important;
 }
 html[data-theme="dark"] .theme-icon-sun {
-    display: inline-block;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
 }
 
 html:not([data-theme="dark"]) .theme-icon-moon {
-    display: inline-block;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
 }
 html:not([data-theme="dark"]) .theme-icon-sun {
-    display: none;
+    display: none !important;
+}
+
+/* Versão Mobile do Botão de Tema */
+.d-lg-none .theme-toggle-btn {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 6px !important;
+    padding: 8px 16px !important;
+    gap: 8px;
+}
+.d-lg-none .theme-toggle-btn:hover {
+    transform: none !important;
 }
 
 /* ==========================================================================

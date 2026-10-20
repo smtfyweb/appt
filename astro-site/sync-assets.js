@@ -33,13 +33,8 @@ if (fs.existsSync(bSrc) && !fs.existsSync(bDest)) {
   console.log('✅ bootstrap.min.css sincronizado em src/styles/');
 }
 
-// Garante imagens temporárias para bathroom e basement
-const tempImgPairs = [
-  { src: 'about-15.jpg', dst: 'bathroom-1.jpg' },
-  { src: 'about-16.jpg', dst: 'bathroom-2.jpg' },
-  { src: 'about-13.jpg', dst: 'basement-1.jpg' },
-  { src: 'about-14.jpg', dst: 'basement-2.jpg' }
-];
+// Fotos reais já cadastradas para basement
+const tempImgPairs = [];
 for (const pair of tempImgPairs) {
   for (const dPath of [path.resolve(__dirname, '../img'), path.resolve(__dirname, 'public/img')]) {
     const s = path.join(dPath, pair.src);

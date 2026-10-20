@@ -20,7 +20,7 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   name: "Opportunity Painting",
-  legalName: "Opportunity Painting And Renovation Services Inc.",
+  legalName: "Opportunity Painting & Renovation Services Inc.",
   phone: "+15082159441",
   displayPhone: "(508) 215-9441",
   email: "office@opportunity-painting.com",

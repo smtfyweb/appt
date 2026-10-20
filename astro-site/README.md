@@ -104,7 +104,7 @@ npm install
 ```bash
 npm run dev
 ```
-O site estará disponível localmente em `http://localhost:4321`.
+O site estará disponível localmente em `http://localhost:4322`.
 
 ### 3. Gerar a versão de produção para o Hostinger
 ```bash

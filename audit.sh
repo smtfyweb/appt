@@ -40,10 +40,10 @@ step "7/8  Preservação (links, contatos, chat, formulários do site no ar)"
 
 if [ "${1:-}" != "--sem-lighthouse" ]; then
   step "8/8  Lighthouse mobile (metas: acessibilidade ≥95, boas práticas ≥90, SEO 100)"
-  (npx astro preview --port 4321 >/tmp/audit-preview.log 2>&1 &); sleep 4
+  (npx astro preview --port 4322 >/tmp/audit-preview.log 2>&1 &); sleep 4
   for u in index service-interior-painting about contact; do
     echo " /$u.html"
-    npx --yes lighthouse "http://localhost:4321/$u.html" --only-categories=performance,accessibility,best-practices,seo --output=json --output-path=/tmp/audit-lh.json --chrome-flags="--headless" --quiet >/dev/null 2>&1 || { echo "  falha ao rodar o Lighthouse"; FAIL=1; continue; }
+    npx --yes lighthouse "http://localhost:4322/$u.html" --only-categories=performance,accessibility,best-practices,seo --output=json --output-path=/tmp/audit-lh.json --chrome-flags="--headless" --quiet >/dev/null 2>&1 || { echo "  falha ao rodar o Lighthouse"; FAIL=1; continue; }
     node -e '
 const r=require("/tmp/audit-lh.json"),c=r.categories,s=k=>Math.round(c[k].score*100);
 const p=s("performance"),a=s("accessibility"),b=s("best-practices"),q=s("seo"),ok=a>=95&&b>=90&&q===100;

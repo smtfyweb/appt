@@ -65,6 +65,38 @@ export function getHousePainterSchema() {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
+            "name": "Bathroom Renovation",
+            "url": "https://www.opportunity-painting.com/bathroom-renovation.html"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Basement Renovation",
+            "url": "https://www.opportunity-painting.com/basement-renovation.html"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Kitchen Renovation",
+            "url": "https://www.opportunity-painting.com/kitchen-renovation.html"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Kitchen Cabinet Refinishing",
+            "url": "https://www.opportunity-painting.com/service-kitchen-cabinet-refinishing.html"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
             "name": "Interior Painting",
             "url": "https://www.opportunity-painting.com/service-interior-painting.html"
           }
@@ -91,38 +123,6 @@ export function getHousePainterSchema() {
             "@type": "Service",
             "name": "Light Carpentry",
             "url": "https://www.opportunity-painting.com/service-light-carpentry.html"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Kitchen Cabinet Refinishing",
-            "url": "https://www.opportunity-painting.com/service-kitchen-cabinet-refinishing.html"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Kitchen Renovation",
-            "url": "https://www.opportunity-painting.com/kitchen-renovation.html"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Bathroom Renovation",
-            "url": "https://www.opportunity-painting.com/bathroom-renovation.html"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Basement Renovation",
-            "url": "https://www.opportunity-painting.com/basement-renovation.html"
           }
         }
       ]
