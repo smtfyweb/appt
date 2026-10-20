@@ -153,7 +153,13 @@ async function run() {
       const localFile = findLocalImage(imgSrc);
       if (!localFile) continue;
 
-      const dims = await getImageDimensions(localFile);
+      const webpPath = `${localFile}.webp`;
+      let effectiveFile = localFile;
+      if (fs.existsSync(webpPath) && !imgSrc.endsWith('.webp') && !imgSrc.includes('carousel-')) {
+        effectiveFile = webpPath;
+      }
+
+      const dims = await getImageDimensions(effectiveFile);
       if (!dims) continue;
 
       const fileName = path.basename(localFile);
@@ -194,7 +200,6 @@ async function run() {
       }
 
       // Se existir versão .webp mais leve para esta imagem, atualiza o src para .webp (exceto carousel hero)
-      const webpPath = `${localFile}.webp`;
       if (fs.existsSync(webpPath) && !imgSrc.endsWith('.webp') && !imgSrc.includes('carousel-')) {
         replacement = replacement.replace(imgSrc, `${imgSrc}.webp`);
       }

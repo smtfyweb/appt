@@ -40,20 +40,42 @@ async function getImages(dir) {
   return files;
 }
 
+const maxImageSizes = {
+  'about-16.jpg': { width: 640, height: 427 },
+  'bathroom-1.jpg': { width: 540, height: 716 },
+  'bathroom-2.jpg': { width: 540, height: 716 },
+  'service-2.jpg': { width: 500, height: 750 },
+  'service-1.jpg': { width: 500, height: 750 }
+};
+
 async function convertImage(srcPath) {
   const destPath = `${srcPath}.webp`;
+  const baseName = path.basename(srcPath);
 
-  // Se já existe e é mais recente que a imagem original, pula
+  // Se já existe e é mais recente que a imagem original, pula APENAS se estiver com a dimensão correta
   if (fs.existsSync(destPath)) {
     const srcStat = fs.statSync(srcPath);
     const destStat = fs.statSync(destPath);
     if (destStat.mtimeMs >= srcStat.mtimeMs) {
-      return { skipped: true, srcPath, destPath };
+      if (!maxImageSizes[baseName]) {
+        return { skipped: true, srcPath, destPath };
+      }
+      try {
+        const existingMeta = await sharp(destPath).metadata();
+        if (existingMeta.width <= maxImageSizes[baseName].width) {
+          return { skipped: true, srcPath, destPath };
+        }
+      } catch (e) {}
     }
   }
 
-  await sharp(srcPath)
-    .webp({ quality: 78 })
+  let pipeline = sharp(srcPath);
+  if (maxImageSizes[baseName]) {
+    pipeline = pipeline.resize(maxImageSizes[baseName].width, maxImageSizes[baseName].height, { fit: 'inside' });
+  }
+
+  await pipeline
+    .webp({ quality: 75, effort: 6 })
     .toFile(destPath);
 
   const srcSize = fs.statSync(srcPath).size;
@@ -101,6 +123,17 @@ async function run() {
     } catch (err) {
       console.error(`  ⚠️ Falha ao converter ${img}:`, err.message);
     }
+  }
+
+  // Garante que carousel-3-mobile.webp está otimizado para mobile (768px)
+  const carousel3Path = path.join(targetImgDir, 'carousel-3.jpg');
+  if (fs.existsSync(carousel3Path)) {
+    const mobileDest = path.join(targetImgDir, 'carousel-3-mobile.webp');
+    await sharp(carousel3Path)
+      .resize(768, 432, { fit: 'cover' })
+      .webp({ quality: 75, effort: 6 })
+      .toFile(mobileDest);
+    console.log(`  ✓ carousel-3-mobile.webp: Gerada versão mobile otimizada (768x432)`);
   }
 
   // Se existir a pasta raiz img/, sincroniza as versões .webp também para a raiz
