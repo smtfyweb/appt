@@ -225,6 +225,14 @@ async function run() {
       if (newContent !== prev) modified = true;
     }
 
+    // Preload do CSS bundle principal para eliminar aviso de bloqueio de renderização
+    const cssMatch = newContent.match(/<link\s+rel=["']stylesheet["']\s+href=["'](\/_astro\/[^"']+\.css)["']/i);
+    if (cssMatch && !newContent.includes(`rel="preload" as="style" href="${cssMatch[1]}"`)) {
+      const preloadTag = `<link rel="preload" as="style" href="${cssMatch[1]}">`;
+      newContent = newContent.replace(/(<meta\s+name=["']viewport["'][^>]*>)/i, `$1${preloadTag}`);
+      modified = true;
+    }
+
     if (modified) {
       await fs.promises.writeFile(htmlPath, newContent, 'utf8');
       console.log(`  ✓ Dimensões e caminhos atualizados em: ${path.relative(distDir, htmlPath)}`);

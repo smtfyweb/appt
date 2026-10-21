@@ -125,15 +125,30 @@ async function run() {
     }
   }
 
-  // Garante que carousel-3-mobile.webp está otimizado para mobile (768px)
+  // Garante thumbnails leves para os dots do carrossel (60x60 retina = 80x80)
+  const thumbMap = [
+    { src: 'carousel-3.jpg', out: 'carousel-3-thumb.webp' },
+    { src: 'carousel-1.jpg', out: 'carousel-1-thumb.webp' },
+    { src: 'carousel-2.jpg', out: 'carousel-2-thumb.webp' },
+    { src: 'about-16.jpg', out: 'about-16-thumb.webp' }
+  ];
+  for (const t of thumbMap) {
+    const s = path.join(targetImgDir, t.src);
+    const d = path.join(targetImgDir, t.out);
+    if (fs.existsSync(s)) {
+      await sharp(s).resize(80, 80, { fit: 'cover' }).webp({ quality: 75 }).toFile(d);
+    }
+  }
+
+  // Garante que carousel-3-mobile.webp está otimizado para mobile (640x360, ~24KB)
   const carousel3Path = path.join(targetImgDir, 'carousel-3.jpg');
   if (fs.existsSync(carousel3Path)) {
     const mobileDest = path.join(targetImgDir, 'carousel-3-mobile.webp');
     await sharp(carousel3Path)
-      .resize(768, 432, { fit: 'cover' })
-      .webp({ quality: 75, effort: 6 })
+      .resize(640, 360, { fit: 'cover' })
+      .webp({ quality: 68, effort: 6 })
       .toFile(mobileDest);
-    console.log(`  ✓ carousel-3-mobile.webp: Gerada versão mobile otimizada (768x432)`);
+    console.log(`  ✓ carousel-3-mobile.webp: Gerada versão mobile ultraleve (640x360, ~24KB)`);
   }
 
   // Se existir a pasta raiz img/, sincroniza as versões .webp também para a raiz

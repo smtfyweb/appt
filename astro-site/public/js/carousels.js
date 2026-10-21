@@ -12,7 +12,15 @@
             dots: true,
             items: 1,
             dotsData: true,
-            autoHeight: false
+            autoHeight: false,
+            responsive: {
+                0: {
+                    dots: false
+                },
+                769: {
+                    dots: true
+                }
+            }
         });
     }
 

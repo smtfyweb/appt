@@ -481,6 +481,12 @@ p.fs-5,
     justify-content: center;
 }
 
+@media (max-width: 768px) {
+    .header-carousel .owl-dots {
+        display: none !important;
+    }
+}
+
 .header-carousel .owl-dots .owl-dot {
     position: relative;
     width: 45px;
