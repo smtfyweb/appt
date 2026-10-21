@@ -668,6 +668,54 @@ html[data-theme="dark"] .metric-card .badge {
     color: #e5c3a3 !important;
 }
 
+/* Documentos Legais no Dark Mode (Terms of Service / Privacy Policy) */
+html[data-theme="dark"] .legal-doc-card {
+    background: #1c1f23 !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4) !important;
+    color: #e2e8f0 !important;
+}
+
+html[data-theme="dark"] .legal-doc-card h2,
+html[data-theme="dark"] .legal-doc-card h3,
+html[data-theme="dark"] .legal-doc-card h4,
+html[data-theme="dark"] .legal-doc-card .text-dark {
+    color: #ffffff !important;
+    border-bottom-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+html[data-theme="dark"] .legal-doc-card p,
+html[data-theme="dark"] .legal-doc-card li,
+html[data-theme="dark"] .legal-doc-card .lead {
+    color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .legal-doc-card .text-muted,
+html[data-theme="dark"] .legal-doc-card small {
+    color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .legal-doc-card .border-bottom {
+    border-bottom-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+html[data-theme="dark"] .legal-doc-card .badge.bg-light {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    color: #e5b98f !important;
+    border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+html[data-theme="dark"] .legal-doc-footer {
+    background: #15181b !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+html[data-theme="dark"] .legal-doc-footer p,
+html[data-theme="dark"] .legal-doc-footer li {
+    color: #94a3b8 !important;
+}
+
+
 
 
 

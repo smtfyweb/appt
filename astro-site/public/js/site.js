@@ -38,8 +38,10 @@
                 });
             }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
 
-            wowElements.forEach(function (el) {
-                wowObserver.observe(el);
+            window.requestAnimationFrame(function () {
+                wowElements.forEach(function (el) {
+                    wowObserver.observe(el);
+                });
             });
         }
     }
@@ -169,4 +171,88 @@
             });
         }
     }
+
+    // 6. Form US Localization & Universal English HTML5 Validation Tooltips
+    function setupFormLocalization() {
+        try {
+            var today = new Date().toISOString().split('T')[0];
+            var dateInputs = document.querySelectorAll('input[type="date"][name="date"]');
+            dateInputs.forEach(function (inp) {
+                inp.setAttribute('min', today);
+            });
+
+            function applyEnglishMessages(form) {
+                var elements = form.querySelectorAll('input, select, textarea');
+                elements.forEach(function (el) {
+                    if (el.validity.valueMissing) {
+                        if (el.tagName === 'SELECT') {
+                            el.setCustomValidity('Please select an option from the list.');
+                        } else if (el.type === 'email') {
+                            el.setCustomValidity('Please enter your email address.');
+                        } else if (el.type === 'tel') {
+                            el.setCustomValidity('Please enter your phone number.');
+                        } else if (el.type === 'date') {
+                            el.setCustomValidity('Please choose a preferred date (MM/DD/YYYY).');
+                        } else {
+                            el.setCustomValidity('Please fill out this field.');
+                        }
+                    } else if (el.validity.typeMismatch && el.type === 'email') {
+                        el.setCustomValidity('Please enter a valid email address.');
+                    } else {
+                        el.setCustomValidity('');
+                    }
+                });
+            }
+
+            var forms = document.querySelectorAll('form');
+            forms.forEach(function (form) {
+                var submitBtns = form.querySelectorAll('button[type="submit"], input[type="submit"]');
+                submitBtns.forEach(function (btn) {
+                    btn.addEventListener('click', function () {
+                        applyEnglishMessages(form);
+                    });
+                });
+
+                form.addEventListener('submit', function () {
+                    applyEnglishMessages(form);
+                });
+
+                var formControls = form.querySelectorAll('input, select, textarea');
+                formControls.forEach(function (el) {
+                    el.addEventListener('invalid', function () {
+                        if (el.validity.valueMissing) {
+                            if (el.tagName === 'SELECT') {
+                                el.setCustomValidity('Please select an option from the list.');
+                            } else if (el.type === 'email') {
+                                el.setCustomValidity('Please enter your email address.');
+                            } else if (el.type === 'tel') {
+                                el.setCustomValidity('Please enter your phone number.');
+                            } else if (el.type === 'date') {
+                                el.setCustomValidity('Please choose a preferred date (MM/DD/YYYY).');
+                            } else {
+                                el.setCustomValidity('Please fill out this field.');
+                            }
+                        } else if (el.validity.typeMismatch && el.type === 'email') {
+                            el.setCustomValidity('Please enter a valid email address.');
+                        }
+                    });
+
+                    function clearValidity() {
+                        el.setCustomValidity('');
+                    }
+                    el.addEventListener('input', clearValidity);
+                    el.addEventListener('change', clearValidity);
+                });
+            });
+        } catch (e) {
+            // Silently fall back to standard browser validation if any error occurs
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupFormLocalization);
+    } else {
+        setupFormLocalization();
+    }
 })();
+

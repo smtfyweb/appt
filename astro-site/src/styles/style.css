@@ -1695,21 +1695,21 @@ input[type="time"].form-control:focus {
     color: var(--primary);
 }
 
-/* Hero e Testimonials visíveis antes do Owl inicializar: evita salto (CLS) */
+/* Hero e Testimonials visíveis antes do Owl inicializar: evita salto (CLS) e atraso de renderização */
 .header-carousel:not(.owl-loaded) {
-    display: block;
+    display: block !important;
 }
 
 .header-carousel:not(.owl-loaded)>.owl-carousel-item:not(:first-child) {
-    display: none;
+    display: none !important;
 }
 
 .testimonial-carousel:not(.owl-loaded) {
-    display: block;
+    display: block !important;
 }
 
 .testimonial-carousel:not(.owl-loaded)>.testimonial-item:not(:first-child) {
-    display: none;
+    display: none !important;
 }
 
 /*************************************************************

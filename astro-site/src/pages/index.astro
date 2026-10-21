@@ -556,10 +556,25 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
                                 </select>
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="date" name="date" class="form-control" placeholder="Choose Date" aria-label="Choose Date" autocomplete="off" required style="height:55px">
+                                <input type="date" name="date" class="form-control" placeholder="MM/DD/YYYY" aria-label="Preferred Date (MM/DD/YYYY)" title="Preferred Date (MM/DD/YYYY)" lang="en-US" autocomplete="off" required style="height:55px">
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="time" name="time" class="form-control" placeholder="Choose Time" aria-label="Choose Time" autocomplete="off" required style="height:55px">
+                                <select class="form-select" name="time" aria-label="Preferred Time (EST)" required style="height:55px">
+                                    <option value="" selected disabled>Preferred Time (EST)</option>
+                                    <option value="Morning (08:00 AM - 11:00 AM)">Morning (08:00 AM - 11:00 AM)</option>
+                                    <option value="Midday (11:00 AM - 02:00 PM)">Midday (11:00 AM - 02:00 PM)</option>
+                                    <option value="Afternoon (02:00 PM - 05:00 PM)">Afternoon (02:00 PM - 05:00 PM)</option>
+                                    <option value="08:00 AM">08:00 AM</option>
+                                    <option value="09:00 AM">09:00 AM</option>
+                                    <option value="10:00 AM">10:00 AM</option>
+                                    <option value="11:00 AM">11:00 AM</option>
+                                    <option value="12:00 PM">12:00 PM</option>
+                                    <option value="01:00 PM">01:00 PM</option>
+                                    <option value="02:00 PM">02:00 PM</option>
+                                    <option value="03:00 PM">03:00 PM</option>
+                                    <option value="04:00 PM">04:00 PM</option>
+                                    <option value="05:00 PM">05:00 PM</option>
+                                </select>
                             </div>
                             <div class="col-12">
                                 <textarea class="form-control" name="message"
