@@ -1631,27 +1631,11 @@ input[type="time"].form-control:focus {
 }
 
 .testimonial-carousel .owl-dots .owl-dot::after {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    content: "\201C";
-    font-size: 26px;
-    font-weight: 900;
-    color: var(--primary);
-    background: #FFFFFF;
-    border-radius: 40px;
-    transition: .5s;
-    opacity: 0;
+    display: none !important;
 }
 
 .testimonial-carousel .owl-dots .owl-dot.active::after {
-    opacity: 1;
+    display: none !important;
 }
 
 .testimonial-carousel .owl-dots .owl-dot img {
